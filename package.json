@@ -1,0 +1,23 @@
+{
+  "name": "robin-portfolio",
+  "version": "1.0.0",
+  "description": "A portfolio for Robin.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mosshide/robin-portfolio.git"
+  },
+  "author": "Wyatt Sushinsky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mosshide/robin-portfolio/issues"
+  },
+  "homepage": "https://github.com/Mosshide/robin-portfolio#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

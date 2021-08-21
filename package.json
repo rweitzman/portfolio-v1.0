@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/Mosshide/robin-portfolio#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "serve-favicon": "^2.5.0"
   }
 }

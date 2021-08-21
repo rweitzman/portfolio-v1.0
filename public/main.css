@@ -27,6 +27,7 @@ nav {
     position: fixed;
     height: 40px;
     width: 100%;
+    background-color: var(--linen);
 }
 
 header {
@@ -49,11 +50,49 @@ main {
 
 section {
     min-height: 100px;
+    padding: 20px;
+    border: 1px solid var(--artichoke);
+}
+
+ul {
+    margin: 20px;
+}
+
+.project-grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    width: 300px;
+    height: 300px;
+    border: 1px solid var(--artichoke);
+    overflow: hidden;
+    margin: 10px;
+    padding: 10px;
+}
+
+.project-card h3 {
+    margin: 5px;
+}
+
+.project-card a {
+    margin: 5px;
+}
+
+.project-card hr {
+    margin: 5px;
+}
+
+.project-card p {
+    margin: 5px;
 }
 
 footer {
     border: 1px solid var(--artichoke);
     height: 200px;
+    background-color: var(--artichoke);
 }
 
 @media only screen and (max-width: 900px) {

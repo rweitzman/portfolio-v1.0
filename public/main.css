@@ -1,11 +1,63 @@
 :root {
     --brass: #CB997E;
-    --pink: #EDDCD2;
-    --linen: #FFF1E6;
-    --pale: #F0EFEB;
-    --deseert: #DDBEA9;
+    --pink: #EDDCD2; /* bulk */
+    --linen: #FFF1E6; /* bulk */
+    --pale: #F0EFEB; /* bulk */
+    --desert: #DDBEA9;
     --artichoke: #A5A58D;
     --ash: #B7B7A4;
     --text: #181818;
     --shadow: #0000008e;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--pale);
+    min-height: 100vh;
+    width: 100%;
+}
+
+nav {
+    border: 1px solid var(--artichoke);
+    position: fixed;
+    height: 40px;
+    width: 100%;
+}
+
+header {
+    border: 1px solid var(--artichoke);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+header p {
+    width: 500px;
+    margin-top: 60px;
+}
+
+main {
+    border: 1px solid var(--artichoke);
+    width: 900px;
+    margin: 0 auto;
+}
+
+section {
+    min-height: 100px;
+}
+
+footer {
+    border: 1px solid var(--artichoke);
+    height: 200px;
+}
+
+@media only screen and (max-width: 900px) {
+    main {
+      width: 100%;
+    }
 }

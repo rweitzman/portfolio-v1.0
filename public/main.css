@@ -37,9 +37,27 @@ header {
     justify-content: center;
 }
 
-header p {
+.profile {
     width: 500px;
     margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile img {
+    width: 100%;
+    margin: 10px;
+}
+
+.profile p {
+    text-align: center;
+    margin: 10px;
+}
+
+.profile button {
+    width: 30%;
+    margin: 10px auto;
 }
 
 main {
@@ -56,6 +74,17 @@ section {
 
 ul {
     margin: 20px;
+}
+
+ul {
+    overflow: auto;
+    height: 200px;
+}
+
+li {
+    display: inline;
+    width: 100px;
+    height: 100%;
 }
 
 .project-grid {

@@ -5,9 +5,9 @@ app.set("view engine", "ejs");
 app.use(express.static('public'));
 
 const favicon = require('serve-favicon');
-app.use(favicon(__dirname + '/public/img/logo.png'));
+app.use(favicon(__dirname + '/public/img/robin.png'));
 
-app.get('/', (req, res) => {
+app.get('/', function (req, res) {
   res.render('index');
 });
 

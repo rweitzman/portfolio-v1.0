@@ -17,7 +17,7 @@
 }
 
 body {
-    background-color: var(--pale);
+    background-color: var(--pink);
     min-height: 100vh;
     width: 100%;
 }
@@ -28,6 +28,10 @@ nav {
     height: 40px;
     width: 100%;
     background-color: var(--linen);
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    z-index: 2;
 }
 
 header {
@@ -39,15 +43,18 @@ header {
 
 .profile {
     width: 500px;
-    margin-top: 60px;
+    margin-top: 160px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-content: flex-start;
 }
 
 .profile img {
-    width: 100%;
+    width: 200px;
+    height: 200px;
     margin: 10px;
+    border-radius: 50%;
 }
 
 .profile p {
@@ -55,9 +62,17 @@ header {
     margin: 10px;
 }
 
-.profile button {
+.profile a {
     width: 30%;
+    height: 50px;
     margin: 10px auto;
+    background-color: var(--brass);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--pale);
 }
 
 main {
@@ -68,23 +83,109 @@ main {
 
 section {
     min-height: 100px;
-    padding: 20px;
+    padding: 120px 20px;
     border: 1px solid var(--artichoke);
+    position: relative;
 }
 
 ul {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 150px;
     margin: 20px;
+    white-space: nowrap;
+    padding: 10px;
 }
 
-ul {
-    overflow: auto;
-    height: 200px;
+/* width */
+ul::-webkit-scrollbar {
+    height: 10px;
+}
+
+ul::-webkit-scrollbar-track {
+    background: var(--pale);
+    border-radius: 5px;
+}
+
+ul::-webkit-scrollbar-thumb {
+    background: var(--ash);
+    border-radius: 5px;
+}
+ul::-webkit-scrollbar-thumb:hover {
+    background: var(--artichoke);
+}
+
+#horizontal-scrollbar {
+    width: 50px;
+    height: 20px;
+    position: absolute;
+    left: 5%;
+    bottom: 0;
 }
 
 li {
-    display: inline;
+    display: inline-block;
     width: 100px;
     height: 100%;
+    text-align: center;
+    white-space: normal;
+    user-select: none;
+}
+
+li:hover {
+    background-color: var(--ash);
+    box-shadow: 1px 1px 1px var(--shadow);
+}
+
+li i {
+    width: 75%;
+    margin: 18% 12.5%;
+    font-size: 40px;
+}
+
+.fa-react {
+    color: #61dafb;
+}
+
+.fa-laptop-code {
+    color: rgb(121, 161, 247);
+}
+
+.fa-android {
+    color: #46D17B;
+}
+
+.fa-aws {
+    color: #EC912D;
+}
+
+.fa-cloud {
+    color: rgb(96, 143, 96);
+}
+
+.fa-cog {
+    color: rgb(29, 104, 165);
+}
+
+.fa-js {
+    color: #E8D44D;
+}
+
+.fa-node {
+    color: #509941;
+}
+
+.fa-html5 {
+    color: #DD4B25;
+}
+
+.fa-css3-alt {
+    color: #2465F1;
+}
+
+li img {
+    width: 30%;
+    margin: 15% 35%;
 }
 
 .project-grid {
@@ -100,6 +201,7 @@ li {
     overflow: hidden;
     margin: 10px;
     padding: 10px;
+    background-color: var(--ash);
 }
 
 .project-card h3 {
@@ -111,17 +213,51 @@ li {
 }
 
 .project-card hr {
-    margin: 5px;
+    margin: 5px -10px;
 }
 
 .project-card p {
     margin: 5px;
 }
 
+form {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+form input {
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+}
+
+#submit-button {
+    width: 50%;
+}
+
 footer {
     border: 1px solid var(--artichoke);
-    height: 200px;
+    height: 100px;
     background-color: var(--artichoke);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+footer a {
+    width: 100%;
+    text-align: right;
+    text-decoration: none;
+    padding: 0 20px;
+    height: 30px;
+}
+
+a i {
+    margin: 10px;
 }
 
 @media only screen and (max-width: 900px) {

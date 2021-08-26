@@ -2,7 +2,8 @@
     --brass: #CB997E;
     --pink: #EDDCD2; /* bulk */
     --linen: #FFF1E6; /* bulk */
-    --pale: #F0EFEB; /* bulk */
+    --pale: #ffffff; /* bulk */
+    --paleOG: #F0EFEB; /* bulk */
     --desert: #DDBEA9;
     --artichoke: #A5A58D;
     --ash: #B7B7A4;
@@ -14,6 +15,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Roboto, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -23,27 +26,43 @@ body {
 }
 
 nav {
-    border: 1px solid var(--artichoke);
+    border: none;
+    border-bottom: 1px solid var(--artichoke);
     position: fixed;
     height: 40px;
     width: 100%;
-    background-color: var(--linen);
+    background-color: var(--pink);
     display: flex;
     align-items: center;
     padding: 5px;
     z-index: 2;
 }
 
+nav div {
+    position: fixed;
+    top: 2px;
+    right: 5px;
+}
+
+nav i {
+    color: var(--brass);
+    font-size: 20px;
+}
+
+nav i:hover {
+    color: var(--ash);
+}
+
 header {
-    border: 1px solid var(--artichoke);
     height: 100vh;
     display: flex;
     justify-content: center;
+    background-color: var(--pale);
 }
 
 .profile {
     width: 500px;
-    margin-top: 160px;
+    margin-top: 200px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -76,7 +95,6 @@ header {
 }
 
 main {
-    border: 1px solid var(--artichoke);
     width: 900px;
     margin: 0 auto;
 }
@@ -84,22 +102,48 @@ main {
 section {
     min-height: 100px;
     padding: 120px 20px;
-    border: 1px solid var(--artichoke);
     position: relative;
 }
 
+.about {
+    background-color: var(--pale);
+}
+
+.about p {
+    width: 60%;
+    margin: 10px auto;
+}
+
+.skills {
+    background-color: var(--linen);
+}
+
+.projects {
+    background-color: var(--linen);
+}
+
+.contact {
+    background-color: var(--pale);
+}
+
 ul {
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
-    height: 150px;
-    margin: 20px;
+    height: 250px;
+    margin: 80px 20px;
     white-space: nowrap;
     padding: 10px;
 }
 
+#kibana {
+    background-color: #0077CC;
+    border-radius: 25%;
+    padding: 5px;
+}
+
 /* width */
 ul::-webkit-scrollbar {
-    height: 10px;
+    height: 25px;
 }
 
 ul::-webkit-scrollbar-track {
@@ -115,26 +159,20 @@ ul::-webkit-scrollbar-thumb:hover {
     background: var(--artichoke);
 }
 
-#horizontal-scrollbar {
-    width: 50px;
-    height: 20px;
-    position: absolute;
-    left: 5%;
-    bottom: 0;
-}
-
 li {
     display: inline-block;
     width: 100px;
-    height: 100%;
     text-align: center;
     white-space: normal;
     user-select: none;
+    transition: all .25s ease;
 }
 
 li:hover {
     background-color: var(--ash);
     box-shadow: 1px 1px 1px var(--shadow);
+    transform: scale(1.2);
+    transition: all .25s ease;
 }
 
 li i {
@@ -192,16 +230,19 @@ li img {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
 }
 
 .project-card {
     width: 300px;
     height: 300px;
-    border: 1px solid var(--artichoke);
     overflow: hidden;
     margin: 10px;
     padding: 10px;
-    background-color: var(--ash);
+    background-color: var(--pale);
+    border-radius: 5px;
 }
 
 .project-card h3 {
@@ -210,10 +251,13 @@ li img {
 
 .project-card a {
     margin: 5px;
+    color: var(--brass);
 }
 
 .project-card hr {
     margin: 5px -10px;
+    border: none;
+    border-bottom: 1px solid var(--pink);
 }
 
 .project-card p {
@@ -239,25 +283,36 @@ form input {
 }
 
 footer {
-    border: 1px solid var(--artichoke);
-    height: 100px;
-    background-color: var(--artichoke);
+    height: 150px;
+    background-color: var(--ash);
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    align-content: center;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 footer a {
-    width: 100%;
-    text-align: right;
     text-decoration: none;
     padding: 0 20px;
     height: 30px;
+    color: var(--pink);
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 a i {
     margin: 10px;
+}
+
+h2 {
+    margin: 30px 10px;
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid var(--artichoke);
 }
 
 @media only screen and (max-width: 900px) {

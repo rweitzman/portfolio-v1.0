@@ -121,11 +121,16 @@
         <section class="contact" id="contact">
             <img src="/img/contact.svg" alt="Contact">
             <h2>Contact Me</h2>
-            <form action="#">
+            <form action="/message" method="POST">
                 <input type="text" name="name" placeholder="Your Full Name*">
                 <input type="text" name="email" placeholder="Your Email Address*">
                 <input type="text" name="message" placeholder="Your Message*">
                 <input type="submit" value="Submit" id="submit-button">
+                <% if (message === "fail") { %>
+                    <p>Message failed to send due to internal server error!</p>
+                <% } else if (message === "success") { %>
+                    <p>Thank you for reaching out!</p>
+                <% } %>
             </form>
         </section>
     </main>

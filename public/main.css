@@ -278,6 +278,11 @@ form input {
     padding: 10px;
 }
 
+form p {
+    width: 100%;
+    text-align: center;
+}
+
 #submit-button {
     width: 50%;
 }

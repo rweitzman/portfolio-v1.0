@@ -52,6 +52,6 @@ app.post("/message", async function (req, res) {
   
 });
 
-app.listen(3000, () => {
-  console.log(`Example app listening at http://localhost:3000`);
+app.listen(process.env.PORT, () => {
+  console.log(`Listening at localhost:3000`);
 });

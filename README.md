@@ -22,7 +22,9 @@ AWS
 Cloudwatch
 RESTful
 GraphQL
-Elasticsearch/Kibana
+Elasticsearch
+Kibana
+DynamoDB
 Javascript
 Node.js
 VSCode
@@ -33,3 +35,17 @@ Hi! I'm Robin Weitzman, a retired Farm-to-Fork Chef, turned Mobile Application D
 
 For Robin:
 (Could you please make a readme.md that has the location of files/lines in the code base that contain the colors, descriptions, images, and resume stuff in case I decide to change that stuff in the future?)
+
+todo:
+https://icons8.com/icons/set/xcode-logo
+https://logowik.com/aws-cloudwatch-vector-logo-5460.html
+https://www.jeffreyjohnsonswe.com/
+skills animations-
+skills add-
+values
+heroku
+videos of scroll/modals/etc
+cool animation-
+nav animation-
+
+values skills more noticeable

@@ -152,7 +152,7 @@
 
         let $nav = $("nav");
         $(window).on("scroll", function () {
-            if ($(window)[0].scrollY > $("header")[0].scrollHeight) $nav.addClass("down");
+            if ($(window)[0].scrollY > $("header")[0].scrollHeight * .75) $nav.addClass("down");
             else $nav.removeClass("down");
         });
 

@@ -30,10 +30,10 @@ app.post("/message", async function (req, res) {
     
   var mailOptions = {
     from: process.env.NOREPLYUSER,
-    to: "wyattsushi@gmail.com",
+    to: "robinweitzman3579@gmail.com",
     subject: 'Message from your Portfolio Page!!!',
     html: `<h2>Message from your Portfolio Page:<h2><br><br>` +
-      `<h3>${req.body.name}</h3><br>` +
+      `<h3>${req.body.name}</h3>` +
       `<h4>${req.body.email}</h4><br>` + 
       `<p>${req.body.message}</p><br><br><br><br>` + 
       `<p>Good luck and stay safe! - Wyatt</p>`,

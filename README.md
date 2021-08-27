@@ -22,9 +22,9 @@ AWS
 Cloudwatch
 RESTful
 GraphQL
-Elasticsearch*
+Elasticsearch
 Kibana
-DynamoDB*
+DynamoDB
 Javascript
 Node.js
 VSCode
@@ -40,12 +40,12 @@ todo:
 https://icons8.com/icons/set/xcode-logo
 https://logowik.com/aws-cloudwatch-vector-logo-5460.html
 https://www.jeffreyjohnsonswe.com/
-skills animations
-skills add
+skills animations-
+skills add-
 values
 heroku
 videos of scroll/modals/etc
-cool animation
-nav animation
+cool animation-
+nav animation-
 
 values skills more noticeable

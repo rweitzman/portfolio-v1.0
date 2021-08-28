@@ -1,12 +1,14 @@
 # robin-portfolio
 A portfolio for Robin.
 
-For Robin:
+#For Robin:
 (Could you please make a readme.md that has the location of files/lines in the code base that contain the colors, descriptions, images, and resume stuff in case I decide to change that stuff in the future?):
 Colors can be found at the top of the main.css file in the public directory.
 All the images are located in the public/img directory.
 Your resume is stored in the public directory.
 All html is in the index.ejs file in the views directory. It should be fairly obvious what images, descriptions and links are what.
+aniumation
+comments
 
 Templates:
 https://portfolio.smakosh.com/
@@ -57,6 +59,9 @@ heroku-
 videos of scroll/modals/etc
 cool animation-
 nav animation-
+more flamboyant profile animation
+cover from linkedin
+headers
 
 values skills more noticeable-
 

@@ -61,7 +61,7 @@ nav i:hover {
 }
 
 header {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     background-color: var(--pale);
@@ -69,7 +69,7 @@ header {
 
 .profile {
     width: 500px;
-    margin-top: 100px;
+    margin-top: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -79,27 +79,32 @@ header {
 }
 
 .profile.down {
-    margin-top: 250px;
+    margin-top: 5%;
     opacity: 1;
     transition: all 1s ease;
 }
 
 .profile img {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: auto;
     margin: 10px;
     border-radius: 50%;
 }
 
 .profile p {
+    width: 100%;
     text-align: center;
     margin: 10px;
 }
 
+.profile h2 {
+    font-size: 50px;
+}
+
 .profile a {
-    width: 30%;
-    height: 50px;
-    margin: 10px auto;
+    width: 50%;
+    height: 75px;
+    margin: 30px auto;
     background-color: var(--brass);
     display: flex;
     justify-content: center;
@@ -110,7 +115,7 @@ header {
 }
 
 main {
-    width: 900px;
+    width: 1100px;
     margin: 0 auto;
 }
 
@@ -135,7 +140,7 @@ section {
 }
 
 #values-list div {
-    flex-grow: 1;
+    width: 25%;
     text-align: center;
 }
 
@@ -223,13 +228,11 @@ ul {
     top: 0;
     width: 100%;
     height: calc(100% - 25px);
-    background: linear-gradient(90deg, rgba(237,220,210,1) 0%, rgba(237,220,210,0) 20%, rgba(237,220,210,0.01724439775910369) 80%, rgba(237,220,210,1) 100%);
-}
-
-#kibana {
-    background-color: #0077CC;
-    border-radius: 25%;
-    padding: 5px;
+    background: linear-gradient(90deg, 
+    rgba(237,220,210,1) 0%, 
+    rgba(237,220,210,0) 15%, 
+    rgba(237,220,210,0.01724439775910369) 85%, 
+    rgba(237,220,210,1) 100%);
 }
 
 /* width */
@@ -275,6 +278,17 @@ li i {
 li img {
     width: 50px;
     margin: 15% calc((100% - 50px) / 2);
+}
+
+#kibana {
+    background-color: #0077CC;
+    border-radius: 25%;
+    padding: 5px;
+}
+
+#dynamo {
+    width: 60px;
+    margin: 15% calc((100% - 60px) / 2);
 }
 
 .fa-react {
@@ -327,7 +341,7 @@ li img {
 }
 
 .project-card {
-    width: 300px;
+    width: calc(50% - 40px);
     height: 300px;
     overflow: hidden;
     margin: 10px;
@@ -341,9 +355,14 @@ li img {
     margin: 5px;
 }
 
-.project-card a {
+.project-card>a {
     display: block;
     margin: 5px;
+    color: var(--brass);
+    text-decoration: none;
+}
+
+.project-card p a {
     color: var(--brass);
     text-decoration: none;
 }
@@ -416,7 +435,7 @@ h2 {
 
 
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1100px) {
     main {
       width: 100%;
     }
@@ -440,5 +459,18 @@ h2 {
 
     li {
         width: 100px;
+    }
+
+    #values-list {
+        flex-wrap: wrap;
+    }
+
+    #values-list div {
+        width: 50%;
+    }
+
+    .project-card {
+        width: calc(100%);
+        margin: 10px 0;
     }
 }

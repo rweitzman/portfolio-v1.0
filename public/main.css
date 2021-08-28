@@ -1,14 +1,14 @@
 :root {
-    --brass: #CB997E;
-    --pink: #EDDCD2; /* bulk */
-    --linen: #FFF1E6; /* bulk */
-    --pale: #ffffff; /* bulk */
-    --paleOG: #F0EFEB; /* bulk */
-    --desert: #DDBEA9;
-    --artichoke: #A5A58D;
-    --ash: #B7B7A4;
+    --link: #E79265;
+    --flourish: #E69B9B; 
+    --focus: #b0bb9e; /* bulk */
+    --focusTransparent: #9da68d00;
+    --bg: #ffffff; /* bulk */
+    --bgTransparent: #ffffff00;
+    --inactive: #F0EFEB; 
+    --accent: #ECCE9C;
+    --shadow: #3E483F;
     --text: #181818;
-    --shadow: #0000008e;
 }
 
 * {
@@ -17,25 +17,26 @@
     padding: 0;
     font-family: Roboto, Helvetica, sans-serif;
     scroll-behavior: smooth;
+    color: var(--text);
 }
 
 body {
-    background-color: var(--pale);
+    background-color: var(--bg);
     min-height: 100vh;
     width: 100%;
 }
 
 nav {
     border: none;
-    border-bottom: 1px solid var(--artichoke);
+    border-bottom: 1px solid var(--accent);
     position: fixed;
     height: 40px;
     width: 100%;
-    background-color: var(--pink);
+    background-color: var(--accent);
     display: flex;
     align-items: center;
     padding: 5px;
-    z-index: 2;
+    z-index: 20;
     top: -40px;
     transition: all .5s ease;
 }
@@ -52,19 +53,53 @@ nav div {
 }
 
 nav i {
-    color: var(--brass);
+    color: var(--link);
     font-size: 20px;
 }
 
 nav i:hover {
-    color: var(--ash);
+    color: var(--bg);
 }
 
 header {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    background-color: var(--pale);
+    background-color: var(--bg);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.splash {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px);
+}
+
+.splash img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fade {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, 
+    var(--bgTransparent) 0%,
+    var(--bgTransparent) 85%,
+    var(--bg) 100%);
+    z-index: 1;
 }
 
 .profile {
@@ -76,12 +111,16 @@ header {
     align-content: flex-start;
     opacity: 0;
     transition: all 1s ease;
+    z-index: 2;
+    height: 0;
+    overflow: hidden;
 }
 
 .profile.down {
-    margin-top: 5%;
+    margin-top: 50px;
     opacity: 1;
     transition: all 1s ease;
+    height: 800px;
 }
 
 .profile img {
@@ -105,13 +144,19 @@ header {
     width: 50%;
     height: 75px;
     margin: 30px auto;
-    background-color: var(--brass);
+    background-color: var(--link);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
     text-decoration: none;
-    color: var(--pale);
+    color: var(--bg);
+    transition: all .25s ease;
+}
+
+.profile a:hover {
+    transform: scale(1.2);
+    transition: all .25s ease;
 }
 
 main {
@@ -120,13 +165,14 @@ main {
 }
 
 section {
+    margin-top: 30px;
     min-height: 100px;
     padding: 60px;
     position: relative;
 }
 
 .values {
-    background-color: var(--linen);
+    background-color: var(--focus);
     border-radius: 15px;
 }
 
@@ -147,7 +193,7 @@ section {
 #values-list div i {
     font-size: 50px;
     margin: 5px;
-    color: var(--artichoke);
+    color: var(--shadow);
 }
 
 #values-list div h3, #values-list div p {
@@ -155,7 +201,7 @@ section {
 }
 
 .about {
-    background-color: var(--linen);
+    background-color: var(--focus);
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -166,8 +212,9 @@ section {
 .about i {
     width: 30%;
     font-size: 175px;
-    color: var(--artichoke);
+    color: var(--accent);
     text-align: center;
+    text-shadow: 10px 10px var(--shadow);
 }
 
 .about div {
@@ -176,12 +223,24 @@ section {
 }
 
 .work {
-    background-color: var(--linen);
+    background-color: var(--focus);
     border-radius: 15px;
 }
 
+.work h2 {
+    position: relative;
+    left: 25px;
+    top: -90px;
+    background-color: var(--accent);
+    width: 350px;
+    height: 50px;
+    border-radius: 5px;
+    padding: 10px 5px;
+    z-index: 1;
+}
+
 .contact {
-    background-color: var(--pale);
+    background-color: var(--bg);
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -192,8 +251,9 @@ section {
 .contact i {
     width: 30%;
     font-size: 175px;
-    color: var(--pink);
+    color: var(--flourish);
     text-align: center;
+    text-shadow: 10px 10px var(--link);
 }
 
 .contact form {
@@ -207,7 +267,18 @@ section {
     position: relative;
     border-radius: 5px;
     overflow: hidden;
-    margin: 50px 0;
+}
+
+.skills h2 {
+    position: relative;
+    left: 25px;
+    top: 20px;
+    background-color: var(--accent);
+    width: 350px;
+    height: 50px;
+    border-radius: 5px;
+    padding: 10px 5px;
+    z-index: 1;
 }
 
 ul {
@@ -216,8 +287,9 @@ ul {
     overflow-y: hidden;
     height: 100%;
     white-space: nowrap;
-    padding: 30px;
-    background-color: var(--linen);
+    padding: 20px 60px;
+    padding-top: 40px;
+    background-color: var(--focus);
     border-radius: 5px;
 }
 
@@ -229,10 +301,10 @@ ul {
     width: 100%;
     height: calc(100% - 25px);
     background: linear-gradient(90deg, 
-    rgba(237,220,210,1) 0%, 
-    rgba(237,220,210,0) 15%, 
-    rgba(237,220,210,0.01724439775910369) 85%, 
-    rgba(237,220,210,1) 100%);
+    var(--focus) 0%, 
+    var(--focusTransparent) 15%, 
+    var(--focusTransparent) 85%, 
+    var(--focus) 100%);
 }
 
 /* width */
@@ -241,43 +313,49 @@ ul::-webkit-scrollbar {
 }
 
 ul::-webkit-scrollbar-track {
-    background: var(--paleOG);
+    background: var(--inactive);
     border-radius: 5px;
 }
 
 ul::-webkit-scrollbar-thumb {
-    background: var(--ash);
+    background: var(--accent);
     border-radius: 5px;
 }
 ul::-webkit-scrollbar-thumb:hover {
-    background: var(--artichoke);
+    background: var(--flourish);
 }
 
 li {
     display: inline-block;
     width: 150px;
+    height: 130px;
     text-align: center;
     white-space: normal;
     user-select: none;
     transition: all .25s ease;
+    border-radius: 5px;
 }
 
 li:hover {
-    background-color: var(--ash);
+    background-color: var(--flourish);
     box-shadow: 1px 1px 1px var(--shadow);
     transform: scale(1.2);
     transition: all .25s ease;
 }
 
 li i {
-    width: 75%;
-    margin: 18% 12.5%;
+    width: 50px;
+    height: 50px;
+    margin: 10% calc((100% - 50px) / 2);
     font-size: 50px;
+    display: block;
 }
 
 li img {
     width: 50px;
-    margin: 15% calc((100% - 50px) / 2);
+    height: 50px;
+    margin: 10% calc((100% - 50px) / 2);
+    display: block;
 }
 
 #kibana {
@@ -288,7 +366,7 @@ li img {
 
 #dynamo {
     width: 60px;
-    margin: 15% calc((100% - 60px) / 2);
+    margin: 10% calc((100% - 60px) / 2);
 }
 
 .fa-react {
@@ -342,13 +420,13 @@ li img {
 
 .project-card {
     width: calc(50% - 40px);
-    height: 300px;
-    overflow: hidden;
+    height: 500px;
+    overflow: auto;
     margin: 10px;
-    padding: 15px;
-    background-color: var(--pale);
+    padding: 20px;
+    background-color: var(--bg);
     border-radius: 15px;
-    border: 1px solid var(--brass);
+    border: 1px solid var(--focus);
 }
 
 .project-card>h3 {
@@ -358,19 +436,28 @@ li img {
 .project-card>a {
     display: block;
     margin: 5px;
-    color: var(--brass);
+}
+
+a h3 {
+    color: var(--link);
+}
+
+.project-card a {
+    color: var(--link);
     text-decoration: none;
 }
 
-.project-card p a {
-    color: var(--brass);
-    text-decoration: none;
+.project-card video {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 5px;
 }
 
 .project-card hr {
     margin: 5px -10px;
     border: none;
-    border-bottom: 1px solid var(--pink);
+    border-bottom: 1px solid var(--flourish);
 }
 
 .project-card p {
@@ -391,7 +478,7 @@ input, textarea {
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid var(--artichoke);
+    border: 1px solid var(--focus);
 }
 
 form p {
@@ -402,21 +489,23 @@ form p {
 #submit-button {
     width: 50%;
     cursor: pointer;
+    background-color: var(--link);
+    color: var(--bg);
 }
 
 footer {
     height: 75px;
-    background-color: var(--artichoke);
+    background-color: var(--shadow);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--pale);
+    color: var(--bg);
 }
 
 footer a {
     text-decoration: none;
     margin: 0px 10px;
-    color: var(--pale);
+    color: var(--bg);
     font-size: 15px;
 }
 
@@ -426,10 +515,10 @@ footer a:hover {
 
 a i {
     margin: 10px;
+    color: var(--bg);
 }
 
 h2 {
-    margin: 10px 0px;
     text-align: center;
 }
 
@@ -472,5 +561,17 @@ h2 {
     .project-card {
         width: calc(100%);
         margin: 10px 0;
+    }
+
+    .skills h2 {
+        width: 75%;
+        left: 12.5%;
+        top: 10px;
+    }
+
+    .work h2 {
+        width: 75%;
+        top: -70px;
+        left: 12.5%;
     }
 }

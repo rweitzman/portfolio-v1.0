@@ -24,6 +24,10 @@
         </div>
     </nav>
     <header>
+        <div class="splash">
+            <img src="/img/grow.png">
+            <div class="fade"></div>
+        </div>
         <div class="profile">
             <img src="/img/robin.png" alt="Profile Pcture of Robin Weitzman">
             <p>Hi! I'm</p>
@@ -34,7 +38,6 @@
     </header>
     <main>
         <section class="values">
-            <h2>My Values</h2>
             <div id="values-list">
                 <div>
                     <i class="fa fa-sitemap" aria-hidden="true"></i>
@@ -59,12 +62,18 @@
             </div>
         </section>
         <section class="skills">
-            <h2>My Skills</h2>
+            <h2>Mobile Skills</h2>
             <div>
-                <ul id="skills-list">
+                <ul id="mobile-skills">
                     <li><i class="fab fa-react"></i>React-Native</li>
                     <li><img src="/img/xcode.png">XCode</li>
                     <li><i class="fab fa-android"></i>Android SDK</li>
+                </ul>
+                <div class="skills-gradient"></div>
+            </div>
+            <h2>Full-Stack Skills</h2>
+            <div>
+                <ul id="stack-skills">
                     <li><i class="fab fa-aws"></i>AWS</li>
                     <li><img src="/img/cloud.png" id="cloud"></i>Cloudwatch</li>
                     <li><i class="fas fa-cog"></i>RESTful</li>
@@ -79,21 +88,23 @@
                     <li><i class="fab fa-html5"></i>HTML</li>
                     <li><i class="fab fa-css3-alt"></i>CSS</li>
                 </ul>
-                <div class="skills-gradient">
-    
-                </div>
+                <div class="skills-gradient"></div>
             </div>
-            
         </section>
         <section class="work">
-            <h2>My Work Experience</h2>
+            <h2>Work Experience</h2>
         </section>
         <section class="projects">
-            <h2>My Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
-                    <h3>Tamagotchi</h3>
+                    <a href="https://rweitzman.github.io/Tamagotchi/"><h3>Tamagotchi</h3></a>
                     <a href="https://github.com/rweitzman/Tamagotchi">github.com/rweitzman/Tamagotchi</a>
+                    <video loop controls>
+                        <source src="/img/tama.webm"
+                                type="video/webm">
+                    
+                        Sorry, your browser doesn't support embedded videos.
+                    </video>
                     <p>A single page interactive game with timers, decreasing tally, and onClick events. Written exclusively with HTML/CSS and jQuery to create interactive and fluid DOM manipulation.</p>
                 </div>
                 <div class="project-card">
@@ -109,6 +120,12 @@
                 <div class="project-card">
                     <a href="https://ariadogfood.herokuapp.com/"><h3>Aria</h3></a>
                     <a href="https://github.com/rweitzman/Capstone">github.com/rweitzman/Capstone</a>
+                    <video loop controls>
+                        <source src="/img/aria.webm"
+                                type="video/webm">
+                    
+                        Sorry, your browser doesn't support embedded videos.
+                    </video>
                     <p>Aria Description</p>
                 </div>
             </div>
@@ -116,7 +133,6 @@
         <section class="about">
             <i class="fas fa-paw"></i>
             <div>
-                <h2>About Me</h2>
                 <p>
                     I have a passion for all things sustainable, an obession with superb UX/UI, and a love for 
                     creating excellent software architecture. 
@@ -127,9 +143,7 @@
                     me to put my best foot forward to make the app even better.
                 </p>
             </div>
-            
         </section>
-        
         <section class="contact" id="contact">
             <i class="fas fa-bone"></i>
             <form action="/message" method="POST">
@@ -153,8 +167,10 @@
     </footer>
 
     <script>
-        let $skills = $("#skills-list");
-        $skills.scrollLeft(($skills[0].scrollWidth - parseInt($skills.css("width")))/ 2);
+        let $mobile = $("#mobile-skills");
+        $mobile.scrollLeft(($mobile[0].scrollWidth - parseInt($mobile.css("width")))/ 2);
+        let $stack = $("#stack-skills");
+        $stack.scrollLeft(($stack[0].scrollWidth - parseInt($stack.css("width")))/ 2);
 
         let $nav = $("nav");
         $(window).on("scroll", function () {

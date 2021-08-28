@@ -142,6 +142,7 @@ section {
 #values-list div i {
     font-size: 50px;
     margin: 5px;
+    color: var(--artichoke);
 }
 
 #values-list div h3, #values-list div p {
@@ -153,10 +154,15 @@ section {
     border-radius: 15px;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.about img {
+.about i {
     width: 30%;
+    font-size: 175px;
+    color: var(--artichoke);
+    text-align: center;
 }
 
 .about div {
@@ -173,10 +179,16 @@ section {
     background-color: var(--pale);
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.contact img {
+.contact i {
     width: 30%;
+    font-size: 175px;
+    color: var(--pink);
+    text-align: center;
 }
 
 .contact form {
@@ -184,13 +196,34 @@ section {
     margin: 10px auto;
 }
 
+.skills>div {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 50px 0;
+}
+
 ul {
+    width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
-    height: 250px;
-    margin: 50px 0;
+    height: 100%;
     white-space: nowrap;
-    padding: 10px;
+    padding: 30px;
+    background-color: var(--linen);
+    border-radius: 5px;
+}
+
+.skills-gradient {
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: calc(100% - 25px);
+    background: linear-gradient(90deg, rgba(237,220,210,1) 0%, rgba(237,220,210,0) 20%, rgba(237,220,210,0.01724439775910369) 80%, rgba(237,220,210,1) 100%);
 }
 
 #kibana {
@@ -205,7 +238,7 @@ ul::-webkit-scrollbar {
 }
 
 ul::-webkit-scrollbar-track {
-    background: var(--pale);
+    background: var(--paleOG);
     border-radius: 5px;
 }
 
@@ -304,11 +337,12 @@ li img {
     border: 1px solid var(--brass);
 }
 
-.project-card h3 {
+.project-card>h3 {
     margin: 5px;
 }
 
 .project-card a {
+    display: block;
     margin: 5px;
     color: var(--brass);
     text-decoration: none;
@@ -322,6 +356,7 @@ li img {
 
 .project-card p {
     margin: 5px;
+    padding: 10px;
 }
 
 form {
@@ -332,10 +367,12 @@ form {
     flex-wrap: wrap;
 }
 
-form input {
+input, textarea {
     width: 100%;
     margin: 10px;
     padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--artichoke);
 }
 
 form p {
@@ -345,22 +382,23 @@ form p {
 
 #submit-button {
     width: 50%;
+    cursor: pointer;
 }
 
 footer {
-    height: 150px;
-    background-color: var(--ash);
+    height: 75px;
+    background-color: var(--artichoke);
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    color: var(--pale);
 }
 
 footer a {
     text-decoration: none;
-    padding: 0 20px;
-    height: 30px;
+    margin: 0px 10px;
     color: var(--pale);
+    font-size: 15px;
 }
 
 footer a:hover {
@@ -372,16 +410,35 @@ a i {
 }
 
 h2 {
-    margin: 10px;
+    margin: 10px 0px;
+    text-align: center;
 }
 
-input {
-    border-radius: 5px;
-    border: 1px solid var(--artichoke);
-}
+
 
 @media only screen and (max-width: 900px) {
     main {
       width: 100%;
+    }
+
+    .about i, .contact i {
+        width: 100%;
+        font-size: 75px;
+    }
+
+    .about div, .contact form {
+        width: 100%;
+    }
+
+    section {
+        padding: 30px;
+    }
+
+    .skills>div {
+        height: 200px;
+    }
+
+    li {
+        width: 100px;
     }
 }

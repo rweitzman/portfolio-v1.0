@@ -42,10 +42,13 @@ https://logowik.com/aws-cloudwatch-vector-logo-5460.html
 https://www.jeffreyjohnsonswe.com/
 skills animations-
 skills add-
-values
-heroku
+values-
+heroku-
 videos of scroll/modals/etc
 cool animation-
 nav animation-
 
 values skills more noticeable
+
+live:
+https://robinsportfolio.herokuapp.com/

@@ -138,13 +138,10 @@
             <i class="fas fa-paw"></i>
             <div>
                 <p>
-                    I have a passion for all things sustainable, an obession with superb UX/UI, and a love for 
-                    creating excellent software architecture. 
+                    I have a passion for all things sustainable, an obession with superb UX/UI, and a love for creating excellent software architecture. 
                 </p><br>
                 <p>
-                    I love working in a team-oriented environment 
-                    where people can come together to bring out the best in each other. The synergy motivates 
-                    me to put my best foot forward to make the app even better.
+                    I love working in a team-oriented environment where people can come together to bring out the best in each other. The synergy motivates me to put my best foot forward to make the app even better.
                 </p>
             </div>
         </section>
@@ -165,23 +162,30 @@
         </section>
     </main>
     <footer>
+        <!-- this needs to updated with your resume -->
+        <!-- something like: href="/resume.pdf" -->
+        <!-- assuming you just dropped your resume in the public directory -->
+        <!-- it should work as a download link, let me know if it doesn't -->
         <a href="#">Resume</a> |
         <a href="https://github.com/rweitzman"><i class="fab fa-github"></i>GitHub</a> |
         <a href="https://www.linkedin.com/in/robinweitzman1/"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
     </footer>
 
     <script>
+        // these automatically center the skills lists
         let $mobile = $("#mobile-skills");
         $mobile.scrollLeft(($mobile[0].scrollWidth - parseInt($mobile.css("width")))/ 2);
         let $stack = $("#stack-skills");
         $stack.scrollLeft(($stack[0].scrollWidth - parseInt($stack.css("width")))/ 2);
 
+        //this drops down the nav bar when you scroll 50% down the header
         let $nav = $("nav");
         $(window).on("scroll", function () {
             if ($(window)[0].scrollY > $("header")[0].scrollHeight * .5) $nav.addClass("down");
             else $nav.removeClass("down");
         });
 
+        // this initiates the profile animation
         $(".profile").addClass("down");
     </script>
 </body>

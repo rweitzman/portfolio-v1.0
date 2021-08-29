@@ -1,7 +1,7 @@
 :root {
     --link: #E79265;
     --flourish: #E69B9B; 
-    --focus: #b0bb9e; /* bulk */
+    --focus: #c7cebb; /* bulk */
     --focusTransparent: #9da68d00;
     --bg: #ffffff; /* bulk */
     --bgTransparent: #ffffff00;
@@ -66,7 +66,7 @@ header {
     display: flex;
     justify-content: center;
     background-color: var(--bg);
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     overflow: hidden;
 }
 
@@ -225,18 +225,32 @@ section {
 .work {
     background-color: var(--focus);
     border-radius: 15px;
+    padding-top: 0;
 }
 
 .work h2 {
     position: relative;
     left: 25px;
-    top: -90px;
+    top: -30px;
     background-color: var(--accent);
-    width: 350px;
+    width: 450px;
     height: 50px;
     border-radius: 5px;
     padding: 10px 5px;
     z-index: 1;
+}
+
+.work h3 {
+    font-size: 30px;
+}
+
+.work h4 {
+    margin-top: 15px;
+    float: right;
+}
+
+.work p {
+    margin: 10px 0;
 }
 
 .contact {
@@ -267,6 +281,7 @@ section {
     position: relative;
     border-radius: 5px;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 
 .skills h2 {
@@ -415,7 +430,7 @@ li img {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding: 20px 10px;
+    padding: 10px;
 }
 
 .project-card {
@@ -451,7 +466,6 @@ a h3 {
     width: 100%;
     height: auto;
     border-radius: 5px;
-    margin: 5px;
 }
 
 .project-card hr {
@@ -461,8 +475,7 @@ a h3 {
 }
 
 .project-card p {
-    margin: 5px;
-    padding: 10px;
+    padding-top: 10px;
 }
 
 form {
@@ -559,7 +572,7 @@ h2 {
     }
 
     .project-card {
-        width: calc(100%);
+        width: 100%;
         margin: 10px 0;
     }
 
@@ -570,8 +583,17 @@ h2 {
     }
 
     .work h2 {
-        width: 75%;
-        top: -70px;
-        left: 12.5%;
+        width: 100%;
+        top: -30px;
+        left: 0;
+        font-size: 19px;
+    }
+
+    .work h4 {
+        float: none;
+    }
+
+    .project-grid {
+        padding: 0;
     }
 }

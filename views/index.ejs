@@ -68,18 +68,18 @@
                     <li><i class="fab fa-react"></i>React-Native</li>
                     <li><img src="/img/xcode.png">XCode</li>
                     <li><i class="fab fa-android"></i>Android SDK</li>
+                    <li><i class="fab fa-aws"></i>AWS</li>
+                    <li><img src="/img/cloud.png" id="cloud"></i>Cloudwatch</li>
+                    <li><img src="/img/elastic.png" id="elastic">Elasticsearch</li>
+                    <li><img id="kibana" src="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt531cab4e93907de5/5d0e3b58b0b16b1c530d3cfa/logo-kibana-32-white.svg">Kibana</li>
                 </ul>
                 <div class="skills-gradient"></div>
             </div>
             <h2>Full-Stack Skills</h2>
             <div>
                 <ul id="stack-skills">
-                    <li><i class="fab fa-aws"></i>AWS</li>
-                    <li><img src="/img/cloud.png" id="cloud"></i>Cloudwatch</li>
                     <li><i class="fas fa-cog"></i>RESTful</li>
                     <li><img src="https://graphql.org/img/logo.svg">GraphQL</li>
-                    <li><img src="/img/elastic.png" id="elastic">Elasticsearch</li>
-                    <li><img id="kibana" src="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt531cab4e93907de5/5d0e3b58b0b16b1c530d3cfa/logo-kibana-32-white.svg">Kibana</li>
                     <li><img src="/img/dynamo.png" id="dynamo">DynamoDB</li>
                     <li><i class="fab fa-js"></i>Javascript</li>
                     <li><i class="fab fa-node"></i>Node.js</li>
@@ -92,7 +92,11 @@
             </div>
         </section>
         <section class="work">
-            <h2>Work Experience</h2>
+            <h2>Professional Software Experience</h2>
+            <h4>Santa Clara, CA 2021</h4>
+            <h3>Mobile Full-Stack Application Engineer</h3>
+            <p>I was working with a referral on their small team for their very young start-up company. We worked to debug an externally written, full-stack React-Native application. The application was configured on the AWS cloud with a back-end stack that consisted of S3, DynamoDB, GraphQL, and Elasticsearch/Kibana. </p>
+            <p>The goal was to take the externally written application, test it for and fix its bugs, as well as to fix/re-configure the back-end. We also implemented changes on the front-end with UX/UI improvements.</p>
         </section>
         <section class="projects">
             <div class="project-grid">
@@ -115,7 +119,7 @@
                 <div class="project-card">
                     <h3>Wayfarer</h3>
                     <a href="https://github.com/rweitzman/Wayfarer">github.com/rweitzman/Wayfarer</a>
-                    <p>Wayfarer Description</p>
+                    <p>Meant to replicate the feel of a travel blog, this is a full-stack Django website application that was co-authored with <a href="https://www.linkedin.com/in/jonathanmichaelpark/">John Park</a>, <a href="https://www.linkedin.com/in/justin-cairo/">Justin Cairo</a>, and <a href="https://www.linkedin.com/in/pmiller5254/">Prince Miller</a>. Written with client input and direction, we created and fulfilled sprints to create a website with full CRUD to allow users to create profiles, leave comments, search travel locations, and view blog articles. We used PostgreSQL for the back-end.</p>
                 </div>
                 <div class="project-card">
                     <a href="https://ariadogfood.herokuapp.com/"><h3>Aria</h3></a>
@@ -126,7 +130,7 @@
                     
                         Sorry, your browser doesn't support embedded videos.
                     </video>
-                    <p>Aria Description</p>
+                    <p>Written solo, this is a full-stack MEN application meant to create a more SPA-like feel for the user experience. It is a dummy wesbite for a fake retail store for fresh made dog food, with searchable recipes, and full CRUD allowing users to create/update/edit/delete comments and reviews. It was written with HTML and an uniquely self-authored CSS library and Javascript for the front-end with Mongoose and MongoDB Atlas for the back-end.</p>
                 </div>
             </div>
         </section>
@@ -134,13 +138,10 @@
             <i class="fas fa-paw"></i>
             <div>
                 <p>
-                    I have a passion for all things sustainable, an obession with superb UX/UI, and a love for 
-                    creating excellent software architecture. 
+                    I have a passion for all things sustainable, an obession with superb UX/UI, and a love for creating excellent software architecture. 
                 </p><br>
                 <p>
-                    I love working in a team-oriented environment 
-                    where people can come together to bring out the best in each other. The synergy motivates 
-                    me to put my best foot forward to make the app even better.
+                    I love working in a team-oriented environment where people can come together to bring out the best in each other. The synergy motivates me to put my best foot forward to make the app even better.
                 </p>
             </div>
         </section>
@@ -161,23 +162,30 @@
         </section>
     </main>
     <footer>
+        <!-- this needs to updated with your resume -->
+        <!-- something like: href="/resume.pdf" -->
+        <!-- assuming you just dropped your resume in the public directory -->
+        <!-- it should work as a download link, let me know if it doesn't -->
         <a href="#">Resume</a> |
         <a href="https://github.com/rweitzman"><i class="fab fa-github"></i>GitHub</a> |
         <a href="https://www.linkedin.com/in/robinweitzman1/"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
     </footer>
 
     <script>
+        // these automatically center the skills lists
         let $mobile = $("#mobile-skills");
         $mobile.scrollLeft(($mobile[0].scrollWidth - parseInt($mobile.css("width")))/ 2);
         let $stack = $("#stack-skills");
         $stack.scrollLeft(($stack[0].scrollWidth - parseInt($stack.css("width")))/ 2);
 
+        //this drops down the nav bar when you scroll 50% down the header
         let $nav = $("nav");
         $(window).on("scroll", function () {
             if ($(window)[0].scrollY > $("header")[0].scrollHeight * .5) $nav.addClass("down");
             else $nav.removeClass("down");
         });
 
+        // this initiates the profile animation
         $(".profile").addClass("down");
     </script>
 </body>

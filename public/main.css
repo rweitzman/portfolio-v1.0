@@ -97,7 +97,7 @@ header {
     height: 100%;
     background: linear-gradient(180deg, 
     var(--bgTransparent) 0%,
-    var(--bgTransparent) 85%,
+    var(--bgTransparent) 75%,
     var(--bg) 100%);
     z-index: 1;
 }
@@ -128,6 +128,8 @@ header {
     height: auto;
     margin: 10px;
     border-radius: 50%;
+    border: #181818;
+    border-width: 5px;
 }
 
 .profile p {

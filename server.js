@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require('express');
 const app = express();
 const nodemailer = require("nodemailer");
+const PORT = 3000;
 
 app.set("view engine", "ejs");
 app.use(express.static('public'));
@@ -52,6 +53,9 @@ app.post("/message", async function (req, res) {
   
 });
 
-app.listen(process.env.PORT, () => {
+// app.listen(process.env.PORT, () => {
+//   console.log(`Listening at localhost:3000`);
+// });
+app.listen(PORT, () => {
   console.log(`Listening at localhost:3000`);
 });

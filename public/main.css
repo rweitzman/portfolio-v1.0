@@ -1,14 +1,19 @@
 :root {
     --link: #E79265;
     --flourish: #E69B9B; 
-    --focus: #c7cebb; /* bulk */
+    --focus: rgba(89, 51, 31, 0.45);
+    --shade: rgba(24, 24, 24, 0.05); /* bulk */
+    --shade2: rgba(24, 24, 24, 0.20);
     --focusTransparent: #9da68d00;
     --bg: #ffffff; /* bulk */
-    --bgTransparent: #ffffff00;
+    --bgtransparent: rgba(255,255,255,0.5);
     --inactive: #F0EFEB; 
     --accent: #ECCE9C;
     --shadow: #3E483F;
     --text: #181818;
+    --hover: rgba(228, 130, 79, 0.35);
+    --hover2:rgb(205, 209, 222);
+    --hover3:rgba(205, 209, 222, 0.5);
 }
 
 * {
@@ -24,15 +29,17 @@ body {
     background-color: var(--bg);
     min-height: 100vh;
     width: 100%;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 nav {
     border: none;
-    border-bottom: 1px solid var(--link);
+    border-bottom: 1px solid var(--text);
     position: fixed;
     height: 40px;
     width: 100%;
-    background-color: var(--link);
+    background-color: var(--text);
     display: flex;
     align-items: center;
     padding: 5px;
@@ -46,6 +53,19 @@ nav.down {
     transition: all .5s ease;
 }
 
+nav a {
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: var(--bg);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--link);
+}
+
 nav div {
     position: absolute;
     top: 0;
@@ -53,12 +73,12 @@ nav div {
 }
 
 nav i {
-    color: var(--link);
+    color: var(--bg);
     font-size: 20px;
 }
 
 nav i:hover {
-    color: var(--bg);
+    color: #E79265;
 }
 
 header {
@@ -68,7 +88,7 @@ header {
     background-color: var(--bg);
     margin-bottom: 0px;
     overflow: hidden;
-    height: 450px;
+    height: 600px;
 }
 
 .splash {
@@ -78,7 +98,7 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: blur(2px);
+    filter: blur(3px);
 }
 
 .splash img {
@@ -113,7 +133,7 @@ header {
     opacity: 0;
     transition: all 1s ease;
     z-index: 2;
-    height: 0;
+    height: 0px;
     overflow: hidden;
     
 }
@@ -122,15 +142,36 @@ header {
     width: 100%;
     text-align: center;
     margin: 10px;
-    font-size: 95px;
+    font-size: 55px;
     font-family: 'Monda', sans-serif;
-    color:#181818;
+    font-family: 'Raleway', sans-serif;
+    color: #181818;
+    text-shadow: 0px 0px 0px #181818;
+    font-weight: 900;
+}
+
+.name1 {
+    height: 115px;
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+    font-size: 45px;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    color: #181818;
+    text-shadow: 0px 0px 0px #181818;
+    font-weight: 900;
 }
 .profile.down {
-    margin-top: 180px;
+    background: radial-gradient(ellipse at center, var(--bgtransparent) 25%, transparent 75%);
+    margin-top: 160px;
     opacity: 1;
-    transition: all 1s ease;
-    height: 700px;
+    transition: all 1.8s ease;
+    height: 500px;
+    width: 1100px;
+    /* background-color: var(--shade2);  */
+    padding-top: 80px;
+
 }
 
 .profile p {
@@ -139,6 +180,7 @@ header {
     margin: 1px;
     font-size: 30px;
     font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 /* .profile h1 {
@@ -153,28 +195,32 @@ header {
     font-size: 40px;
     /* font-weight: 300; */
     font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .profile a {
     width: 30%;
     height: 75px;
     margin: 15px auto;
-    background-color: var(--link);
+    background-color: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 3px solid var(--text);
     border-radius: 5px;
     text-decoration: none;
     color: #181818;
-    font-size: 1.5em;;
+    font-size: 1.7em;;
     transition: all .25s ease;
     font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
     
 }
 
 .profile a:hover {
     transform: scale(.8);
     transition: all .25s ease;
+    background-color: var(--hover);
 }
 
 main {
@@ -190,73 +236,94 @@ section {
     width: 100%;
 }
 
-.values {
-    /* margin-top: 100px; */
-    /* background-color: var(--focus); */
-    /* border-radius: 15px; */
-}
-
 .values h3 {
     font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 #values-list {
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
     display: flex;
     /* margin: 10px 10px; */
 }
 
 #values-list div {
     width: 25%;
+    padding: 5px;
+    margin: 5px;
     text-align: center;
+    /* border: 1px solid var(--focus);*/
 }
 
-#values-list div i {    font-size: 70px;
+#values-list div i {    
+    font-size: 70px;
     margin: 20px;
-    color: var(--shadow);
+    color: var(--text);
 }
 
 #values-list div h3, #values-list div p {
     margin: 5px;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .about {
-    /* background-color: var(--focus); */
+    background-color: var(--shade);
     /* border-radius: 15px; */
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
 }
 
-.about img {
-    width: 30%;
-    height: 30%;
-    margin: 10px;
-    border: 5px solid #181818;
-    border-radius: 50%;
+#about-card {
+    width: 430px;
+    height: 530px;
+    overflow: auto;
+    margin-right:10px;
+    /* padding: 20px; */
+    background-color: var(--bg);
+    border-radius: 15px;
+    /* border: 1px solid var(--focus); */
 }
 
-/* .about i {
-    width: 30%;
-    font-size: 175px;
+.about img {
+    overflow: hidden;
+    width: 500px;
+    height: 450px;
+    margin-right: 110px;
+    /* border: 2px solid #181818; */
+    border-top: 15px;
+}
+
+.about i {
+    width: 5%;
+    font-size: 10px;
     color: var(--accent);
     text-align: center;
     text-shadow: 10px 10px var(--shadow);
-} */
+}
 
 .about div {
     width: 60%;
     margin: 10px auto;
     font-family: 'Monda', sans-serif;
-    font-size: 1.8em;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+}
+
+.about h1, .about p {
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .work {
     margin-top: 20px;
-    /* background-color: var(--focus); */
+    background-color: var(--shade);
     /* border-radius: 15px; */
     padding-top: 0;
-    height: 400px;
+    height: 500px;
 }
 
 .work h2 {
@@ -270,6 +337,7 @@ section {
     padding: 10px 5px;
     z-index: 1;
     font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 3em;
     text-align: left;
     margin-bottom: 50px;
@@ -279,6 +347,8 @@ section {
     font-size: 20px;
     margin-left: 30px;
     font-size: 1.8em;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
     
 }
 /* 
@@ -295,10 +365,12 @@ section {
     font-size: 1.8em;
     margin: 10px 0;
     margin-left: 30px;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .contact {
-    background-color: var(--bg);
+    background-color: var(--shade);
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -317,6 +389,7 @@ section {
     padding: 10px 5px;
     z-index: 1;
     font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 3em;
     text-align: left;
     margin-bottom: 50px;
@@ -356,6 +429,7 @@ section {
     padding: 10px 5px;
     z-index: 1;
     font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 3em;
     text-align: left;
     margin-bottom: 30px;
@@ -399,11 +473,11 @@ ul::-webkit-scrollbar-track {
 }
 
 ul::-webkit-scrollbar-thumb {
-    background: var(--accent);
+    background: var(--shade);
     border-radius: 5px;
 }
 ul::-webkit-scrollbar-thumb:hover {
-    background: var(--flourish);
+    background: var(--hover2);
 }
 
 li {
@@ -418,7 +492,7 @@ li {
 }
 
 li:hover {
-    background-color: var(--flourish);
+    background-color: var(--hover3);
     box-shadow: 1px 1px 1px var(--shadow);
     transform: scale(1.2);
     transition: all .25s ease;
@@ -505,6 +579,7 @@ li img {
     padding: 10px 5px;
     z-index: 1;
     font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 3em;
     text-align: left;
     margin-bottom: 80px; 
@@ -535,17 +610,20 @@ li img {
     margin: 5px;
     font-size: 1.6em;
     font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .project-card>a {
     display: block;
     margin: 5px;
     font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 a h3 {
     color: var(--link);
     font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .project-card a {
@@ -553,6 +631,7 @@ a h3 {
     text-decoration: none;
     font-size: 1.6em;
     font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .project-card video {
@@ -570,6 +649,7 @@ a h3 {
 .project-card p {
     padding-top: 10px;
     font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 form {
@@ -579,6 +659,7 @@ form {
     align-items: center;
     flex-wrap: wrap;
     font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 input, textarea {
@@ -588,12 +669,14 @@ input, textarea {
     border-radius: 5px;
     border: 1px solid var(--focus);
     font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 form p {
     width: 100%;
     text-align: center;
     font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 #submit-button {
@@ -602,6 +685,7 @@ form p {
     background-color: var(--link);
     color: #181818;
     font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 footer {
@@ -612,6 +696,7 @@ footer {
     align-items: center;
     color: var(--bg);
     font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 footer a {
@@ -620,6 +705,7 @@ footer a {
     color: var(--bg);
     font-size: 15px;
     font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 footer a:hover {
@@ -630,11 +716,13 @@ a i {
     margin: 10px;
     color: var(--bg);
     font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 h2 {
     text-align: center;
     font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 

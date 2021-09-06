@@ -289,8 +289,8 @@ section {
 }
 
 #about-card {
-    width: 460px;
-    height: 540px;
+    width: 450px;
+    height: 520px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -301,24 +301,30 @@ section {
     border-radius: 15px;
     border: 2px solid #181818;
     box-shadow: 4px 6px 7px 1px rgba(0, 0, 0, 0.35);
-    ju
+    
 } 
 
 .about img {
-    overflow: hidden;
+    overflow: auto;
     width: auto;
     height: auto;
-    /* margin-right: 110px; */
-    /* border: 2px solid #181818; */
     border-top: 15px;
+    /* margin-left: 5px; */
+}
+
+#about-info {
+    height: 100px;
+    display:grid;
+    place-items: center;
+    margin-left: 10px;
+    padding-top:10px;
 }
 
 #about-name {
     justify-content: center;
     text-align: center;
-    margin-top: 30px;
     line-height: 20px;
-    /* padding-top: 50px; */
+    
 }
 
 .about a {
@@ -327,47 +333,62 @@ section {
 }
 
 #a-name {
-    font-size: 2.2em;
+    font-size: 1.6em;
     justify-content: center;
     height: 100px;
-    padding-top: 90px;
+    padding-top: 100px;
 }
 
 #a-email {
+    margin-top: 40px;;
     line-height: 35px;
-
 }
 #about-icons {
+    display:flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: normal;
     justify-content: center;
-    padding-left:85px;
-    /* padding-bottom: 20px; */
-    height:auto;
-    /* padding-bottom: 20px; */
-
+    margin-top: 0px;
 }
 
 .about i {
-    height: 20px;
-    width: 10%;
-    font-size: 30px;
+    font-size: 25px;
     color: var(--accent);
     text-align: center;
     text-shadow: 0px 0px 0px var(--shadow);
-    /* padding-bottom: 20px; */
 }
 
 .about div {
-    width: 60%;
-    margin: 10px auto;
+    width: 80%;
+    margin: 10px auto auto 50px;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
     font-size: 1em;
+}
+
+.quote {
+    padding: 100px 0 0 0;
+}
+
+.quote-text {
+    /* width:40%; */
+}
+
+.quote b {
+    color:#2465F1
 }
 
 .about h1, .about p {
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
     font-size: 1.5em;
+    text-align: center;
+}
+
+.fa-quote-right {
+    margin-left: 1100px;
 }
 
 .work {

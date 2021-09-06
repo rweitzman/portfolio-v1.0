@@ -65,7 +65,7 @@
         <section class="about" id="about">
             <div id="about-card">
                 <img src="/img/portfolio-selfie.png" alt="Profile Pcture of Robin Weitzman">
-                <div id="about-info">
+                <div class="about-info">
                     <div id="about-name">
                         <a id="a-name" href="">Robin Weitzman</a>
                         <a id="a-email" href=""><em>robinweitzman3579@gmail.com</em></a>
@@ -75,6 +75,8 @@
                        <a href="https://www.linkedin.com/in/robinweitzman1/"><i class="fab fa-linkedin-in"></i></a>
                    </div>
                 </div>
+                
+               
             </div>
             
         
@@ -82,18 +84,18 @@
                 <i class="fa fa-quote-left" aria-hidden="true"></i>
                 <div class="quote-text">
                    
-                     <p>
-                        Hi! I'm <a>Robin Weitzman</a>, a Full-Stack Software and Mobile Application Engineer, residing in Santa Clara, CA, USA. I am highly capable of creating full-stack applications from beginning to production. 
-                     </p><br>
-                  
-                     <p>
-                         Over the past 2 years, I have changed careers into <a>software developement</a>, self-taught coding, graduated a Software Engineering Immersive bootcamp from General Assembly, and I have also co-authored a mobile dating application for a local, small startup. 
-                     </p><br>
-                     <p>
-                        As a retired farm-to-fork chef, I draw on my motivational desire to create positive change in the world through my creation of software applications. to help me create <a>wonderful and rich applications</a> to give users amazing experiences.
-                    </p>
+                    <p>
+                       Hi! I'm <a>Robin Weitzman</a>, a Full-Stack Software and Mobile Application Engineer, residing in Santa Clara, CA, USA. I am highly capable of creating full-stack applications from beginning to production. 
+                    </p><br>
+                 
+                    <p>
+                        Over the past 2 years, I have changed careers into <a>software developement</a>, self-taught coding, graduated a Software Engineering Immersive bootcamp from General Assembly, and I have also co-authored a mobile dating application for a local, small startup. 
+                    </p><br>
+                    <p>
+                       As a retired farm-to-fork chef, I draw on my motivational desire to create positive change in the world through my creation of software applications. to help me create <a>wonderful and rich applications</a> to give users amazing experiences.
+                   </p>
 
-                </div>
+               </div>
                 <i class="fa fa-quote-right" aria-hidden="true"></i>
             </div>
         </section>
@@ -212,7 +214,7 @@
         //this drops down the nav bar when you scroll 50% down the header
         let $nav = $("nav");
         $(window).on("scroll", function () {
-            if ($(window)[0].scrollY > $("header")[0].scrollHeight * .9) $nav.addClass("down");
+            if ($(window)[0].scrollY > $("header")[0].scrollHeight * .5) $nav.addClass("down");
             else $nav.removeClass("down");
         });
 

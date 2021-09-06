@@ -289,8 +289,8 @@ section {
 }
 
 #about-card {
-    width: 450px;
-    height: 520px;
+    width: 30%;
+    height: auto;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -301,102 +301,89 @@ section {
     border-radius: 15px;
     border: 2px solid #181818;
     box-shadow: 4px 6px 7px 1px rgba(0, 0, 0, 0.35);
-    
+    /* margin-right: 40px; */
 } 
 
 .about img {
-    overflow: auto;
+    overflow: hidden;
     width: auto;
     height: auto;
     border-top: 15px;
-    /* margin-left: 5px; */
 }
 
-#about-info {
+.about-info {
     height: 100px;
-    display:grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
     margin-left: 10px;
-    padding-top:10px;
+    padding-top: 10px;
 }
 
 #about-name {
-    justify-content: center;
     text-align: center;
     line-height: 20px;
-    
 }
 
 .about a {
     text-decoration: none;
-    height: 50px;
+    /* height: 50px; */
 }
 
 #a-name {
     font-size: 1.6em;
     justify-content: center;
-    height: 100px;
-    padding-top: 100px;
+    /* height: 100px; */
+    /* padding-top: 90px; */
 }
 
 #a-email {
-    margin-top: 40px;;
-    line-height: 35px;
+    padding-top: 10px;
+    /* font-size:1.3em;
+    line-height: 35px; */
+
 }
 #about-icons {
-    display:flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-evenly;
-    align-items: normal;
-    justify-content: center;
-    margin-top: 0px;
+    padding-left:35%;
+    /* height:auto;  */
 }
 
 .about i {
-    font-size: 25px;
+    height: 20px;
+    width: 10%;
+    font-size: 30px;
     color: var(--accent);
     text-align: center;
     text-shadow: 0px 0px 0px var(--shadow);
 }
 
-.about div {
-    width: 80%;
-    margin: 10px auto auto 50px;
+.quote{
+    width: 70%;
+    margin: 10px auto;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
     font-size: 1em;
-}
-
-.quote {
-    padding: 80px 0 0 0;
+    justify-content: center;
 }
 
 .quote-text {
-    /* width:40%; */
-}
-
-.quote a {
-    text-shadow: 0px 1px 2px #181818;
-    text-decoration: none;
+    display: grid;
+    place-items: center;
+    padding-left: 50px;
+    text-align: center;
 }
 
 .about h1, .about p {
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
-    font-size: 1.6em;
-    text-align: center;
-    line-height: 35px;
+    font-size: 1.5em;
+    justify-content: center;
 }
-
 .fa-quote-right {
-    margin-left: 1100px;
+    margin-left: 95%;
 }
-
 .work {
     margin-top: 20px;
     background-color: var(--shade);
-    /* border-radius: 15px; */
     padding-top: 0;
     height: 500px;
 }
@@ -405,7 +392,6 @@ section {
     position: relative;
     left: 25px;
     top: 0px;
-    /* background-color: var(--accent); */
     width: 700px;
     height: 50px;
     border-radius: 5px;
@@ -426,15 +412,7 @@ section {
     font-family: 'Raleway', sans-serif;
     
 }
-/* 
-.work h4 {
-    margin-top: 15px;
-    float: right;
-    margin-right: 40px;
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    margin-left: 30px;
-} */
+
 
 .work p {
     font-size: 1.8em;
@@ -647,7 +625,7 @@ li img {
     position: relative;
     left: 25px;
     top: 20px;
-    /* background-color: var(--accent); */
+    background-color: var(--accent);
     width: 350px;
     height: 50px;
     border-radius: 5px;

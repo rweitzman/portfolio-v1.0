@@ -35,7 +35,7 @@ body {
 
 nav {
     border: none;
-    border-bottom: 1px solid var(--text);
+    border-bottom: 3px solid var(--link);
     position: fixed;
     height: 40px;
     width: 100%;
@@ -60,7 +60,8 @@ nav a {
     margin-right: 5px;
     color: var(--bg);
     text-decoration: none;
-    font-size: 1.4em;;
+    font-size: 1.4em;
+    transition: all 500ms ease;
 }
 
 nav a:hover {
@@ -185,17 +186,11 @@ header {
     font-family: 'Raleway', sans-serif;
 }
 
-/* .profile h1 {
-    font-size: 60px;
-    font-family: 'Lato', sans-serif;
-} */
-
 .profile-add {
     width: 100%;
     text-align: center;
     margin: 1px;
     font-size: 40px;
-    /* font-weight: 300; */
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
 }
@@ -216,6 +211,7 @@ header {
     transition: all .25s ease;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
+    transition: all 500ms ease;
     
 }
 
@@ -233,11 +229,47 @@ main {
 section {
     /* margin-top: 30px; */
     min-height: 100px;
-    padding: 60px;
+    padding: 0px 30px 30px 30px;
     position: relative;
     width: 100%;
     background-color: rgba(24, 24, 24, 0.01);
 }
+
+.values-header {
+    display: grid;
+    place-items: center;
+    margin-bottom: 15px;
+}
+
+.values-header h1:hover {
+    transform: scale(1.1);
+    transition: all .25s ease;
+    text-shadow: 0px 3px 4px #181818;
+}
+
+.values h1 {
+    width: auto;
+    height: auto;
+    z-index: 1;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3em;
+    text-align: center;
+    justify-content: center;
+    transition: 400ms linear;
+}
+
+.values hr {
+    border: 2px solid #181818;
+    width: 7%;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .values hr:hover {
+    transform: translate(-120px);
+  }
 
 .values h3 {
     font-family: 'Monda', sans-serif;
@@ -268,6 +300,12 @@ section {
     /* text-shadow: 0px 0px 6px #E79265; */
 }
 
+#values-list i:hover {
+    transform: scale(1.1);
+    transition: all .25s ease;
+    text-shadow: 0px 3px 4px var(--link);
+}
+
 #values-list div h3, #values-list div p {
     margin: 5px;
     font-family: 'Monda', sans-serif;
@@ -280,12 +318,14 @@ section {
 }
 .about {
     background-color: var(--shade);
-    /* border-radius: 15px; */
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
     justify-content: center;
     flex-direction: row;
+    margin-top:30px;
+    padding-top:60px;
+    
 }
 
 #about-card {
@@ -301,8 +341,13 @@ section {
     border-radius: 15px;
     border: 2px solid #181818;
     box-shadow: 4px 6px 7px 1px rgba(0, 0, 0, 0.35);
-    /* margin-right: 40px; */
+    transition: all 300ms ease;
 } 
+
+#about-card:hover{
+    transform: scale(1.05);
+    transition: all 300ms ease;
+}
 
 .about img {
     overflow: hidden;
@@ -357,12 +402,16 @@ section {
 }
 
 .quote{
-    width: 70%;
+    width: 60%;
     margin: 10px auto;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
     font-size: 1em;
     justify-content: center;
+}
+.quote h1 {
+    padding-left: 45%;
+    padding-bottom: 5%;
 }
 
 .quote-text {
@@ -372,7 +421,7 @@ section {
     text-align: center;
 }
 
-.about h1, .about p {
+.about p {
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
     font-size: 1.5em;
@@ -384,27 +433,49 @@ section {
 .work {
     margin-top: 20px;
     background-color: var(--shade);
-    padding-top: 0;
-    height: 500px;
+    padding-top: 60px;
+    height: 860px;
 }
 
-.work h2 {
-    position: relative;
-    left: 25px;
-    top: 0px;
-    width: 700px;
-    height: 50px;
-    border-radius: 5px;
-    padding: 10px 5px;
+.work-header {
+    display: grid;
+    place-items: center;
+    margin-bottom: 15px;
+}
+
+.work-header h1:hover {
+    transform: scale(1.1);
+    transition: all .25s ease;
+    text-shadow: 0px 3px 4px #181818;
+}
+
+.work h1 {
+    width: auto;
+    height: auto;
     z-index: 1;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
     font-size: 3em;
-    text-align: left;
-    margin-bottom: 50px;
+    text-align: center;
+    /* margin-bottom: */
+    justify-content: center;
+    transition: 400ms linear;
 }
 
+.work hr {
+    border: 2px solid #181818;
+    width: 17.5%;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .work hr:hover {
+    transform: translate(-120px);
+  }
+
 .work h3 {
+    width: 900px;
     font-size: 20px;
     margin-left: 30px;
     font-size: 1.8em;
@@ -412,8 +483,6 @@ section {
     font-family: 'Raleway', sans-serif;
     
 }
-
-
 .work p {
     font-size: 1.8em;
     margin: 10px 0;
@@ -422,8 +491,147 @@ section {
     font-family: 'Raleway', sans-serif;
 }
 
+.work-info {
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+}
+
+.detailed-info a {
+    width: 40%;
+    height: 75px;
+    margin: 15px auto;
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--text);
+    border-radius: 5px;
+    text-decoration: none;
+    color: #181818;
+    font-size: 1.7em;;
+    transition: all .25s ease;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    transition: all 500ms ease;
+}
+
+.detailed-info a:hover {
+    transform: scale(.8);
+    transition: all .25s ease;
+    background-color: var(--hover);
+}
+
+.detailed-info {
+    width: 70%;
+}
+
+.work-image {
+    width: 30%;
+}
+/*Image Carousel*/
+.slideshow-container {
+  width: 60%;
+  height: 60%;
+  position: relative;
+  margin: 0px auto 40px auto;
+}
+
+/* Make the images invisible by default */
+.Containers {
+  /* display: none; */
+}
+
+/* forward & Back buttons */
+.Back, .forward {
+  cursor: pointer;
+  position: absolute;
+  top: 48%;
+  width: auto;
+  margin-top: -23px;
+  padding: 17px;
+  color: grey;
+  font-weight: bold;
+  font-size: 19px;
+  transition: 0.4s ease;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
+}
+
+/* Place the "forward button" to the right */
+.forward {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+/*when the user hovers,add a black background with some little opacity */
+.Back:hover, .forward:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption Info */
+/* .Info {
+  color: #e3e3e3;
+  font-size: 16px;
+  padding: 10px 14px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+} */
+
+/* Worknumbering (1/3 etc) */
+/* .MessageInfo {
+  color: #f2f2f3;
+  font-size: 14px;
+  padding: 10px 14px;
+  position: absolute;
+  top: 0;
+} */
+
+/* The circles or bullets and indicators */
+/* .dots {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 3px;
+  background-color: #acc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+} */
+
+.enable, .dots:hover {
+  background-color: #717161;
+}
+
+/* Faint animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+.work-image img {
+    border-radius: 40px;
+    /* border: 5px solid #181818;; */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 .contact {
-    background-color: var(--shade);
+    background-color:var(--shade);
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -431,11 +639,43 @@ section {
     justify-content: center;
 }
 
+.contact-header {
+    display: grid;
+    place-items: center;
+    margin-bottom: 15px;
+}
+
+/* .contact-header h1:hover {
+    transform: scale(1.1);
+    transition: all .25s ease;
+    text-shadow: 0px 3px 4px #181818;
+} */
+
+.contact h1 {
+    width: auto;
+    height: auto;
+    z-index: 1;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3em;
+    text-align: center;
+    justify-content: center;
+    /* transition: 400ms linear; */
+}
+
+/* .contact hr {
+    border: 2px solid #181818;
+    width: 72%;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: all 0.5s ease-in-out; 
+  } */
+
+  .contact hr:hover {
+    /* transform: translate(-120px); */
+  }
+
 .contact h2 {
-    position: relative;
-    left: 25px;
-    top: 0px;
-    /* background-color: var(--accent); */
     width: 700px;
     height: 50px;
     border-radius: 5px;
@@ -444,8 +684,13 @@ section {
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
     font-size: 3em;
-    text-align: left;
+    text-align: center;
     margin-bottom: 50px;
+}
+
+.contact p {
+    width: 99%;
+    margin-bottom: 10px;
 }
 
 .contact i {
@@ -462,33 +707,66 @@ section {
 }
 
 .skills>div {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     width: 100%;
-    height: 220px;
+    /* height: 220px; */
     position: relative;
     border-radius: 5px;
     overflow: hidden;
     margin-bottom: 30px;
 }
 
-.skills h2 {
-    position: relative;
-    left: 25px;
-    top: 20px;
-    /* background-color: var(--accent); */
-    width: 350px;
-    height: 50px;
-    border-radius: 5px;
-    padding: 10px 5px;
+.skills-header {
+    display: grid;
+    place-items: center;
+    margin-bottom: 15px;
+    padding-top:60px;
+}
+
+.skills-header h1:hover {
+    transform: scale(1.1);
+    transition: all .25s ease;
+    text-shadow: 0px 3px 4px #181818;
+}
+
+.skills h1 {
+    width: auto;
+    height: auto;
     z-index: 1;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
     font-size: 3em;
-    text-align: left;
-    margin-bottom: 30px;
+    text-align: center;
+    transition: 400ms linear;
+    justify-content: center;
+}
+
+.skills hr {
+    border: 2px solid #181818;
+    width: 6%;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: all 0.5s ease-in-out;  
+  }
+
+  .skills hr:hover {
+    transform: translate(120px);
+  }
+
+.skills h2 {
+    width: auto;
+    height: auto;
+    z-index: 1;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.3em;
+    text-align: center;
 }
 
 ul {
+    /* display:flex;
+    flex-direction: column; */
+    justify-content: center;
     text-align: center;
     width: 100%;
     overflow-x: auto;
@@ -618,8 +896,44 @@ li img {
 }
 
 .projects {
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
+
+.projects-header {
+    display: grid;
+    place-items: center;
+    margin-bottom: 15px;
+}
+
+.projects-header h1:hover {
+    transform: scale(1.1);
+    transition: all .25s ease;
+    text-shadow: 0px 3px 4px #181818;
+}
+
+.projects h1 {
+    width: auto;
+    height: auto;
+    z-index: 1;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3em;
+    text-align: center;
+    transition: 400ms linear;
+    justify-content: center;
+}
+
+.projects hr {
+    border: 2px solid #181818;
+    width: 12.5%;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .projects hr:hover {
+    transform: translate(120px);
+  }
 
 .projects h2 {
     position: relative;
@@ -628,7 +942,7 @@ li img {
     background-color: var(--accent);
     width: 350px;
     height: 50px;
-    border-radius: 5px;
+    border-radius: 5px; 
     padding: 10px 5px;
     z-index: 1;
     font-family: 'Monda', sans-serif;
@@ -645,18 +959,18 @@ li img {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 .project-card {
-    width: calc(50% - 40px);
+    width: calc(30% - 15px);
     height: 500px;
     overflow: auto;
-    margin: 10px;
+    /* margin: 10px; */
     padding: 20px;
     background-color: var(--bg);
-    border-radius: 15px;
-    border: 1px solid var(--focus);
+    /* border-radius: 15px; */
+    /* border: 1px solid var(--focus); */
 }
 
 .project-card>h3 {
@@ -717,12 +1031,40 @@ form {
 
 input, textarea {
     width: 100%;
+    height: auto;
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid var(--focus);
+    border: 1px solid #181818;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+}
+
+input[type="submit"]{
+    width: 30%;
+    height: 75px;
+    margin: 15px auto;
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--text);
+    border-radius: 5px;
+    text-decoration: none;
+    color: #181818;
+    font-size: 1.7em;;
+    transition: all .25s ease;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+input[type="submit"]:hover {
+    transform: scale(.8);
+    transition: all .25s ease;
+    background-color: var(--hover);
 }
 
 form p {
@@ -735,15 +1077,21 @@ form p {
 #submit-button {
     width: 50%;
     cursor: pointer;
-    background-color: var(--link);
+    background-color: var(--hover);
+    /* background-color: var(--link); */
     color: #181818;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
 }
 
+#submit-button:hover {
+    transform: scale(.8);
+    transition: all .25s ease;
+    background-color: transparent;
+}
 footer {
     height: 75px;
-    background-color: var(--shadow);
+    background-color: #181818;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -759,6 +1107,7 @@ footer a {
     font-size: 15px;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
+    transition: all 500ms ease;
 }
 
 footer a:hover {

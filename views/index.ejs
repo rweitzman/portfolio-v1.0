@@ -50,22 +50,22 @@
                 <div>
                     <i class="fa fa-sitemap" aria-hidden="true"></i>
                     <h3>Highly Detailed</h3>
-                    <p>Meticulous with software engineering best practices to ensure smooth software  production</p>
+                    <p>Meticulous with software <a>engineering best practices</a> to ensure smooth software  production</p>
                 </div>
                 <div>
                     <i class="fas fa-people-carry"></i>
                     <h3>Team Player</h3>
-                    <p>We all succed when we succeed together - team work really does make the dream work</p>
+                    <p>We all succed when <a>we succeed together</a> - team work really does make the dream work</p>
                 </div>
                 <div>
                     <i class="fas fa-lightbulb"></i>
                     <h3>Problem Solving</h3>
-                    <p>Fervent, enthusiastic and tenacious problem solver</p>
+                    <p>Fervent, <a>enthusiastic</a> and tenacious problem solver</p>
                 </div>
                 <div>
                     <i class="fas fa-book-reader"></i>
                     <h3>Avid Learner</h3>
-                    <p>Ferocious learner with a passion for a deeper understanding and a zest for learning new concepts</p>
+                    <p>Ferocious learner with a <a>passion</a> for a deeper understanding and a zest for <a>learning new concepts</a></p>
                 </div>
             </div>
         </section>
@@ -318,12 +318,23 @@
             else $nav.removeClass("down");
         });
 
-        let $section = $("section");
-        $(window).on("scroll", function () {
-            if ($(window)[0].scrollY > $("section")[0].scrollHeight * .1) $section.addClass("left");
-            else $section.removeClass("left");
-        });
-
+        // MIGHT be adding some animation to the header-underlines CHECK
+        let hr = document.querySelector('hr')
+        hr.addEventListener('mouseover', blueText)
+        
+        hr.addEventListener('mouseout', middle)
+        
+        function myRemoveFunct() {  
+        hr.removeEventListener('mouseover', blueText);
+        hr.addEventListener('mouseover', middle)
+        }
+        function blueText(){
+        hr.style.cursor = "pointer"
+        hr.style.transform = "translate(-120px)"
+        }
+        function middle(){
+        hr.style.transform = "translate(5px)"
+        }
         // this initiates the profile animation
         $(".profile").addClass("down");
     </script>

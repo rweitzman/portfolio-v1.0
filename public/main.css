@@ -243,6 +243,7 @@ section {
     transform: scale(1.1);
     transition: all .25s ease;
     text-shadow: 0px 3px 4px var(--shade2);
+    cursor:pointer;
 }
 
 .values h1 {
@@ -258,6 +259,7 @@ section {
 }
 
 .values hr {
+    margin: 15px;
     border: 2px solid #181818;
     width: 7%;
     border-radius: 5px;
@@ -265,14 +267,35 @@ section {
     transition: all 0.5s ease-in-out;
   }
 
-  .values hr:hover {
+  /* .values>hr.left {
     transform: translate(-120px);
-  }
+    cursor:pointer;
+  } */
 
 .values h3 {
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
     font-size: 1.7em;
+    transition: all 0.5s ease-in-out;
+    color: black;
+    
+}
+
+.values h3:hover {
+    transform: scale(1.1);
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.45);
+    cursor:pointer;
+}
+
+.values a {
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.values a:hover {
+    transform: scale(1.1);
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.45);
+    cursor:pointer;
 }
 
 #values-list {
@@ -290,7 +313,7 @@ section {
 
 #values-list div i {    
     font-size: 70px;
-    margin: 0 40px;
+    margin: 10px 40px;
     color: var(--text);
     text-shadow: 0px 3px 4px #181818;
 }
@@ -299,12 +322,19 @@ section {
     transform: scale(1.1);
     transition: all .25s ease;
     text-shadow: 0px 3px 4px var(--link);
+    cursor:pointer;
 }
 
-#values-list div h3, #values-list div p {
-    margin: 5px;
+#values-list div h3 {
+    margin: 15px 0 10px 0;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;    
+} 
+#values-list div p {
+    margin: 5px 0;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
+    line-height: 1.5em;
 }
 
 #values-list p {

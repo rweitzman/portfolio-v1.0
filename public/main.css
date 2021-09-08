@@ -45,12 +45,13 @@ nav {
     padding: 5px;
     z-index: 20;
     top: -40px;
-    transition: all .5s ease;
+    transition: all .7s ease;
 }
 
 nav.down {
     top: 0;
-    transition: all .5s ease;
+    transition: all .7s ease;
+    height:60px;
 }
 
 nav a {
@@ -172,7 +173,6 @@ header {
     transition: all 1.8s ease;
     height: 500px;
     width: 1100px;
-    /* background-color: var(--shade2);  */
     padding-top: 80px;
 
 }
@@ -227,9 +227,7 @@ main {
 }
 
 section {
-    /* margin-top: 30px; */
-    min-height: 100px;
-    padding: 0px 30px 30px 30px;
+    padding: 40px;
     position: relative;
     width: 100%;
     background-color: rgba(24, 24, 24, 0.01);
@@ -244,7 +242,7 @@ section {
 .values-header h1:hover {
     transform: scale(1.1);
     transition: all .25s ease;
-    text-shadow: 0px 3px 4px #181818;
+    text-shadow: 0px 3px 4px var(--shade2);
 }
 
 .values h1 {
@@ -281,7 +279,6 @@ section {
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
     display: flex;
-    /* margin: 10px 10px; */
 }
 
 #values-list div {
@@ -289,15 +286,13 @@ section {
     padding: 5px;
     margin: 5px;
     text-align: center;
-    /* border: 1px solid var(--focus);*/
 }
 
 #values-list div i {    
     font-size: 70px;
-    margin: 20px;
+    margin: 0 40px;
     color: var(--text);
     text-shadow: 0px 3px 4px #181818;
-    /* text-shadow: 0px 0px 6px #E79265; */
 }
 
 #values-list i:hover {
@@ -316,16 +311,14 @@ section {
     line-height: 1.5em;
     font-size: 1.2em;
 }
+
 .about {
     background-color: var(--shade);
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
     justify-content: center;
-    flex-direction: row;
-    margin-top:30px;
-    padding-top:60px;
-    
+    flex-direction: row;    
 }
 
 #about-card {
@@ -335,18 +328,18 @@ section {
     flex-direction: column;
     flex-wrap: nowrap;
     overflow: hidden;
-    /* margin-right:10px; */
-    /* padding: 20px; */
     background-color: var(--bg);
     border-radius: 15px;
     border: 2px solid #181818;
-    box-shadow: 4px 6px 7px 1px rgba(0, 0, 0, 0.35);
+    box-shadow: 4px 6px 7px 1px rgba(0, 0, 0, 0.25);
     transition: all 300ms ease;
 } 
 
 #about-card:hover{
     transform: scale(1.05);
-    transition: all 300ms ease;
+    transition: all 500ms ease;
+    box-shadow: 4px 6px 7px 1px rgba(0, 0, 0, 0.45);
+    
 }
 
 .about img {
@@ -371,25 +364,19 @@ section {
 
 .about a {
     text-decoration: none;
-    /* height: 50px; */
 }
 
 #a-name {
     font-size: 1.6em;
     justify-content: center;
-    /* height: 100px; */
-    /* padding-top: 90px; */
 }
 
 #a-email {
     padding-top: 10px;
-    /* font-size:1.3em;
-    line-height: 35px; */
-
 }
+
 #about-icons {
     padding-left:35%;
-    /* height:auto;  */
 }
 
 .about i {
@@ -398,10 +385,14 @@ section {
     font-size: 30px;
     color: var(--accent);
     text-align: center;
+    transition: all 500ms ease;
+}
+
+.about i:hover {
     text-shadow: 0px 0px 0px var(--shadow);
 }
 
-.quote{
+.quote {
     width: 60%;
     margin: 10px auto;
     font-family: 'Monda', sans-serif;
@@ -409,6 +400,7 @@ section {
     font-size: 1em;
     justify-content: center;
 }
+
 .quote h1 {
     padding-left: 45%;
     padding-bottom: 5%;
@@ -419,6 +411,21 @@ section {
     place-items: center;
     padding-left: 50px;
     text-align: center;
+    transition: all 450ms ease;
+}
+
+/* .quote-text:hover {
+    transform: scale(1.02);
+} */
+
+.quote-text a {
+    text-decoration: none;
+    color:black;
+    transition: all 450ms ease;
+}
+
+.quote-text a:hover {
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.45);
 }
 
 .about p {
@@ -427,9 +434,24 @@ section {
     font-size: 1.5em;
     justify-content: center;
 }
-.fa-quote-right {
-    margin-left: 95%;
+
+.fa-quote-left {
 }
+
+.fa-quote-left:hover {
+    transform: scale(1.5);
+    text-shadow: 0px 3px 4px var(--shade2);
+}
+
+.fa-quote-right {
+    margin-left: 98%;
+}
+
+.fa-quote-right:hover {
+    transform: scale(1.5);
+    text-shadow: 0px 3px 4px var(--shade2);
+}
+
 .work {
     margin-top: 20px;
     background-color: var(--shade);
@@ -446,7 +468,7 @@ section {
 .work-header h1:hover {
     transform: scale(1.1);
     transition: all .25s ease;
-    text-shadow: 0px 3px 4px #181818;
+    text-shadow: 0px 3px 4px var(--shade2);
 }
 
 .work h1 {
@@ -457,7 +479,6 @@ section {
     font-family: 'Raleway', sans-serif;
     font-size: 3em;
     text-align: center;
-    /* margin-bottom: */
     justify-content: center;
     transition: 400ms linear;
 }
@@ -468,11 +489,11 @@ section {
     border-radius: 5px;
     margin-top: 10px;
     transition: all 0.5s ease-in-out;
-  }
+}
 
-  .work hr:hover {
+.work hr:hover {
     transform: translate(-120px);
-  }
+}
 
 .work h3 {
     width: 900px;
@@ -529,17 +550,25 @@ section {
 .work-image {
     width: 30%;
 }
+
 /*Image Carousel*/
 .slideshow-container {
   width: 60%;
   height: 60%;
   position: relative;
   margin: 0px auto 40px auto;
+  transition: all 500ms ease;
+}
+
+.slideshow-container:hover {
+    border-radius: 40px;
+    transform: scale(1.1);
+    box-shadow: 6px 6px 7px 1px rgba(0, 0, 0, 0.35); 
 }
 
 /* Make the images invisible by default */
 .Containers {
-  /* display: none; */
+    
 }
 
 /* forward & Back buttons */
@@ -623,11 +652,10 @@ section {
   to {opacity: 2}
 }
 .work-image img {
-    border-radius: 40px;
-    /* border: 5px solid #181818;; */
     width: 100%;
     height: 100%;
     overflow: hidden;
+    border-radius: 40px;
 }
 
 .contact {
@@ -707,9 +735,7 @@ section {
 }
 
 .skills>div {
-    /* margin-top: 20px; */
     width: 100%;
-    /* height: 220px; */
     position: relative;
     border-radius: 5px;
     overflow: hidden;
@@ -719,14 +745,13 @@ section {
 .skills-header {
     display: grid;
     place-items: center;
-    margin-bottom: 15px;
-    padding-top:60px;
+    padding-top:20px;
 }
 
 .skills-header h1:hover {
     transform: scale(1.1);
     transition: all .25s ease;
-    text-shadow: 0px 3px 4px #181818;
+    text-shadow: 0px 3px 4px var(--shade2);
 }
 
 .skills h1 {
@@ -759,13 +784,13 @@ section {
     z-index: 1;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
-    font-size: 2.3em;
+    font-size: 2em;
     text-align: center;
+    padding-top: 10px;
+    background-color: var(--hover3);
 }
 
 ul {
-    /* display:flex;
-    flex-direction: column; */
     justify-content: center;
     text-align: center;
     width: 100%;
@@ -775,8 +800,6 @@ ul {
     white-space: nowrap;
     padding: 20px 60px;
     padding-top: 40px;
-    /* background-color: var(--focus); */
-    /* border-radius: 5px; */
 }
 
 .skills-gradient {
@@ -786,11 +809,6 @@ ul {
     top: 0;
     width: 100%;
     height: calc(100% - 25px);
-    /* background: linear-gradient(90deg, 
-    var(--focus) 0%, 
-    var(--focusTransparent) 15%, 
-    var(--focusTransparent) 85%, 
-    var(--focus) 100%); */
 }
 
 /* width */
@@ -824,7 +842,6 @@ li {
 
 li:hover {
     background-color: var(--hover3);
-    box-shadow: 1px 1px 1px var(--shadow) 25%;
     transform: scale(1.2);
     transition: all .25s ease;
 }
@@ -908,7 +925,7 @@ li img {
 .projects-header h1:hover {
     transform: scale(1.1);
     transition: all .25s ease;
-    text-shadow: 0px 3px 4px #181818;
+    text-shadow: 0px 3px 4px var(--shade2);
 }
 
 .projects h1 {
@@ -959,18 +976,14 @@ li img {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    /* padding: 10px; */
 }
 
 .project-card {
     width: calc(30% - 15px);
     height: 500px;
     overflow: auto;
-    /* margin: 10px; */
     padding: 20px;
     background-color: var(--bg);
-    /* border-radius: 15px; */
-    /* border: 1px solid var(--focus); */
 }
 
 .project-card>h3 {
@@ -1078,7 +1091,6 @@ form p {
     width: 50%;
     cursor: pointer;
     background-color: var(--hover);
-    /* background-color: var(--link); */
     color: #181818;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;

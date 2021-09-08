@@ -37,10 +37,9 @@
             <a href="#work">View My Experience</a>
         </div>
     </header>
+
     <main>
-        
-       
-        <section class="values">
+        <section class="values" id="about">
             <div class="values-header"> 
                 <h1>ABOUT</h1>
                 <hr>
@@ -93,14 +92,14 @@
                 <h1>Who Am I?</h1>
                 <div class="quote-text">
                     <p>
-                      I love creating full-stack mobile and web applications from start to finish, all the way to production!
+                      I love creating <a>full-stack</a> mobile and web applications from start to finish, all the way to production!
                     </p><br>
                  
                     <p>
-                        I graduated from General Assembly in 2021, completing Software Engineering Immersive course. I've written and co-authored full-stack web and mobile applications.
+                        I graduated from General Assembly in 2021, completing Software Engineering Immersive course. I've written and <a>co-authored</a> full-stack web and mobile applications.
                     </p><br>
                     <p>
-                       I draw on my desire to create positive change in the world to create wonderful and rich applications to help solve problems that users love and enjoy!
+                       I draw on my desire to create positive change in the world to create wonderful and <a>rich applications</a> to help solve problems that users love and enjoy!
                    </p>
 
                </div>
@@ -294,6 +293,7 @@
             </form>
         </section>
     </main>
+    
     <footer>
         <!-- this needs to updated with your resume -->
         <!-- something like: href="/resume.pdf" -->
@@ -316,6 +316,12 @@
         $(window).on("scroll", function () {
             if ($(window)[0].scrollY > $("header")[0].scrollHeight * .9) $nav.addClass("down");
             else $nav.removeClass("down");
+        });
+
+        let $section = $("section");
+        $(window).on("scroll", function () {
+            if ($(window)[0].scrollY > $("section")[0].scrollHeight * .1) $section.addClass("left");
+            else $section.removeClass("left");
         });
 
         // this initiates the profile animation

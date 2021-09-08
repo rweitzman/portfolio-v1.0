@@ -39,13 +39,14 @@
     </header>
 
     <main>
-        <section class="values" id="about">
+        <div id="about"></div>
+        <section class="values" >
             <div class="values-header"> 
                 <h1>ABOUT</h1>
                 <hr>
             </div>
             
-            <div id="values-list">
+            <div class="values-list">
                 
                 <div>
                     <i class="fa fa-sitemap" aria-hidden="true"></i>
@@ -69,7 +70,7 @@
                 </div>
             </div>
         </section>
-        <section class="about" id="about">
+        <section class="about">
             <div id="about-card">
                 <img src="/img/portfolio-selfie.png" alt="Profile Pcture of Robin Weitzman">
                 <div class="about-info">
@@ -146,12 +147,12 @@
                 <hr>
             </div>
             
-            <h3><b>Full-Stack React-Native App Engineer</b> - <i>Santa Clara, CA 2021</i></h3><br>
+            <h2>Full-Stack React-Native App Engineer - Santa Clara, CA 2021</h2><br>
             <div class="work-info">
                 <div class="detailed-info">
-                    <p>Worked with a referral on their small team for their very young start-up company.</p><br> <p>We worked to debug an externally written, full-stack React-Native application. The application was configured on the AWS cloud with a back-end stack that consisted of S3, DynamoDB, GraphQL, and Elasticsearch/Kibana.</p><br>
-                    <p>The goal was to take the externally written application, test it for and fix its bugs, as well as to fix/re-configure the back-end. We also implemented changes on the front-end with UX/UI improvements.</p>
-                    <p>The goal was to take the externally written application, test it for and fix its bugs, as well as to fix/re-configure the back-end. We also implemented changes on the front-end with UX/UI improvements.</p>    
+                    <p><i class="fas fa-code"></i>  Worked with a referral on their small team for their very young start-up company.</p><br> <p><i class="fas fa-code"></i>    We worked to debug an externally written, full-stack React-Native application. The application was configured on the AWS cloud with a back-end stack that consisted of S3, DynamoDB, GraphQL, and Elasticsearch/Kibana.</p><br>
+                    <p><i class="fas fa-code"></i>  The goal was to take the externally written application, test it for and fix its bugs, as well as to fix/re-configure the back-end. We also implemented changes on the front-end with UX/UI improvements.</p><br>
+                    <p><i class="fas fa-code"></i>  The goal was to take the externally written application, test it for and fix its bugs, as well as to fix/re-configure the back-end. We also implemented changes on the front-end with UX/UI improvements.</p>    
                     <a href="/resume.pdf">View Detailed Experience</a>            
                 </div>
                 <div class="work-image">
@@ -278,7 +279,9 @@
                 <h1>CONTACT ME</h1>
                 <hr>
             </div>
-            <p>Have a question or want to work together? Please send me a message and I will get back to you as soon as possible.</p>
+            <br>
+            <p>Have a question? Want to work together? Send me a message and I will get back to you as soon as possible.</p>
+           
             <form action="/message" method="POST"> 
                
                 <input type="text" name="name" placeholder="Your Full Name*">

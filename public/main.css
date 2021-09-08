@@ -76,6 +76,7 @@ nav div {
 }
 
 nav i {
+    padding-top: 10px;
     color: var(--bg);
     font-size: 20px;
 }
@@ -234,6 +235,7 @@ section {
 }
 
 .values-header {
+    margin-top:60px;
     display: grid;
     place-items: center;
     margin-bottom: 15px;
@@ -241,7 +243,7 @@ section {
 
 .values-header h1:hover {
     transform: scale(1.1);
-    transition: all .25s ease;
+    transition: all .5s ease;
     text-shadow: 0px 3px 4px var(--shade2);
     cursor:pointer;
 }
@@ -298,46 +300,46 @@ section {
     cursor:pointer;
 }
 
-#values-list {
+.values-list {
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
     display: flex;
 }
 
-#values-list div {
+.values-list div {
     width: 25%;
     padding: 5px;
     margin: 5px;
     text-align: center;
 }
 
-#values-list div i {    
+.values-list div i {    
     font-size: 70px;
     margin: 10px 40px;
     color: var(--text);
     text-shadow: 0px 3px 4px #181818;
 }
 
-#values-list i:hover {
+.values-list i:hover {
     transform: scale(1.1);
     transition: all .25s ease;
     text-shadow: 0px 3px 4px var(--link);
     cursor:pointer;
 }
 
-#values-list div h3 {
+.values-list div h3 {
     margin: 15px 0 10px 0;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;    
 } 
-#values-list div p {
+.values-list div p {
     margin: 5px 0;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
     line-height: 1.5em;
 }
 
-#values-list p {
+.values-list p {
     line-height: 1.5em;
     font-size: 1.2em;
 }
@@ -495,22 +497,23 @@ section {
 }
 
 .work {
-    margin-top: 20px;
     background-color: var(--shade);
     padding-top: 60px;
-    height: 860px;
+    height: 920px;
 }
 
 .work-header {
+    margin-top:60px;
     display: grid;
     place-items: center;
     margin-bottom: 15px;
+    transition: all .5s ease;
 }
 
 .work-header h1:hover {
     transform: scale(1.1);
-    transition: all .25s ease;
     text-shadow: 0px 3px 4px var(--shade2);
+    cursor: pointer;
 }
 
 .work h1 {
@@ -531,20 +534,35 @@ section {
     border-radius: 5px;
     margin-top: 10px;
     transition: all 0.5s ease-in-out;
+    margin-bottom: 15px;
 }
 
 .work hr:hover {
     transform: translate(-120px);
+    cursor: pointer;
 }
 
-.work h3 {
-    width: 900px;
+.fa-star-of-life {
+    font-size: 4em;
+}
+
+.work h2 {
+    width: 100%;
     font-size: 20px;
-    margin-left: 30px;
-    font-size: 1.8em;
+    font-size: 2em;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
-    
+    transition: all 0.25s ease-in-out;
+    text-align:center;
+    background-color: var(--hover3);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.work h2:hover {
+    transform: scale(1.02);
+    text-shadow: 0px 3px 4px var(--shade2);
+    cursor: pointer;
 }
 .work p {
     font-size: 1.8em;
@@ -552,6 +570,8 @@ section {
     margin-left: 30px;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
+    justify-content: center;
+    text-align: left;
 }
 
 .work-info {
@@ -560,8 +580,12 @@ section {
     flex-direction: row;
 }
 
+.detailed-info {
+    padding-left:20px;
+}
+
 .detailed-info a {
-    width: 40%;
+    width: 60%;
     height: 75px;
     margin: 15px auto;
     background-color: none;
@@ -581,7 +605,6 @@ section {
 
 .detailed-info a:hover {
     transform: scale(.8);
-    transition: all .25s ease;
     background-color: var(--hover);
 }
 
@@ -598,7 +621,7 @@ section {
   width: 60%;
   height: 60%;
   position: relative;
-  margin: 0px auto 40px auto;
+  margin: 30px auto 0px auto;
   transition: all 500ms ease;
 }
 
@@ -710,6 +733,7 @@ section {
 }
 
 .contact-header {
+    margin-top: 50px;
     display: grid;
     place-items: center;
     margin-bottom: 15px;
@@ -733,13 +757,13 @@ section {
     /* transition: 400ms linear; */
 }
 
-/* .contact hr {
+.contact hr {
     border: 2px solid #181818;
     width: 72%;
     border-radius: 5px;
     margin-top: 10px;
     transition: all 0.5s ease-in-out; 
-  } */
+  }
 
   .contact hr:hover {
     /* transform: translate(-120px); */
@@ -760,7 +784,12 @@ section {
 
 .contact p {
     width: 99%;
+    margin-top: 10px;
     margin-bottom: 10px;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    justify-content: center;
+    text-align: center;
 }
 
 .contact i {
@@ -792,7 +821,7 @@ section {
 
 .skills-header h1:hover {
     transform: scale(1.1);
-    transition: all .25s ease;
+    transition: all .5s ease;
     text-shadow: 0px 3px 4px var(--shade2);
     cursor:pointer;
 }
@@ -969,6 +998,7 @@ li img {
 }
 
 .projects-header {
+    margin-top:60px;
     display: grid;
     place-items: center;
     margin-bottom: 15px;
@@ -976,7 +1006,7 @@ li img {
 
 .projects-header h1:hover {
     transform: scale(1.1);
-    transition: all .25s ease;
+    transition: all .5s ease;
     text-shadow: 0px 3px 4px var(--shade2);
 }
 
@@ -1129,7 +1159,7 @@ input[type="submit"]{
 input[type="submit"]:hover {
     transform: scale(.8);
     transition: all .25s ease;
-    background-color: var(--hover);
+    background-color:var();
 }
 
 form p {
@@ -1142,17 +1172,18 @@ form p {
 #submit-button {
     width: 50%;
     cursor: pointer;
-    background-color: var(--hover);
+    /* background-color: var(--hover); */
     color: #181818;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
+    transition: all .5s ease;
 }
 
 #submit-button:hover {
     transform: scale(.8);
-    transition: all .25s ease;
-    background-color: transparent;
+    background-color: var(--hover);
 }
+
 footer {
     height: 75px;
     background-color: #181818;
@@ -1175,7 +1206,7 @@ footer a {
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: var(--link);
 }
 
 a i {

@@ -323,7 +323,7 @@ section {
 
 #about-card {
     width: 30%;
-    height: auto;
+    height: 480px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -336,6 +336,7 @@ section {
 } 
 
 #about-card:hover{
+    cursor:pointer;
     transform: scale(1.05);
     transition: all 500ms ease;
     box-shadow: 4px 6px 7px 1px rgba(0, 0, 0, 0.45);
@@ -357,9 +358,10 @@ section {
     padding-top: 10px;
 }
 
-#about-name {
+.about-name {
     text-align: center;
-    line-height: 20px;
+    line-height: 25px;
+    transition: all 450ms ease;
 }
 
 .about a {
@@ -390,6 +392,7 @@ section {
 
 .about i:hover {
     text-shadow: 0px 0px 0px var(--shadow);
+    cursor:pointer;
 }
 
 .quote {
@@ -404,6 +407,16 @@ section {
 .quote h1 {
     padding-left: 45%;
     padding-bottom: 5%;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2em;
+    transition: all 450ms ease;
+}
+
+.quote h1:hover {
+    transform: scale(1.1);
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.45);
+    cursor:pointer;
 }
 
 .quote-text {
@@ -414,10 +427,6 @@ section {
     transition: all 450ms ease;
 }
 
-/* .quote-text:hover {
-    transform: scale(1.02);
-} */
-
 .quote-text a {
     text-decoration: none;
     color:black;
@@ -426,6 +435,7 @@ section {
 
 .quote-text a:hover {
     text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.45);
+    cursor:pointer;
 }
 
 .about p {
@@ -441,6 +451,7 @@ section {
 .fa-quote-left:hover {
     transform: scale(1.5);
     text-shadow: 0px 3px 4px var(--shade2);
+    cursor:pointer;
 }
 
 .fa-quote-right {
@@ -450,6 +461,7 @@ section {
 .fa-quote-right:hover {
     transform: scale(1.5);
     text-shadow: 0px 3px 4px var(--shade2);
+    cursor:pointer;
 }
 
 .work {

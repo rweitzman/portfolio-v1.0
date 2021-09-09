@@ -533,6 +533,13 @@ section {
     font-size: 4em;
 }
 
+.work i:hover {
+    transform: scale(1.1);
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.45);
+    cursor:pointer;
+}
+
+
 .work h2 {
     width: 100%;
     font-size: 20px;
@@ -568,10 +575,17 @@ section {
 }
 
 .detailed-info {
-    padding-left:20px;
+    padding-left:50px;
+    transition: all .5s ease-in-out;
 }
 
-.detailed-info a {
+.detailed-info a:hover {
+    transform: scale(1.1);
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.45);
+    cursor:pointer;
+}
+
+.detailed-info a.button {
     width: 60%;
     height: 75px;
     margin: 15px auto;
@@ -590,9 +604,10 @@ section {
     transition: all 500ms ease;
 }
 
-.detailed-info a:hover {
+.detailed-info a.button:hover {
     transform: scale(.8);
     background-color: var(--hover);
+    text-shadow: none;
 }
 
 .detailed-info {

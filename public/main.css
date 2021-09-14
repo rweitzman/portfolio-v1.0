@@ -199,7 +199,7 @@ header {
     border-radius: 5px;
     text-decoration: none;
     color: #181818;
-    font-size: 1.7em;;
+    font-size: 1.7em;
     transition: all .25s ease;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
@@ -1049,6 +1049,7 @@ li img {
     border-radius: 5px;
     margin-top: 10px;
     transition: all 0.5s ease-in-out;
+    margin-bottom: 20px;
   }
 
   .projects hr:hover {
@@ -1084,21 +1085,45 @@ li img {
 .project-card {
     width: calc(30% - 15px);
     height: 260px;
-    /* overflow: auto; */
-    /* padding: 20px; */
     background-color: var(--bg);
     position: relative;
 }
 
 .project-card img {
-    /* object-fit: cover; */
     display: block;
-    /* overflow: hidden; */
     width: 100%;
     height: 100%;
-    /* transition: all 0.5s ease */
-    /* max-width: 100%;
-  height: auto; */
+}
+
+.clubsoda {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.terminal {
+  display: grid;
+  place-items: center;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.project-card1 {
+  width: calc(30% - 15px);
+  height: 260px;
+  display: grid;
+  place-items: center;
+  background-color: #181818;
+  position: relative;
+
+}
+
+.project-card1:hover .overlay {
+  bottom: 0;
+  height: 100%;
+  visibility: visible;
 }
 
 .overlay {
@@ -1107,7 +1132,7 @@ li img {
     bottom: 100%;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255);
     overflow: hidden;
     width: 100%;
     height: 0;
@@ -1122,44 +1147,67 @@ li img {
   }
   
   .text1 {
+    display: grid;
+    place-items: center;
     white-space: nowrap; 
     color: white;
     font-size: 20px;
     position: absolute;
-    overflow: hidden;
-    top: 10%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
   }
 
   .text1 p {
-      margin: 5px;
+    text-align: center;
+    margin: 3px;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    color: var(--link);
+    font-size: .9em;
   }
 
-  .text1 p:hover {
-      background-color:yellow;
+  p.title {
+    font-size: 1.4em;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    color: black;
   }
+
+p.date {
+    font-size: .7em;
+}
+
+
+
 
   .text1 a:hover {
       cursor: pointer;
   }
 
-  /*modal 1*/
+  .box {
+    justify-content: center;
+    margin-top:10px;
+}
 
-  .button1 {
+   /*modal 1*/
+
+   .button1 {
     font-size: 1em;
     padding: 10px;
-    color: #fff;
-    border: 2px solid #06D85F;
-    border-radius: 20px/50px;
+    color: #181818;
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.3s ease-out;
+    border: 3px solid var(--text);
+    border-radius: 5px;
   }
 
   .button1:hover {
-    background: #06D85F;
+    background-color: var(--hover);
+    color: black;
   }
 
   .overlay2 {
@@ -1351,16 +1399,16 @@ li img {
   .button2 {
     font-size: 1em;
     padding: 10px;
-    color: #fff;
-    border: 2px solid #06D85F;
-    border-radius: 20px/50px;
+    color: #181818;
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.3s ease-out;
+    border: 3px solid var(--text);
+    border-radius: 5px;
   }
 
   .button2:hover {
-    background: #06D85F;
+    background-color: var(--hover);
+    color: black;
   }
 
   .overlay2-2 {
@@ -1557,16 +1605,16 @@ li img {
   .button3 {
     font-size: 1em;
     padding: 10px;
-    color: #fff;
-    border: 2px solid #06D85F;
-    border-radius: 20px/50px;
+    color: #181818;
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.3s ease-out;
+    border: 3px solid var(--text);
+    border-radius: 5px;
   }
 
   .button3:hover {
-    background: #06D85F;
+    background-color: var(--hover);
+    color: black;
   }
 
   .overlay2-3 {
@@ -1755,16 +1803,16 @@ li img {
    .button4 {
     font-size: 1em;
     padding: 10px;
-    color: #fff;
-    border: 2px solid #06D85F;
-    border-radius: 20px/50px;
+    color: #181818;
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.3s ease-out;
+    border: 3px solid var(--text);
+    border-radius: 5px;
   }
 
   .button4:hover {
-    background: #06D85F;
+    background-color: var(--hover);
+    color: black;
   }
 
   .overlay2-4 {
@@ -1953,16 +2001,16 @@ li img {
    .button5 {
     font-size: 1em;
     padding: 10px;
-    color: #fff;
-    border: 2px solid #06D85F;
-    border-radius: 20px/50px;
+    color: #181818;
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.3s ease-out;
+    border: 3px solid var(--text);
+    border-radius: 5px;
   }
 
   .button5:hover {
-    background: #06D85F;
+    background-color: var(--hover);
+    color: black;
   }
 
   .overlay2-5 {
@@ -2151,16 +2199,16 @@ li img {
    .button6 {
     font-size: 1em;
     padding: 10px;
-    color: #fff;
-    border: 2px solid #06D85F;
-    border-radius: 20px/50px;
+    color: #181818;
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.3s ease-out;
+    border: 3px solid var(--text);
+    border-radius: 5px;
   }
 
   .button6:hover {
-    background: #06D85F;
+    background-color: var(--hover);
+    color: black;
   }
 
   .overlay2-6 {

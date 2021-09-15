@@ -31,6 +31,7 @@ body {
     width: 100%;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
+    /* position: fixed; */
 }
 
 nav {
@@ -101,6 +102,7 @@ header {
     top: 0;
     width: 100%;
     height: 100%;
+    /* object-fit: cover; */
     filter: blur(3px);
 }
 
@@ -261,6 +263,10 @@ section {
     transition: all 0.5s ease-in-out;
   }
 
+  /* .values>hr.left {
+    transform: translate(-120px);
+    cursor:pointer;
+  } */
 
 .values h3 {
     font-family: 'Monda', sans-serif;
@@ -360,6 +366,7 @@ section {
     transform: scale(1.05);
     transition: all 500ms ease;
     box-shadow: 4px 6px 7px 1px rgba(0, 0, 0, 0.45);
+    
 }
 
 .about img {
@@ -668,6 +675,38 @@ section {
   background-color: rgba(0,0,0,0.8);
 }
 
+/* Caption Info */
+/* .Info {
+  color: #e3e3e3;
+  font-size: 16px;
+  padding: 10px 14px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+} */
+
+/* Worknumbering (1/3 etc) */
+/* .MessageInfo {
+  color: #f2f2f3;
+  font-size: 14px;
+  padding: 10px 14px;
+  position: absolute;
+  top: 0;
+} */
+
+/* The circles or bullets and indicators */
+/* .dots {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 3px;
+  background-color: #acc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+} */
+
 .enable, .dots:hover {
   background-color: #717161;
 }
@@ -716,6 +755,12 @@ section {
     position: relative;
 }
 
+/* .contact-header h1:hover {
+    transform: scale(1.1);
+    transition: all .25s ease;
+    text-shadow: 0px 3px 4px #181818;
+} */
+
 .contact h1 {
     width: auto;
     height: auto;
@@ -725,6 +770,7 @@ section {
     font-size: 3em;
     text-align: center;
     justify-content: center;
+    /* transition: 400ms linear; */
 }
 
 .contact hr {
@@ -1010,6 +1056,24 @@ li img {
     transform: translate(120px);
   }
 
+/* .projects h2 {
+    position: relative;
+    left: 25px;
+    top: 20px;
+    background-color: var(--accent);
+    width: 350px;
+    height: 50px;
+    border-radius: 5px; 
+    padding: 10px 5px;
+    z-index: 1;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3em;
+    text-align: left;
+    margin-bottom: 80px; 
+} */
+
+
 .project-grid {
     width: 100%;
     display: flex;
@@ -1117,6 +1181,9 @@ p.date {
     font-size: .7em;
 }
 
+
+
+
   .text1 a:hover {
       cursor: pointer;
   }
@@ -1166,6 +1233,7 @@ p.date {
     background: #fff;
     border-radius: 5px;
     width: 30%;
+    /* height: 700px; */
     position: fixed;
     transition: all 0.5s ease-in-out;
     z-index: 40;
@@ -1190,14 +1258,13 @@ p.date {
     color: #333;
   }
   .popup .close:hover {
-    color:#181818;
+    color: #06D85F;
     cursor: pointer;
   }
 
   .popup .content {
     overflow: auto;
     height: 700px;
-    width: auto;
     z-index: 20;
   }
 
@@ -1205,6 +1272,11 @@ p.date {
     height: 100vh;
     overflow-y: hidden;
 }
+
+/* body.modal-open {
+    height: 100vh;
+    overflow-y: hidden;
+  } */
   
   @media screen and (max-width: 700px){
     .box{
@@ -1269,6 +1341,26 @@ p.date {
     background-color: rgba(0,0,0,0.8);
   }
   
+  /* Caption Info */
+  .Info {
+    color: #e3e3e3;
+    font-size: 16px;
+    padding: 10px 14px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  } 
+  
+  /*Worknumbering (1/3 etc) */
+  .MessageInfo {
+    color: #f2f2f3;
+    font-size: 14px;
+    padding: 10px 14px;
+    position: absolute;
+    top: 0;
+  } 
+  
   /* The circles or bullets and indicators */
   .m1-dots {
     cursor: pointer;
@@ -1281,28 +1373,27 @@ p.date {
     transition: background-color 0.5s ease;
   }
   
-  .m1-enable, .m1-dots:hover {
+  .enable, .m1-dots:hover {
     background-color: #717161;
   }
   
   /* Faint animation */
-  .fades {
+  .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.4s;
     animation-name: fade;
     animation-duration: 1.4s;
   }
   
-  @-webkit-keyframes fades {
+  @-webkit-keyframes fade {
     from {opacity: .5}
     to {opacity: 2}
   }
   
-  @keyframes fades {
+  @keyframes fade {
     from {opacity: .5}
     to {opacity: 2}
   }
-
 /* modal 2*/
 
   .button2 {
@@ -1332,7 +1423,6 @@ p.date {
     opacity: 0;
     z-index:3;
   }
-
   .overlay2-2:target {
     visibility: visible;
     opacity: 1;
@@ -1368,17 +1458,18 @@ p.date {
     text-decoration: none;
     color: #333;
   }
-
   .popup2 .close2:hover {
-    color: #181818;
+    color: #06D85F;
     cursor: pointer;
   }
 
   .popup2 .content2 {
+    /* height: 60%; */
     overflow: auto;
     height: 700px;
     z-index: 20;
     width:auto;
+    z-index: 20;
   }
 
   body.popup2 .close2 {
@@ -1386,14 +1477,18 @@ p.date {
     overflow-y: hidden;
 }
   
-  @media screen and (max-width: 700px){
+  /* @media screen and (max-width: 700px){
     .box{
       width: 70%;
     }
     .popup{
       width: 70%;
     }
-  }
+  } */
+
+
+/* modal 2 carousel */
+
 
 /*Modal 2 Image Carousel*/
 .modal2-slideshow-container {
@@ -1449,6 +1544,26 @@ p.date {
     background-color: rgba(0,0,0,0.8);
   }
   
+  /* Caption Info */
+  .Info {
+    color: #e3e3e3;
+    font-size: 16px;
+    padding: 10px 14px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  } 
+  
+  /*Worknumbering (1/3 etc) */
+  .MessageInfo {
+    color: #f2f2f3;
+    font-size: 14px;
+    padding: 10px 14px;
+    position: absolute;
+    top: 0;
+  } 
+  
   /* The circles or bullets and indicators */
   .m2-dots {
     cursor: pointer;
@@ -1461,27 +1576,29 @@ p.date {
     transition: background-color 0.5s ease;
   }
   
-  .m2-enable, .m2-dots:hover {
+  .enable, .m2-dots:hover {
     background-color: #717161;
   }
   
   /* Faint animation */
-  .fades {
+  .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.4s;
     animation-name: fade;
     animation-duration: 1.4s;
   }
   
-  @-webkit-keyframes fades {
+  @-webkit-keyframes fade {
     from {opacity: .5}
     to {opacity: 2}
   }
   
-  @keyframes fades {
+  @keyframes fade {
     from {opacity: .5}
     to {opacity: 2}
   }
+
+
 
   /* modal 3*/
 
@@ -1512,7 +1629,6 @@ p.date {
     opacity: 0;
     z-index: 3;
   }
-
   .overlay2-3:target {
     visibility: visible;
     opacity: 1;
@@ -1524,6 +1640,7 @@ p.date {
     background: #fff;
     border-radius: 5px;
     width: 30%;
+    height: 500px;
     position: fixed;
     transition: all 0.5s ease-in-out;
     z-index: 40;
@@ -1547,15 +1664,14 @@ p.date {
     text-decoration: none;
     color: #333;
   }
-
   .popup3 .close3:hover {
-    color:#181818;
+    color: #06D85F;
     cursor: pointer;
   }
 
   .popup3 .content3 {
+    max-height: 30%;
     overflow: auto;
-    width: auto;
     height: 700px;
     z-index: 20;
   }
@@ -1565,17 +1681,16 @@ p.date {
     overflow-y: hidden;
 }
   
-  @media screen and (max-width: 700px){
+  /* @media screen and (max-width: 700px){
     .box{
       width: 70%;
     }
     .popup{
       width: 70%;
     }
-  }
+  } */
 
   /*Modal 3 Image Carousel*/
-
 .modal3-slideshow-container {
     width: 200px;
     height: 500px;
@@ -1629,6 +1744,26 @@ p.date {
     background-color: rgba(0,0,0,0.8);
   }
   
+  /* Caption Info */
+  .Info {
+    color: #e3e3e3;
+    font-size: 16px;
+    padding: 10px 14px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  } 
+  
+  /*Worknumbering (1/3 etc) */
+  .MessageInfo {
+    color: #f2f2f3;
+    font-size: 14px;
+    padding: 10px 14px;
+    position: absolute;
+    top: 0;
+  } 
+  
   /* The circles or bullets and indicators */
   .m3-dots {
     cursor: pointer;
@@ -1641,24 +1776,24 @@ p.date {
     transition: background-color 0.5s ease;
   }
   
-  .m3-enable, .m3-dots:hover {
+  .enable, .m3-dots:hover {
     background-color: #717161;
   }
   
   /* Faint animation */
-  .fades {
+  .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.4s;
     animation-name: fade;
     animation-duration: 1.4s;
   }
   
-  @-webkit-keyframes fades {
+  @-webkit-keyframes fade {
     from {opacity: .5}
     to {opacity: 2}
   }
   
-  @keyframes fades {
+  @keyframes fade {
     from {opacity: .5}
     to {opacity: 2}
   }
@@ -1692,7 +1827,6 @@ p.date {
     opacity: 0;
     z-index: 3;
   }
-
   .overlay2-4:target {
     visibility: visible;
     opacity: 1;
@@ -1704,6 +1838,7 @@ p.date {
     background: #fff;
     border-radius: 5px;
     width: 30%;
+    height: 500px;
     position: fixed;
     transition: all 0.5s ease-in-out;
     z-index: 40;
@@ -1727,15 +1862,14 @@ p.date {
     text-decoration: none;
     color: #333;
   }
-
   .popup4 .close4:hover {
-    color: #181818;
+    color: #06D85F;
     cursor: pointer;
   }
 
   .popup4 .content4 {
+    max-height: 30%;
     overflow: auto;
-    width: auto;
     height: 700px;
     z-index: 20;
   }
@@ -1745,103 +1879,123 @@ p.date {
     overflow-y: hidden;
 }
   
-  @media screen and (max-width: 700px){
+  /* @media screen and (max-width: 700px){
     .box{
       width: 70%;
     }
     .popup{
       width: 70%;
     }
+  } */
+
+  /* modal 4 image carousel */
+.modal4-slideshow-container {
+    width: 200px;
+    height: 500px;
+    overflow:auto;
+    position: relative;
+    margin: 30px auto 0px auto;
+    transition: all 500ms ease;
+  }
+  
+  .modal4-slideshow-container:hover {
+      border-radius: 40px;
+      transform: scale(1.1);
+      box-shadow: 6px 6px 7px 1px rgba(0, 0, 0, 0.35); 
+  }
+  
+  /* Make the images invisible by default */
+  .modal4-slideshow-container img {
+      height: 600px;
+      width: 400px;
   }
 
-    /*Modal 4 Image Carousel*/
+  .Modal4-Containers {
+      height:auto;
+      width:auto;
+  }
+  
+  /* forward & Back buttons */
+  .m4-Back, .m4-forward {
+    cursor: pointer;
+    position: absolute;
+    top: 48%;
+    width: auto;
+    margin-top: -23px;
+    padding: 17px;
+    color: grey;
+    font-weight: bold;
+    font-size: 19px;
+    transition: 0.4s ease;
+    border-radius: 0 5px 5px 0;
+    user-select: none;
+  }
+  
+  /* Place the "forward button" to the right */
+  .m4-forward {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  /*when the user hovers,add a black background with some little opacity */
+  .m4-Back:hover, .m4-forward:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption Info */
+  .Info {
+    color: #e3e3e3;
+    font-size: 16px;
+    padding: 10px 14px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  } 
+  
+  /*Worknumbering (1/3 etc) */
+  .MessageInfo {
+    color: #f2f2f3;
+    font-size: 14px;
+    padding: 10px 14px;
+    position: absolute;
+    top: 0;
+  } 
+  
+  /* The circles or bullets and indicators */
+  .m4-dots {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    margin: 0 3px;
+    background-color: #acc;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+  }
+  
+  .enable, .m4-dots:hover {
+    background-color: #717161;
+  }
+  
+  /* Faint animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.4s;
+    animation-name: fade;
+    animation-duration: 1.4s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .5}
+    to {opacity: 2}
+  }
+  
+  @keyframes fade {
+    from {opacity: .5}
+    to {opacity: 2}
+  }
 
-.modal4-slideshow-container {
-  width: 200px;
-  height: 500px;
-  overflow:auto;
-  position: relative;
-  margin: 30px auto 0px auto;
-  transition: all 500ms ease;
-}
-
-.modal4-slideshow-container:hover {
-    border-radius: 40px;
-    transform: scale(1.1);
-    box-shadow: 6px 6px 7px 1px rgba(0, 0, 0, 0.35); 
-}
-
-/* Make the images invisible by default */
-.modal4-slideshow-container img {
-    height: 600px;
-    width: 400px;
-}
-
-.Modal4-Containers {
-    height:auto;
-    width:auto;
-}
-
-/* forward & Back buttons */
-.m4-Back, .m4-forward {
-  cursor: pointer;
-  position: absolute;
-  top: 48%;
-  width: auto;
-  margin-top: -23px;
-  padding: 17px;
-  color: grey;
-  font-weight: bold;
-  font-size: 19px;
-  transition: 0.4s ease;
-  border-radius: 0 5px 5px 0;
-  user-select: none;
-}
-
-/* Place the "forward button" to the right */
-.m4-forward {
-  right: 0;
-  border-radius: 4px 0 0 4px;
-}
-
-/*when the user hovers,add a black background with some little opacity */
-.m4-Back:hover, .m4-forward:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* The circles or bullets and indicators */
-.m4-dots {
-  cursor: pointer;
-  height: 16px;
-  width: 16px;
-  margin: 0 3px;
-  background-color: #acc;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.5s ease;
-}
-
-.m4-enable, .m4-dots:hover {
-  background-color: #717161;
-}
-
-/* Faint animation */
-.fades {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.4s;
-  animation-name: fade;
-  animation-duration: 1.4s;
-}
-
-@-webkit-keyframes fades {
-  from {opacity: .5}
-  to {opacity: 2}
-}
-
-@keyframes fades {
-  from {opacity: .5}
-  to {opacity: 2}
-}
    /* modal 5*/
 
    .button5 {
@@ -1871,7 +2025,6 @@ p.date {
     opacity: 0;
     z-index:3;
   }
-
   .overlay2-5:target {
     visibility: visible;
     opacity: 1;
@@ -1883,6 +2036,7 @@ p.date {
     background: #fff;
     border-radius: 5px;
     width: 30%;
+    height: 500px;
     position: fixed;
     transition: all 0.5s ease-in-out;
     z-index: 40;
@@ -1906,15 +2060,14 @@ p.date {
     text-decoration: none;
     color: #333;
   }
-
   .popup5 .close5:hover {
-    color: #181818;
+    color: #06D85F;
     cursor: pointer;
   }
 
   .popup5 .content5 {
+    max-height: 30%;
     overflow: auto;
-    width: auto;
     height: 700px;
     z-index: 20;
   }
@@ -1924,14 +2077,14 @@ p.date {
     overflow-y: hidden;
 }
   
-  @media screen and (max-width: 700px){
+  /* @media screen and (max-width: 700px){
     .box{
       width: 70%;
     }
     .popup{
       width: 70%;
     }
-  }
+  } */
 
     /*Modal 5 Image Carousel*/
 .modal5-slideshow-container {
@@ -1987,6 +2140,26 @@ p.date {
     background-color: rgba(0,0,0,0.8);
   }
   
+  /* Caption Info */
+  .Info {
+    color: #e3e3e3;
+    font-size: 16px;
+    padding: 10px 14px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  } 
+  
+  /*Worknumbering (1/3 etc) */
+  .MessageInfo {
+    color: #f2f2f3;
+    font-size: 14px;
+    padding: 10px 14px;
+    position: absolute;
+    top: 0;
+  } 
+  
   /* The circles or bullets and indicators */
   .m5-dots {
     cursor: pointer;
@@ -1999,24 +2172,24 @@ p.date {
     transition: background-color 0.5s ease;
   }
   
-  .m5-enable, .m5-dots:hover {
+  .enable, .m5-dots:hover {
     background-color: #717161;
   }
   
   /* Faint animation */
-  .fades {
+  .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.4s;
     animation-name: fade;
     animation-duration: 1.4s;
   }
   
-  @-webkit-keyframes fades {
+  @-webkit-keyframes fade {
     from {opacity: .5}
     to {opacity: 2}
   }
   
-  @keyframes fades {
+  @keyframes fade {
     from {opacity: .5}
     to {opacity: 2}
   }
@@ -2050,7 +2223,6 @@ p.date {
     opacity: 0;
     z-index:3;
   }
-
   .overlay2-6:target {
     visibility: visible;
     opacity: 1;
@@ -2062,6 +2234,7 @@ p.date {
     background: #fff;
     border-radius: 5px;
     width: 30%;
+    height: 500px;
     position: fixed;
     transition: all 0.5s ease-in-out;
     z-index: 40;
@@ -2085,9 +2258,8 @@ p.date {
     text-decoration: none;
     color: #333;
   }
-
   .popup6 .close6:hover {
-    color:#181818;
+    color: #06D85F;
     cursor: pointer;
   }
 
@@ -2103,17 +2275,16 @@ p.date {
     overflow-y: hidden;
 }
   
-  @media screen and (max-width: 700px){
+  /* @media screen and (max-width: 700px){
     .box{
       width: 70%;
     }
     .popup{
       width: 70%;
     }
-  }
+  } */
 
   /*   /*Modal 6 Image Carousel*/
-
 .modal6-slideshow-container {
     width: 200px;
     height: 500px;
@@ -2167,6 +2338,26 @@ p.date {
     background-color: rgba(0,0,0,0.8);
   }
   
+  /* Caption Info */
+  .Info {
+    color: #e3e3e3;
+    font-size: 16px;
+    padding: 10px 14px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  } 
+  
+  /*Worknumbering (1/3 etc) */
+  .MessageInfo {
+    color: #f2f2f3;
+    font-size: 14px;
+    padding: 10px 14px;
+    position: absolute;
+    top: 0;
+  } 
+  
   /* The circles or bullets and indicators */
   .m6-dots {
     cursor: pointer;
@@ -2179,27 +2370,74 @@ p.date {
     transition: background-color 0.5s ease;
   }
   
-  .m6-enable, .m6-dots:hover {
+  .enable, .m6-dots:hover {
     background-color: #717161;
   }
   
   /* Faint animation */
-  .fades {
+  .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.4s;
     animation-name: fade;
     animation-duration: 1.4s;
   }
   
-  @-webkit-keyframes fades {
+  @-webkit-keyframes fade {
     from {opacity: .5}
     to {opacity: 2}
   }
   
-  @keyframes fades {
+  @keyframes fade {
     from {opacity: .5}
     to {opacity: 2}
   } */
+   
+
+/* .project-card>h3 {
+    margin: 5px;
+    font-size: 1.6em;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
+} */
+
+/* .project-card>a {
+    display: block;
+    margin: 5px;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
+} */
+
+/* a h3 {
+    color: var(--link);
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
+} */
+
+/* .project-card a {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 1.6em;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
+} */
+
+/* .project-card video {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+} */
+
+/* .project-card hr {
+    margin: 5px -10px;
+    border: none;
+    border-bottom: 1px solid var(--flourish);
+} */
+
+/* .project-card p {
+    padding-top: 10px;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
+} */
 
 form {
     margin: 50px;
@@ -2243,6 +2481,8 @@ input[type="submit"]{
     font-family: 'Raleway', sans-serif;
 }
 
+
+
 input[type="submit"]:hover {
     transform: scale(.8);
     transition: all .25s ease;
@@ -2259,6 +2499,7 @@ form p {
 #submit-button {
     width: 50%;
     cursor: pointer;
+    /* background-color: var(--hover); */
     color: #181818;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
@@ -2307,6 +2548,8 @@ h2 {
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
 }
+
+
 
 @media only screen and (max-width: 1100px) {
     main {

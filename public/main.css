@@ -31,7 +31,6 @@ body {
     width: 100%;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
-    /* position: fixed; */
 }
 
 nav {
@@ -102,8 +101,7 @@ header {
     top: 0;
     width: 100%;
     height: 100%;
-    /* object-fit: cover; */
-    filter: blur(3px);
+    filter: blur(.01px);
 }
 
 .splash img {
@@ -153,7 +151,6 @@ header {
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
     color: #181818;
-    text-shadow: 0px 0px 4px #E79265;
     font-weight: 900;
 }
 
@@ -188,9 +185,10 @@ header {
 }
 
 .profile a {
-    width: 40%;
+    width: auto;
     height: 75px;
-    margin: 15px auto;
+    margin: 15px;
+    padding: 15px;
     background-color: none;
     display: flex;
     justify-content: center;
@@ -199,17 +197,24 @@ header {
     border-radius: 5px;
     text-decoration: none;
     color: #181818;
-    font-size: 1.7em;
+    font-size: 1.9em;
     transition: all .25s ease;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
     transition: all 500ms ease;  
+    background-color: rgba(228, 130, 79, 0.9);
+}
+
+.profile-button-text {
+  font-family: 'Monda', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  color: black;
 }
 
 .profile a:hover {
-    transform: scale(.8);
+    transform: scale(.9);
     transition: all .5s ease;
-    background-color: var(--hover);
+    background-color: var(--link);
     color: black;
 }
 
@@ -233,12 +238,14 @@ section {
     margin-bottom: 15px;
     z-index: 0;
     position: relative;
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.45);
+    font-size: 1.4em;
 }
 
 .values-header h1:hover {
     transform: scale(1.1);
     transition: all .5s ease;
-    text-shadow: 0px 3px 4px var(--shade2);
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.55);
     cursor:pointer;
 }
 
@@ -263,34 +270,31 @@ section {
     transition: all 0.5s ease-in-out;
   }
 
-  /* .values>hr.left {
-    transform: translate(-120px);
-    cursor:pointer;
-  } */
-
 .values h3 {
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
     font-size: 1.7em;
     transition: all 0.5s ease-in-out;
     color: black;
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.45);
     
 }
 
 .values h3:hover {
     transform: scale(1.1);
-    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.45);
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.65);
     cursor:pointer;
 }
 
 .values a {
     text-decoration: none;
     transition: all 0.5s ease-in-out;
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
 }
 
 .values a:hover {
     transform: scale(1.1);
-    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.45);
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.55);
     cursor:pointer;
 }
 
@@ -311,13 +315,14 @@ section {
     font-size: 70px;
     margin: 10px 40px;
     color: var(--text);
-    text-shadow: 0px 3px 4px #181818;
+    text-shadow: 0px 3px 4px var(--link);
 }
 
 .values-list i:hover {
     transform: scale(1.1);
     transition: all .25s ease;
-    text-shadow: 0px 3px 4px var(--link);
+    
+    text-shadow: 0px 3px 4px #181818;
     cursor:pointer;
 }
 
@@ -348,26 +353,19 @@ section {
 }
 
 #about-card {
-    width: 30%;
-    height: 480px;
+    width: 35%;
+    height: 35%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     overflow: hidden;
     background-color: var(--bg);
-    border-radius: 15px;
+    border-radius: 15%;
     border: 2px solid #181818;
     box-shadow: 4px 6px 7px 1px rgba(0, 0, 0, 0.25);
     transition: all 300ms ease;
+    margin-left: 6%;
 } 
-
-#about-card:hover{
-    cursor:pointer;
-    transform: scale(1.05);
-    transition: all 500ms ease;
-    box-shadow: 4px 6px 7px 1px rgba(0, 0, 0, 0.45);
-    
-}
 
 .about img {
     overflow: hidden;
@@ -377,7 +375,7 @@ section {
 }
 
 .about-info {
-    height: 100px;
+    height: 120px;
     display: flex;
     flex-direction: column;
     margin-left: 10px;
@@ -410,7 +408,7 @@ section {
 .about i {
     height: 20px;
     width: 10%;
-    font-size: 30px;
+    font-size: 60px;
     color: var(--accent);
     text-align: center;
     transition: all 500ms ease;
@@ -423,25 +421,27 @@ section {
 
 .quote {
     width: 60%;
-    margin: 10px auto;
+    margin-left: 6%;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
     font-size: 1em;
     justify-content: center;
+    margin-right: 6%;
 }
 
 .quote h1 {
-    padding-left: 45%;
+    padding-left: 40%;
     padding-bottom: 5%;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
-    font-size: 2em;
+    font-size: 3.3em;
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.45);
     transition: all 450ms ease;
 }
 
 .quote h1:hover {
     transform: scale(1.1);
-    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.45);
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.65);
     cursor:pointer;
 }
 
@@ -457,10 +457,11 @@ section {
     text-decoration: none;
     color:black;
     transition: all 450ms ease;
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
 }
 
 .quote-text a:hover {
-    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.45);
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.65);
     cursor:pointer;
 }
 
@@ -469,9 +470,6 @@ section {
     font-family: 'Raleway', sans-serif;
     font-size: 1.5em;
     justify-content: center;
-}
-
-.fa-quote-left {
 }
 
 .fa-quote-left:hover {
@@ -497,13 +495,15 @@ section {
 }
 
 .work-header {
-    margin-top:60px;
+    margin-top:30px;
     display: grid;
     place-items: center;
     margin-bottom: 15px;
     transition: all .5s ease;
     z-index: 0;
     position: relative;
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.45);
+    font-size: 1.4em;
 }
 
 .work-header h1:hover {
@@ -542,10 +542,18 @@ section {
     font-size: 4em;
 }
 
+.work i {
+  text-shadow: 0px 3px 4px var(--link);
+}
+
 .work i:hover {
     transform: scale(1.1);
     text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.45);
     cursor:pointer;
+}
+
+.work-info i {
+  color: black;
 }
 
 
@@ -588,34 +596,41 @@ section {
     transition: all .5s ease-in-out;
 }
 
+/* .detailed-info a {
+  text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.45);
+} */
+
 .detailed-info a:hover {
     transform: scale(1.1);
-    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.45);
+    text-shadow: 0px 3px 4px var(--link);
     cursor:pointer;
 }
 
 .detailed-info a.button {
-    width: 60%;
-    height: 75px;
-    margin: 15px auto;
-    background-color: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid var(--text);
-    border-radius: 5px;
-    text-decoration: none;
-    color: #181818;
-    font-size: 1.7em;;
-    transition: all .25s ease;
-    font-family: 'Monda', sans-serif;
-    font-family: 'Raleway', sans-serif;
-    transition: all 500ms ease;
+  width: 500px;
+  height: 75px;
+  margin-left: 20%;
+  margin-top: 15px;
+  padding: 15px;
+  background-color: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid var(--text);
+  border-radius: 5px;
+  text-decoration: none;
+  color: #181818;
+  font-size: 1.9em;
+  transition: all .25s ease;
+  font-family: 'Monda', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  transition: all 500ms ease;  
+  background-color: rgba(228, 130, 79, 0.7);
 }
 
 .detailed-info a.button:hover {
     transform: scale(.8);
-    background-color: var(--hover);
+    background-color: rgba(228, 130, 79, 0.9);
     text-shadow: none;
 }
 
@@ -629,23 +644,13 @@ section {
 
 /*Image Carousel*/
 .slideshow-container {
-  width: 60%;
-  height: 60%;
+  width: 245px;
+  height: auto;
   position: relative;
   margin: 30px auto 0px auto;
   transition: all 500ms ease;
   z-index:0;
-}
-
-.slideshow-container:hover {
-    border-radius: 40px;
-    transform: scale(1.1);
-    box-shadow: 6px 6px 7px 1px rgba(0, 0, 0, 0.35); 
-}
-
-/* Make the images invisible by default */
-.Containers {
-    
+  /* box-shadow: 6px 6px 7px 1px rgba(0, 0, 0, 0.15); */
 }
 
 /* forward & Back buttons */
@@ -674,38 +679,6 @@ section {
 .Back:hover, .forward:hover {
   background-color: rgba(0,0,0,0.8);
 }
-
-/* Caption Info */
-/* .Info {
-  color: #e3e3e3;
-  font-size: 16px;
-  padding: 10px 14px;
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
-  text-align: center;
-} */
-
-/* Worknumbering (1/3 etc) */
-/* .MessageInfo {
-  color: #f2f2f3;
-  font-size: 14px;
-  padding: 10px 14px;
-  position: absolute;
-  top: 0;
-} */
-
-/* The circles or bullets and indicators */
-/* .dots {
-  cursor: pointer;
-  height: 16px;
-  width: 16px;
-  margin: 0 3px;
-  background-color: #acc;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.5s ease;
-} */
 
 .enable, .dots:hover {
   background-color: #717161;
@@ -747,19 +720,15 @@ section {
 }
 
 .contact-header {
-    margin-top: 50px;
-    display: grid;
-    place-items: center;
-    margin-bottom: 15px;
-    z-index:0;
-    position: relative;
+  margin-top:60px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 15px;
+  z-index: 0;
+  position: relative;
+  text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.45);
+  font-size: 1.4em;
 }
-
-/* .contact-header h1:hover {
-    transform: scale(1.1);
-    transition: all .25s ease;
-    text-shadow: 0px 3px 4px #181818;
-} */
 
 .contact h1 {
     width: auto;
@@ -770,7 +739,6 @@ section {
     font-size: 3em;
     text-align: center;
     justify-content: center;
-    /* transition: 400ms linear; */
 }
 
 .contact hr {
@@ -779,10 +747,6 @@ section {
     border-radius: 5px;
     margin-top: 10px;
     transition: all 0.5s ease-in-out; 
-  }
-
-  .contact hr:hover {
-    /* transform: translate(-120px); */
   }
 
 .contact h2 {
@@ -836,6 +800,8 @@ section {
     padding-top:20px;
     z-index: 0;
     position: relative;
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.45);
+    font-size: 1.4em;
 }
 
 .skills-header h1:hover {
@@ -1017,12 +983,14 @@ li img {
 }
 
 .projects-header {
-    margin-top:60px;
-    display: grid;
-    place-items: center;
-    margin-bottom: 15px;
-    z-index:0;
-    position: relative;
+  margin-top:60px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 15px;
+  z-index: 0;
+  position: relative;
+  text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.45);
+  font-size: 1.4em;
 }
 
 .projects-header h1:hover {
@@ -1056,24 +1024,6 @@ li img {
     transform: translate(120px);
   }
 
-/* .projects h2 {
-    position: relative;
-    left: 25px;
-    top: 20px;
-    background-color: var(--accent);
-    width: 350px;
-    height: 50px;
-    border-radius: 5px; 
-    padding: 10px 5px;
-    z-index: 1;
-    font-family: 'Monda', sans-serif;
-    font-family: 'Raleway', sans-serif;
-    font-size: 3em;
-    text-align: left;
-    margin-bottom: 80px; 
-} */
-
-
 .project-grid {
     width: 100%;
     display: flex;
@@ -1083,8 +1033,8 @@ li img {
 }
 
 .project-card {
-    width: calc(30% - 15px);
-    height: 260px;
+    width: 32%;
+    height: 270px;
     background-color: var(--bg);
     position: relative;
 }
@@ -1111,8 +1061,8 @@ li img {
 }
 
 .project-card1 {
-  width: calc(30% - 15px);
-  height: 260px;
+  width: 32%;
+  height: 270px;
   display: grid;
   place-items: center;
   background-color: #181818;
@@ -1181,9 +1131,6 @@ p.date {
     font-size: .7em;
 }
 
-
-
-
   .text1 a:hover {
       cursor: pointer;
   }
@@ -1203,10 +1150,12 @@ p.date {
     cursor: pointer;
     border: 3px solid var(--text);
     border-radius: 5px;
+    background-color: rgba(228, 130, 79, 0.7);
+    transition: all 0.5s ease-in-out;
   }
 
   .button1:hover {
-    background-color: var(--hover);
+    background-color: rgb(228, 130, 79);
     color: black;
   }
 
@@ -1222,34 +1171,30 @@ p.date {
     opacity: 0;
     z-index: 3;
   }
+  
   .overlay2:target {
     visibility: visible;
     opacity: 1;
   }
 
-  .popup {
-    margin: 70px 40% 50px 35%;
+  .popup1 {
+    margin: 70px auto;
     padding: 20px;
     background: #fff;
     border-radius: 5px;
-    width: 30%;
-    /* height: 700px; */
-    position: fixed;
+    width: 60%;
+    height: 90%;
     transition: all 0.5s ease-in-out;
     z-index: 40;
-  }
-
-  .popup h2 {
-    margin: 10px;
-    margin-top: 0;
-    color: #333;
-    font-family: Tahoma, Arial, sans-serif;
-    font-size: 16px;
-  }
-
-  .popup .close {
     position: absolute;
-    top: 20px;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+  }
+
+  .popup1 .close1 {
+    position: absolute;
+    bottom: 20px;
     right: 30px;
     transition: all 200ms;
     font-size: 30px;
@@ -1257,26 +1202,17 @@ p.date {
     text-decoration: none;
     color: #333;
   }
-  .popup .close:hover {
-    color: #06D85F;
+
+  .popup1 .close1:hover {
+    color: #181818;
     cursor: pointer;
   }
 
-  .popup .content {
-    overflow: auto;
-    height: 700px;
+  .popup1 .content1 {
+    overflow: hidden;
     z-index: 20;
+    color:#333;
   }
-
-  body.popup .close {
-    height: 100vh;
-    overflow-y: hidden;
-}
-
-/* body.modal-open {
-    height: 100vh;
-    overflow-y: hidden;
-  } */
   
   @media screen and (max-width: 700px){
     .box{
@@ -1287,33 +1223,56 @@ p.date {
     }
   }
 
-/*Modal 1 Image Carousel*/
-.modal1-slideshow-container {
-    width: 200px;
-    height: 500px;
-    overflow:auto;
-    position: relative;
-    margin: 30px auto 0px auto;
-    transition: all 500ms ease;
+  /*Modal 1 Image Carousel*/
+
+  .modal-content {
+   display: flex;
+   flex-direction: column;
   }
-  
-  .modal1-slideshow-container:hover {
-      border-radius: 40px;
-      transform: scale(1.1);
-      box-shadow: 6px 6px 7px 1px rgba(0, 0, 0, 0.35); 
+
+  .Modal1-Containers {
+    height: 70%;
+    width: auto;
+    box-shadow: #333;
   }
   
   /* Make the images invisible by default */
   .modal1-slideshow-container img {
-      height: 600px;
-      width: 400px;
+    border-radius: 30px;
+    width: 25%;
+    height: 380px;
+    margin-left: 38%;
+    margin-bottom: 5px;
+    box-shadow: 6px 6px 7px 1px rgba(0, 0, 0, 0.25);
+    transition: 0.4s ease;
   }
 
-  .Modal1-Containers {
-      height:auto;
-      width:auto;
+  .modal1-slideshow-container img:hover {
+    box-shadow: 6px 6px 7px 1px rgba(0, 0, 0, 0.35);
   }
-  
+
+  .modal-header {
+    font-size: .7em;
+    text-align: left;
+  }
+
+  .modal-header hr {
+    margin-left: 45%;
+    padding-bottom: 0px;
+  }
+
+  .project-info p {
+    text-align:justify;
+    word-wrap: wrap;
+    word-break: break-all;
+    white-space: normal;
+    padding-left: 20px;
+    font-size: 1.1em;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    transition: 0.4s ease;
+  }
+
   /* forward & Back buttons */
   .m1-Back, .m1-forward {
     cursor: pointer;
@@ -1339,26 +1298,6 @@ p.date {
   /*when the user hovers,add a black background with some little opacity */
   .m1-Back:hover, .m1-forward:hover {
     background-color: rgba(0,0,0,0.8);
-  }
-  
-  /* Caption Info */
-  .Info {
-    color: #e3e3e3;
-    font-size: 16px;
-    padding: 10px 14px;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-  } 
-  
-  /*Worknumbering (1/3 etc) */
-  .MessageInfo {
-    color: #f2f2f3;
-    font-size: 14px;
-    padding: 10px 14px;
-    position: absolute;
-    top: 0;
   } 
   
   /* The circles or bullets and indicators */
@@ -1373,27 +1312,28 @@ p.date {
     transition: background-color 0.5s ease;
   }
   
-  .enable, .m1-dots:hover {
+  .m1-enable, .m1-dots:hover {
     background-color: #717161;
   }
   
   /* Faint animation */
-  .fade {
+  .fades {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.4s;
     animation-name: fade;
     animation-duration: 1.4s;
   }
   
-  @-webkit-keyframes fade {
+  @-webkit-keyframes fades {
     from {opacity: .5}
     to {opacity: 2}
   }
   
-  @keyframes fade {
+  @keyframes fades {
     from {opacity: .5}
     to {opacity: 2}
   }
+
 /* modal 2*/
 
   .button2 {
@@ -1404,10 +1344,12 @@ p.date {
     cursor: pointer;
     border: 3px solid var(--text);
     border-radius: 5px;
+    background-color: rgba(228, 130, 79, 0.7);
+    transition: all 0.5s ease-in-out;
   }
 
   .button2:hover {
-    background-color: var(--hover);
+    background-color: rgb(228, 130, 79);
     color: black;
   }
 
@@ -1423,34 +1365,30 @@ p.date {
     opacity: 0;
     z-index:3;
   }
+
   .overlay2-2:target {
     visibility: visible;
     opacity: 1;
   }
 
   .popup2 {
-    margin: 70px auto;
-    padding: 20px;
+    margin-top: 70px;
+    padding: 5px 20px 0 20px;
     background: #fff;
     border-radius: 5px;
-    width: 100%;
-    height: 700px;
-    position: fixed;
+    width: 60%;
+    height: 90%;
     transition: all 0.5s ease-in-out;
-    z-index: 60;
-  }
-
-  .popup2 h2 {
-    margin: 10px;
-    margin-top: 0;
-    color: #333;
-    font-family: Tahoma, Arial, sans-serif;
-    font-size: 16px;
+    z-index: 40;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
   }
 
   .popup2 .close2 {
     position: absolute;
-    top: 20px;
+    bottom: 20px;
     right: 30px;
     transition: all 200ms;
     font-size: 30px;
@@ -1458,65 +1396,102 @@ p.date {
     text-decoration: none;
     color: #333;
   }
+
   .popup2 .close2:hover {
-    color: #06D85F;
+    color: #181818;
     cursor: pointer;
   }
 
   .popup2 .content2 {
-    /* height: 60%; */
-    overflow: auto;
-    height: 700px;
+    overflow: hidden;
     z-index: 20;
-    width:auto;
-    z-index: 20;
+
   }
 
-  body.popup2 .close2 {
-    height: 100vh;
-    overflow-y: hidden;
-}
-  
-  /* @media screen and (max-width: 700px){
+  @media screen and (max-width: 700px){
     .box{
       width: 70%;
     }
     .popup{
       width: 70%;
     }
-  } */
-
-
-/* modal 2 carousel */
-
+  }
 
 /*Modal 2 Image Carousel*/
-.modal2-slideshow-container {
-    width: 200px;
-    height: 500px;
-    overflow:auto;
-    position: relative;
-    margin: 30px auto 0px auto;
-    transition: all 500ms ease;
-  }
-  
-  .modal2-slideshow-container:hover {
-      border-radius: 40px;
-      transform: scale(1.1);
-      box-shadow: 6px 6px 7px 1px rgba(0, 0, 0, 0.35); 
-  }
-  
-  /* Make the images invisible by default */
-  .modal2-slideshow-container img {
-      height: 600px;
-      width: 400px;
-  }
+
+.modal-content {
+  display: flex;
+  flex-direction:column;
+}
 
   .Modal2-Containers {
-      height:auto;
+      height: 70%;
       width:auto;
   }
   
+  /* Make the images invisible by default */
+  .modal2-slideshow-container video {
+    max-width: 100%;
+    height: 380px;
+    margin-bottom: 10px;
+  }
+
+  .modal2-slideshow-container img {
+    max-width: 100%;
+    height: 380px;
+    margin-bottom: 10px;
+  }
+
+  .modal-header {
+    font-size: .7em;
+    text-align: left;
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.45);
+  }
+
+  .modal-header:hover {
+    text-shadow: 0px 3px 4px var(--link);
+  }
+
+  .modal-header hr {
+    margin-top: 20px;
+    margin-left: 45%;
+    padding-bottom: 0px;
+  }
+
+  .project-info p {
+    text-align:justify;
+    word-wrap: wrap;
+    word-break: break-all;
+    white-space: normal;
+    margin: 0 10px 0 10px;
+    line-height: 2em;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    color:#333;
+  }
+
+  .project-info a {
+    text-decoration: none;
+    padding: 7px;
+    border: 2px solid #333;
+    transition: all 0.5s ease-in-out;
+    border-radius: 5px;
+    background-color: rgba(228, 130, 79, 0.7);
+  }
+
+  .project-info a:hover {
+    background-color: rgba(228, 130, 79);
+    color: #333;
+  }
+
+  .project-info i {
+    color: #333;
+  }
+
+  .modal-buttons {
+    display: flex;
+    flex-direction: row;
+  }
   /* forward & Back buttons */
   .m2-Back, .m2-forward {
     cursor: pointer;
@@ -1544,26 +1519,6 @@ p.date {
     background-color: rgba(0,0,0,0.8);
   }
   
-  /* Caption Info */
-  .Info {
-    color: #e3e3e3;
-    font-size: 16px;
-    padding: 10px 14px;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-  } 
-  
-  /*Worknumbering (1/3 etc) */
-  .MessageInfo {
-    color: #f2f2f3;
-    font-size: 14px;
-    padding: 10px 14px;
-    position: absolute;
-    top: 0;
-  } 
-  
   /* The circles or bullets and indicators */
   .m2-dots {
     cursor: pointer;
@@ -1576,29 +1531,27 @@ p.date {
     transition: background-color 0.5s ease;
   }
   
-  .enable, .m2-dots:hover {
+  .m2-enable, .m2-dots:hover {
     background-color: #717161;
   }
   
   /* Faint animation */
-  .fade {
+  .fades {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.4s;
     animation-name: fade;
     animation-duration: 1.4s;
   }
   
-  @-webkit-keyframes fade {
+  @-webkit-keyframes fades {
     from {opacity: .5}
     to {opacity: 2}
   }
   
-  @keyframes fade {
+  @keyframes fades {
     from {opacity: .5}
     to {opacity: 2}
   }
-
-
 
   /* modal 3*/
 
@@ -1610,10 +1563,12 @@ p.date {
     cursor: pointer;
     border: 3px solid var(--text);
     border-radius: 5px;
+    background-color: rgba(228, 130, 79, 0.7);
+    transition: all 0.5s ease-in-out;
   }
 
   .button3:hover {
-    background-color: var(--hover);
+    background-color: rgb(228, 130, 79);
     color: black;
   }
 
@@ -1629,6 +1584,7 @@ p.date {
     opacity: 0;
     z-index: 3;
   }
+
   .overlay2-3:target {
     visibility: visible;
     opacity: 1;
@@ -1639,24 +1595,19 @@ p.date {
     padding: 20px;
     background: #fff;
     border-radius: 5px;
-    width: 30%;
-    height: 500px;
-    position: fixed;
+    width: 60%;
+    height: 90%;
     transition: all 0.5s ease-in-out;
     z-index: 40;
-  }
-
-  .popup3 h2 {
-    margin: 10px;
-    margin-top: 0;
-    color: #333;
-    font-family: Tahoma, Arial, sans-serif;
-    font-size: 16px;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
   }
 
   .popup3 .close3 {
     position: absolute;
-    top: 20px;
+    bottom: 20px;
     right: 30px;
     transition: all 200ms;
     font-size: 30px;
@@ -1665,14 +1616,12 @@ p.date {
     color: #333;
   }
   .popup3 .close3:hover {
-    color: #06D85F;
+    color: #181818;
     cursor: pointer;
   }
 
   .popup3 .content3 {
-    max-height: 30%;
-    overflow: auto;
-    height: 700px;
+    overflow: hidden;
     z-index: 20;
   }
 
@@ -1681,42 +1630,30 @@ p.date {
     overflow-y: hidden;
 }
   
-  /* @media screen and (max-width: 700px){
+  @media screen and (max-width: 700px){
     .box{
       width: 70%;
     }
     .popup{
       width: 70%;
     }
-  } */
+  }
 
   /*Modal 3 Image Carousel*/
-.modal3-slideshow-container {
-    width: 200px;
-    height: 500px;
-    overflow:auto;
-    position: relative;
-    margin: 30px auto 0px auto;
-    transition: all 500ms ease;
-  }
-  
-  .modal3-slideshow-container:hover {
-      border-radius: 40px;
-      transform: scale(1.1);
-      box-shadow: 6px 6px 7px 1px rgba(0, 0, 0, 0.35); 
-  }
-  
-  /* Make the images invisible by default */
-  .modal3-slideshow-container img {
-      height: 600px;
-      width: 400px;
-  }
 
   .Modal3-Containers {
-      height:auto;
-      width:auto;
-  }
+    height:70%;
+    width:auto;
+}
   
+  /* Make the images invisible by default */
+  .modal3-slideshow-container video {
+    max-width: 100%;
+    height: 380px;
+    margin-bottom: 5px;
+    margin-left: 5%;
+  }
+
   /* forward & Back buttons */
   .m3-Back, .m3-forward {
     cursor: pointer;
@@ -1744,26 +1681,6 @@ p.date {
     background-color: rgba(0,0,0,0.8);
   }
   
-  /* Caption Info */
-  .Info {
-    color: #e3e3e3;
-    font-size: 16px;
-    padding: 10px 14px;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-  } 
-  
-  /*Worknumbering (1/3 etc) */
-  .MessageInfo {
-    color: #f2f2f3;
-    font-size: 14px;
-    padding: 10px 14px;
-    position: absolute;
-    top: 0;
-  } 
-  
   /* The circles or bullets and indicators */
   .m3-dots {
     cursor: pointer;
@@ -1776,24 +1693,24 @@ p.date {
     transition: background-color 0.5s ease;
   }
   
-  .enable, .m3-dots:hover {
+  .m3-enable, .m3-dots:hover {
     background-color: #717161;
   }
   
   /* Faint animation */
-  .fade {
+  .fades {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.4s;
     animation-name: fade;
     animation-duration: 1.4s;
   }
   
-  @-webkit-keyframes fade {
+  @-webkit-keyframes fades {
     from {opacity: .5}
     to {opacity: 2}
   }
   
-  @keyframes fade {
+  @keyframes fades {
     from {opacity: .5}
     to {opacity: 2}
   }
@@ -1808,10 +1725,12 @@ p.date {
     cursor: pointer;
     border: 3px solid var(--text);
     border-radius: 5px;
+    background-color: rgba(228, 130, 79, 0.7);
+    transition: all 0.5s ease-in-out;
   }
 
   .button4:hover {
-    background-color: var(--hover);
+    background-color: rgb(228, 130, 79);
     color: black;
   }
 
@@ -1837,24 +1756,19 @@ p.date {
     padding: 20px;
     background: #fff;
     border-radius: 5px;
-    width: 30%;
-    height: 500px;
-    position: fixed;
+    width: 60%;
+    height: 90%;
     transition: all 0.5s ease-in-out;
     z-index: 40;
-  }
-
-  .popup4 h2 {
-    margin: 10px;
-    margin-top: 0;
-    color: #333;
-    font-family: Tahoma, Arial, sans-serif;
-    font-size: 16px;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
   }
 
   .popup4 .close4 {
     position: absolute;
-    top: 20px;
+    bottom: 20px;
     right: 30px;
     transition: all 200ms;
     font-size: 30px;
@@ -1863,15 +1777,13 @@ p.date {
     color: #333;
   }
   .popup4 .close4:hover {
-    color: #06D85F;
+    color: #181818;
     cursor: pointer;
   }
 
   .popup4 .content4 {
-    max-height: 30%;
-    overflow: auto;
-    height: 700px;
-    z-index: 20;
+    overflow: hidden;
+    z-index: 20
   }
 
   body.popup4 .close4 {
@@ -1879,41 +1791,43 @@ p.date {
     overflow-y: hidden;
 }
   
-  /* @media screen and (max-width: 700px){
+  @media screen and (max-width: 700px){
     .box{
       width: 70%;
     }
     .popup{
       width: 70%;
     }
-  } */
+  }
 
   /* modal 4 image carousel */
 .modal4-slideshow-container {
-    width: 200px;
-    height: 500px;
-    overflow:auto;
-    position: relative;
-    margin: 30px auto 0px auto;
-    transition: all 500ms ease;
-  }
-  
-  .modal4-slideshow-container:hover {
-      border-radius: 40px;
-      transform: scale(1.1);
-      box-shadow: 6px 6px 7px 1px rgba(0, 0, 0, 0.35); 
+   display: block;
+   place-items: center;
   }
   
   /* Make the images invisible by default */
   .modal4-slideshow-container img {
-      height: 600px;
-      width: 400px;
+      height: 380px;
+      width: 700px;
+      margin-left: 9%;
   }
 
   .Modal4-Containers {
       height:auto;
       width:auto;
   }
+
+.co-authored a {
+  color: var(--link);
+  border: none;
+  font-size: 1em;
+  background-color: #fff;
+}  
+
+.co-authored a:hover {
+  background-color: #fff;
+}
   
   /* forward & Back buttons */
   .m4-Back, .m4-forward {
@@ -1942,26 +1856,6 @@ p.date {
     background-color: rgba(0,0,0,0.8);
   }
   
-  /* Caption Info */
-  .Info {
-    color: #e3e3e3;
-    font-size: 16px;
-    padding: 10px 14px;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-  } 
-  
-  /*Worknumbering (1/3 etc) */
-  .MessageInfo {
-    color: #f2f2f3;
-    font-size: 14px;
-    padding: 10px 14px;
-    position: absolute;
-    top: 0;
-  } 
-  
   /* The circles or bullets and indicators */
   .m4-dots {
     cursor: pointer;
@@ -1974,24 +1868,24 @@ p.date {
     transition: background-color 0.5s ease;
   }
   
-  .enable, .m4-dots:hover {
+  .m4-enable, .m4-dots:hover {
     background-color: #717161;
   }
   
   /* Faint animation */
-  .fade {
+  .fades {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.4s;
     animation-name: fade;
     animation-duration: 1.4s;
   }
   
-  @-webkit-keyframes fade {
+  @-webkit-keyframes fades {
     from {opacity: .5}
     to {opacity: 2}
   }
   
-  @keyframes fade {
+  @keyframes fades {
     from {opacity: .5}
     to {opacity: 2}
   }
@@ -2006,10 +1900,12 @@ p.date {
     cursor: pointer;
     border: 3px solid var(--text);
     border-radius: 5px;
+    background-color: rgba(228, 130, 79, 0.7);
+    transition: all 0.5s ease-in-out;
   }
 
   .button5:hover {
-    background-color: var(--hover);
+    background-color: rgb(228, 130, 79);
     color: black;
   }
 
@@ -2025,6 +1921,7 @@ p.date {
     opacity: 0;
     z-index:3;
   }
+
   .overlay2-5:target {
     visibility: visible;
     opacity: 1;
@@ -2035,24 +1932,19 @@ p.date {
     padding: 20px;
     background: #fff;
     border-radius: 5px;
-    width: 30%;
-    height: 500px;
-    position: fixed;
+    width: 60%;
+    height: 90%;
     transition: all 0.5s ease-in-out;
     z-index: 40;
-  }
-
-  .popup5 h2 {
-    margin: 10px;
-    margin-top: 0;
-    color: #333;
-    font-family: Tahoma, Arial, sans-serif;
-    font-size: 16px;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
   }
 
   .popup5 .close5 {
     position: absolute;
-    top: 20px;
+    bottom: 20px;
     right: 30px;
     transition: all 200ms;
     font-size: 30px;
@@ -2061,14 +1953,12 @@ p.date {
     color: #333;
   }
   .popup5 .close5:hover {
-    color: #06D85F;
+    color: #181818;
     cursor: pointer;
   }
 
   .popup5 .content5 {
-    max-height: 30%;
-    overflow: auto;
-    height: 700px;
+    overflow: hidden;
     z-index: 20;
   }
 
@@ -2077,36 +1967,26 @@ p.date {
     overflow-y: hidden;
 }
   
-  /* @media screen and (max-width: 700px){
+  @media screen and (max-width: 700px){
     .box{
       width: 70%;
     }
     .popup{
       width: 70%;
     }
-  } */
+  }
 
     /*Modal 5 Image Carousel*/
 .modal5-slideshow-container {
-    width: 200px;
-    height: 500px;
-    overflow:auto;
-    position: relative;
-    margin: 30px auto 0px auto;
-    transition: all 500ms ease;
-  }
-  
-  .modal5-slideshow-container:hover {
-      border-radius: 40px;
-      transform: scale(1.1);
-      box-shadow: 6px 6px 7px 1px rgba(0, 0, 0, 0.35); 
+ 
   }
   
   /* Make the images invisible by default */
   .modal5-slideshow-container img {
-      height: 600px;
-      width: 400px;
-  }
+    margin-left: 17%;
+    height: 380px;
+    width: 550px;
+}
 
   .Modal5-Containers {
       height:auto;
@@ -2138,26 +2018,6 @@ p.date {
   /*when the user hovers,add a black background with some little opacity */
   .m5-Back:hover, .m5-forward:hover {
     background-color: rgba(0,0,0,0.8);
-  }
-  
-  /* Caption Info */
-  .Info {
-    color: #e3e3e3;
-    font-size: 16px;
-    padding: 10px 14px;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-  } 
-  
-  /*Worknumbering (1/3 etc) */
-  .MessageInfo {
-    color: #f2f2f3;
-    font-size: 14px;
-    padding: 10px 14px;
-    position: absolute;
-    top: 0;
   } 
   
   /* The circles or bullets and indicators */
@@ -2172,24 +2032,24 @@ p.date {
     transition: background-color 0.5s ease;
   }
   
-  .enable, .m5-dots:hover {
+  .m5-enable, .m5-dots:hover {
     background-color: #717161;
   }
   
   /* Faint animation */
-  .fade {
+  .fades {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.4s;
     animation-name: fade;
     animation-duration: 1.4s;
   }
   
-  @-webkit-keyframes fade {
+  @-webkit-keyframes fades {
     from {opacity: .5}
     to {opacity: 2}
   }
   
-  @keyframes fade {
+  @keyframes fades {
     from {opacity: .5}
     to {opacity: 2}
   }
@@ -2204,10 +2064,12 @@ p.date {
     cursor: pointer;
     border: 3px solid var(--text);
     border-radius: 5px;
+    background-color: rgba(228, 130, 79, 0.7);
+    transition: all 0.5s ease-in-out;
   }
 
   .button6:hover {
-    background-color: var(--hover);
+    background-color: rgb(228, 130, 79);
     color: black;
   }
 
@@ -2223,6 +2085,7 @@ p.date {
     opacity: 0;
     z-index:3;
   }
+
   .overlay2-6:target {
     visibility: visible;
     opacity: 1;
@@ -2233,24 +2096,19 @@ p.date {
     padding: 20px;
     background: #fff;
     border-radius: 5px;
-    width: 30%;
-    height: 500px;
-    position: fixed;
+    width: 60%;
+    height: 90%;
     transition: all 0.5s ease-in-out;
     z-index: 40;
-  }
-
-  .popup6 h2 {
-    margin: 10px;
-    margin-top: 0;
-    color: #333;
-    font-family: Tahoma, Arial, sans-serif;
-    font-size: 16px;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
   }
 
   .popup6 .close6 {
     position: absolute;
-    top: 20px;
+    bottom: 20px;
     right: 30px;
     transition: all 200ms;
     font-size: 30px;
@@ -2259,14 +2117,12 @@ p.date {
     color: #333;
   }
   .popup6 .close6:hover {
-    color: #06D85F;
+    color: #181818;
     cursor: pointer;
   }
 
   .popup6 .content6 {
-    max-height: 30%;
-    overflow: auto;
-    height: 700px;
+    overflow: hidden;
     z-index: 20;
   }
 
@@ -2275,35 +2131,23 @@ p.date {
     overflow-y: hidden;
 }
   
-  /* @media screen and (max-width: 700px){
+  @media screen and (max-width: 700px){
     .box{
       width: 70%;
     }
     .popup{
       width: 70%;
     }
-  } */
+  }
 
   /*   /*Modal 6 Image Carousel*/
-.modal6-slideshow-container {
-    width: 200px;
-    height: 500px;
-    overflow:auto;
-    position: relative;
-    margin: 30px auto 0px auto;
-    transition: all 500ms ease;
-  }
-  
-  .modal6-slideshow-container:hover {
-      border-radius: 40px;
-      transform: scale(1.1);
-      box-shadow: 6px 6px 7px 1px rgba(0, 0, 0, 0.35); 
-  }
   
   /* Make the images invisible by default */
-  .modal6-slideshow-container img {
-      height: 600px;
-      width: 400px;
+  .modal6-slideshow-container video {
+    max-width: 100%;
+    height: 380px;
+    margin-bottom: 5px;
+    margin-left: 5%;
   }
 
   .Modal6-Containers {
@@ -2338,26 +2182,6 @@ p.date {
     background-color: rgba(0,0,0,0.8);
   }
   
-  /* Caption Info */
-  .Info {
-    color: #e3e3e3;
-    font-size: 16px;
-    padding: 10px 14px;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-  } 
-  
-  /*Worknumbering (1/3 etc) */
-  .MessageInfo {
-    color: #f2f2f3;
-    font-size: 14px;
-    padding: 10px 14px;
-    position: absolute;
-    top: 0;
-  } 
-  
   /* The circles or bullets and indicators */
   .m6-dots {
     cursor: pointer;
@@ -2370,75 +2194,28 @@ p.date {
     transition: background-color 0.5s ease;
   }
   
-  .enable, .m6-dots:hover {
+  .m6-enable, .m6-dots:hover {
     background-color: #717161;
   }
   
   /* Faint animation */
-  .fade {
+  .fades {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.4s;
     animation-name: fade;
     animation-duration: 1.4s;
   }
   
-  @-webkit-keyframes fade {
+  @-webkit-keyframes fades {
     from {opacity: .5}
     to {opacity: 2}
   }
   
-  @keyframes fade {
+  @keyframes fades {
     from {opacity: .5}
     to {opacity: 2}
-  } */
+  } 
    
-
-/* .project-card>h3 {
-    margin: 5px;
-    font-size: 1.6em;
-    font-family: 'Monda', sans-serif;
-    font-family: 'Raleway', sans-serif;
-} */
-
-/* .project-card>a {
-    display: block;
-    margin: 5px;
-    font-family: 'Monda', sans-serif;
-    font-family: 'Raleway', sans-serif;
-} */
-
-/* a h3 {
-    color: var(--link);
-    font-family: 'Monda', sans-serif;
-    font-family: 'Raleway', sans-serif;
-} */
-
-/* .project-card a {
-    color: var(--link);
-    text-decoration: none;
-    font-size: 1.6em;
-    font-family: 'Monda', sans-serif;
-    font-family: 'Raleway', sans-serif;
-} */
-
-/* .project-card video {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-} */
-
-/* .project-card hr {
-    margin: 5px -10px;
-    border: none;
-    border-bottom: 1px solid var(--flourish);
-} */
-
-/* .project-card p {
-    padding-top: 10px;
-    font-family: 'Monda', sans-serif;
-    font-family: 'Raleway', sans-serif;
-} */
-
 form {
     margin: 50px;
     display: flex;
@@ -2464,24 +2241,25 @@ input, textarea {
 }
 
 input[type="submit"]{
-    width: 30%;
-    height: 75px;
-    margin: 15px auto;
-    background-color: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid var(--text);
-    border-radius: 5px;
-    text-decoration: none;
-    color: #181818;
-    font-size: 1.7em;;
-    transition: all .25s ease;
-    font-family: 'Monda', sans-serif;
-    font-family: 'Raleway', sans-serif;
+  width: auto;
+  height: 60px;
+  margin: 15px;
+  padding: 15px;
+  background-color: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid var(--text);
+  border-radius: 5px;
+  text-decoration: none;
+  color: #181818;
+  font-size: 1.9em;
+  transition: all .25s ease;
+  font-family: 'Monda', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  transition: all 500ms ease;  
+  background-color: rgba(228, 130, 79, 0.9);
 }
-
-
 
 input[type="submit"]:hover {
     transform: scale(.8);

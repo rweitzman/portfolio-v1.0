@@ -2244,7 +2244,7 @@ input[type="submit"]{
   width: auto;
   height: 60px;
   margin: 15px;
-  padding: 15px;
+  padding: 10px;
   background-color: none;
   display: flex;
   justify-content: center;
@@ -2258,13 +2258,13 @@ input[type="submit"]{
   font-family: 'Monda', sans-serif;
   font-family: 'Raleway', sans-serif;
   transition: all 500ms ease;  
-  background-color: rgba(228, 130, 79, 0.9);
+  background-color: rgba(228, 130, 79, 0.8);
 }
 
 input[type="submit"]:hover {
     transform: scale(.8);
     transition: all .25s ease;
-    background-color:var();
+    background-color: rgba(228, 130, 79, 0.9);
 }
 
 form p {
@@ -2286,7 +2286,7 @@ form p {
 
 #submit-button:hover {
     transform: scale(.8);
-    background-color: var(--hover);
+    background-color: rgba(228, 130, 79, 0.9);
 }
 
 footer {

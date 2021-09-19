@@ -2512,19 +2512,19 @@ h2 {
     .profile.down {
       background: radial-gradient(ellipse at center, var(--bgtransparent) 35%, transparent 65%);
       padding-top: 15%;
-      color: white;
+      /* color: white; */
       text-align: center;
       padding-top: 20%;
     }
 
     .name {
       font-size: 1.2em;
-      color: white;
+      /* color: white; */
     }
 
     .name1 {
       font-size: 1.2em;
-      color: white;
+      /* color: white; */
     }
 
     .profile a {

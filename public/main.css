@@ -86,13 +86,13 @@ nav i:hover {
 }
 
 header {
-    min-height: 100vh;
+    height: 600px;
     display: flex;
     justify-content: center;
     background-color: var(--bg);
     margin-bottom: 0px;
     overflow: hidden;
-    height: 600px;
+    
 }
 
 .splash {
@@ -186,7 +186,7 @@ header {
 
 .profile a {
     width: auto;
-    height: 50%;
+    height: 70%;
     margin: 15px;
     padding: 15px;
     background-color: none;
@@ -232,7 +232,7 @@ section {
 }
 
 .values-header {
-    margin-top:60px;
+    margin-top:140px;
     display: grid;
     place-items: center;
     margin-bottom: 15px;
@@ -302,12 +302,14 @@ section {
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
     display: flex;
+    place-items: center;
+    flex-wrap: wrap;
 }
 
 .values-list div {
     width: 25%;
+    height: 30%;
     padding: 5px;
-    margin: 5px;
     text-align: center;
 }
 
@@ -321,7 +323,6 @@ section {
 .values-list i:hover {
     transform: scale(1.1);
     transition: all .25s ease;
-    
     text-shadow: 0px 3px 4px #181818;
     cursor:pointer;
 }
@@ -386,23 +387,6 @@ section {
     text-align: center;
     line-height: 25px;
     transition: all 450ms ease;
-}
-
-.about a {
-    text-decoration: none;
-}
-
-#a-name {
-    font-size: 1.6em;
-    justify-content: center;
-}
-
-#a-email {
-    padding-top: 10px;
-}
-
-#about-icons {
-    padding-left:35%;
 }
 
 .about i {
@@ -538,9 +522,6 @@ section {
     cursor: pointer;
 }
 
-.fa-star-of-life {
-    font-size: 4em;
-}
 
 .work i {
   text-shadow: 0px 3px 4px var(--link);
@@ -594,11 +575,8 @@ section {
 .detailed-info {
     padding-left:50px;
     transition: all .5s ease-in-out;
+    width:70%;
 }
-
-/* .detailed-info a {
-  text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.45);
-} */
 
 .detailed-info a:hover {
     transform: scale(1.1);
@@ -632,10 +610,6 @@ section {
     transform: scale(.8);
     background-color: rgba(228, 130, 79, 0.9);
     text-shadow: none;
-}
-
-.detailed-info {
-    width: 70%;
 }
 
 .work-image {
@@ -1235,16 +1209,12 @@ p.date {
   /* Make the images invisible by default */
   .modal1-slideshow-container img {
     border-radius: 30px;
-    width: 25%;
+    width: 22.5%;
     height: 380px;
     margin-left: 38%;
     margin-bottom: 5px;
     box-shadow: 6px 6px 7px 1px rgba(0, 0, 0, 0.25);
     transition: 0.4s ease;
-  }
-
-  .modal1-slideshow-container img:hover {
-    box-shadow: 6px 6px 7px 1px rgba(0, 0, 0, 0.35);
   }
 
   .modal-header {
@@ -1259,14 +1229,14 @@ p.date {
 
   .project-info p {
     text-align:justify;
-    word-wrap: wrap;
-    word-break: break-all;
-    white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
     padding-left: 20px;
     font-size: 1.1em;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
     transition: 0.4s ease;
+    line-height: 2.1em;
   }
 
   /* forward & Back buttons */
@@ -1432,12 +1402,6 @@ p.date {
     margin-bottom: 10px;
   }
 
-  .modal2-slideshow-container img {
-    max-width: 100%;
-    height: 380px;
-    margin-bottom: 10px;
-  }
-
   .modal-header {
     font-size: .7em;
     text-align: left;
@@ -1452,18 +1416,6 @@ p.date {
     margin-top: 20px;
     margin-left: 45%;
     padding-bottom: 0px;
-  }
-
-  .project-info p {
-    text-align:justify;
-    word-wrap: wrap;
-    word-break: break-all;
-    white-space: normal;
-    margin: 0 10px 0 10px;
-    line-height: 2em;
-    font-family: 'Monda', sans-serif;
-    font-family: 'Raleway', sans-serif;
-    color:#333;
   }
 
   .project-info a {
@@ -1742,6 +1694,7 @@ p.date {
     opacity: 0;
     z-index: 3;
   }
+
   .overlay2-4:target {
     visibility: visible;
     opacity: 1;
@@ -2351,6 +2304,17 @@ h2 {
     width: 100%;
   }
 
+  .work {
+    height: 1050px;
+  }
+
+  .work p {
+    font-size: 1.7em;
+    margin-left: -20px;
+  }
+  .work-image {
+    width: 20%;
+  }
 
   .project-card {
     width: 47%;
@@ -2360,17 +2324,49 @@ h2 {
     width:47%;
   }
 
+  .popup1 {
+    width:80%;
+  }
+
+  .modal1-slideshow-container img {
+    width: 25%;
+  }
+
+  .popup2 {
+    width: 80%;
+  }
+
+  .modal2-slideshow-container video {
+    margin-top: 2%;
+  }
+
+  .popup3 {
+    width:80%;
+  }
+
+  .popup4 {
+    width:80%;
+  }
+  .popup5 {
+    width:80%;
+  }
+  .popup6 {
+    width:80%;
+  }
+  .contact p {
+    font-size: 1.1em;
+    width: 60%;
+    line-height: 1.7em;
+  }
 }
 
 @media (max-width:941px) and (min-width:851px) {
   .splash {
     height: 100%;
-
   }
 
   .name {
     font-size: 3em;
-
   }
 
   .name1{
@@ -2382,6 +2378,88 @@ h2 {
     width: 100%;
     position: absolute;
     padding-top: 20%;
+  }
+  #about-card {
+    width: 50%;
+  }
+
+  .about i {
+    font-size: 20px;
+  }
+
+  .quote {
+    width: 100%;
+    margin-left:0%;
+  }
+
+  .quote h1 {
+    font-size: 1.5em;
+  }
+
+  .quote-text p {
+    font-size: 1.3em;
+  }
+
+  .work {
+    height: 980px;
+  }
+
+  .work p {
+    font-size: 1.5em;
+    margin-left: -30px;
+  }
+
+  .work-image {
+    width: 20%;
+  }
+
+  .detailed-info a.button {
+    width: 400px;
+    height: 60px;
+    font-size: 1.6em;
+  }
+
+  .project-card {
+    width: 47%;
+  }
+
+  .project-card1 {
+    width:47%;
+  }
+
+  .popup1 {
+    width:90%;
+  }
+
+  .modal1-slideshow-container img {
+    width: 25%;
+  }
+
+  .popup2 {
+    width: 90%;
+  }
+
+  .modal2-slideshow-container video {
+    margin-top: 2%;
+  }
+
+  .popup3 {
+    width:90%;
+  }
+
+  .popup4 {
+    width:90%;
+  }
+  .popup5 {
+    width:90%;
+  }
+  .popup6 {
+    width:90%;
+  }
+  .contact p {
+    font-size: 1.1em;
+    width: 60%;
+    line-height: 1.7em;
   }
 
   
@@ -2395,12 +2473,12 @@ h2 {
   }
 
   .name {
-    font-size: 2.7em;
+    font-size: 2.9em;
 
   }
 
   .name1{
-    font-size: 2.5em;
+    font-size: 2.7em;
   }
 
   .profile.down {
@@ -2408,79 +2486,757 @@ h2 {
     padding-top: 20%;
   }
 
+  .values-header {
+    margin-top:10px;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    }
+
+    .values-list div {
+      width: 50%;
+      padding: 5px;
+      text-align: center;
+    }
+  
+    .about {
+      flex-direction: column;
+    }
+    #about-card {
+      width: 50%;
+    }
+
+    .about i {
+      font-size: 30px;
+    }
+
+    .quote {
+      width: 100%;
+      margin-left:0%;
+    }
+
+    .quote h1 {
+      font-size: 3em;
+    }
+
+    .skills-header {
+      font-size: 1.2em;
+    }
+
+    .work-header {
+      font-size: 1.2em;
+      padding-top: -40px;
+    }
+
+    .work {
+      height: 1000px;
+    }
+  
+    .work p {
+      font-size: 1.5em;
+      margin-left: -30px;
+    }
+  
+    .work-image {
+      width: 20%;
+    }
+  
+    .detailed-info a.button {
+      width: 400px;
+      height: 60px;
+      font-size: 1.6em;
+    }
+
+    .projects-header {
+      font-size: 1.2em;
+    }
+  
+    .project-card {
+      width: 47%;
+    }
+  
+    .project-card1 {
+      width:47%;
+    }
+  
+    .popup1 {
+      width:90%;
+    }
+  
+    .modal1-slideshow-container img {
+      width: 27.5%;
+    }
+  
+    .popup2 {
+      width: 90%;
+    }
+  
+    .modal2-slideshow-container video {
+      margin-top: -2%;
+    }
+  
+    .popup3 {
+      width:90%;
+    }
+    .modal3-slideshow-container video {
+      margin-top: -2%;
+      margin-left: -.5%;
+    }
+  
+    .popup4 {
+      width:90%;
+    }
+    .popup5 {
+      width:90%;
+    }
+    .popup6 {
+      width:90%;
+    }
+    .modal6-slideshow-container video {
+      margin-top: -2%;
+      margin-left: -.5%;
+    }
+
+    .contact-header {
+      font-size: 1.2em;
+    }
+    .contact p {
+      font-size: 1.1em;
+      width: 60%;
+      line-height: 1.7em;
+    }
+
+    input[type="submit"]{
+      font-size: 1.6em;
+    }
 }
 
 @media (max-width: 770px) and (min-width: 641px) {
+
+  header {
+    height: 500px;
+  }
   .splash {
     height: 70%;
-
-  }
-
-  .name {
-    font-size: 2.7em;
-
-  }
-
-  .name1{
-    font-size: 2.5em;
   }
 
   .profile.down {
-    padding-top: 20%;
-    position: absolute;
+    height: 70%;
+    width: 140%;
+    padding-bottom: 100px;
+    background: radial-gradient(ellipse at center, var(--bgtransparent) 25%, transparent 75%);
+    
   }
+
+  .name {
+    font-size: 2.8em;
+  }
+
+  .name1{
+    width:80%;
+    font-size: 2.7em;
+  }
+
+  .values-header {
+    margin-top:10px;
+    margin-bottom: 5px;
+    font-size: 1em;
+    }
+
+    .values-list div {
+      width: 50%;
+      padding: 5px;
+      text-align: center;
+    }
+  
+    .about {
+      flex-direction: column;
+    }
+    #about-card {
+      width: 50%;
+    }
+
+    .about i {
+      font-size: 30px;
+    }
+
+    .quote {
+      width: 100%;
+      margin-left:0%;
+    }
+
+    .quote h1 {
+      font-size: 3em;
+    }
+
+    .skills-header {
+      font-size: 1em;
+    }
+
+    .work {
+      height: 1500px;
+    }
+
+    .work-info {
+      flex-direction: column;
+    }
+
+    .work-header {
+      font-size: 1em;
+      padding-top: -40px;
+    }
+
+    .work p {
+      font-size: 1.5em;
+      margin-left: -30px;
+      width: 100%;
+    }
+
+    .detailed-info {
+      width: 100%;
+    }
+  
+    .work-image {
+      width: 100%;
+    }
+  
+    .detailed-info a.button {
+      width: 400px;
+      height: 60px;
+      font-size: 1.6em;
+      margin-left: 11%;
+    }
+
+    .projects-header {
+      font-size: 1em;
+    }
+  
+    .project-card {
+      width: 47%;
+    }
+  
+    .project-card1 {
+      width:47%;
+    }
+
+    .box {
+      margin-left: 15%;
+    }
+  
+    p.title {
+      font-size: 1.2em;
+    }
+    .popup1 {
+      overflow: auto;
+      width:90%;
+    }
+
+    .project-info p {
+      font-size:.9em;
+      line-height:1.9em;
+    }
+  
+    .popup2 {
+      width: 90%;
+    }
+  
+    .modal2-slideshow-container video {
+      margin-top: -5%;
+    }
+  
+    .popup3 {
+      width:90%;
+    }
+    .modal3-slideshow-container video {
+      margin-top: -5%;
+      margin-left: -.5%;
+    }
+  
+    .popup4 {
+      width:90%;
+    }
+    .modal4-slideshow-container {
+      margin-left: 2px;
+    }
+
+    .modal4-slideshow-container img {
+      width: 90%;
+    }
+
+    .popup5 {
+      width:90%;
+    }
+
+    .popup6 {
+      width:90%;
+    }
+
+    .modal6-slideshow-container video {
+      margin-top: -2%;
+      margin-left: -.5%;
+    }
+
+    .contact-header {
+      font-size: 1em;
+    }
+    .contact p {
+      font-size: 1.1em;
+      width: 60%;
+      line-height: 1.7em;
+    }
+
+    input[type="submit"]{
+      font-size: 1.2em;
+    }
 }
 
 @media (max-width: 640px) and (min-width: 520px) {
+  header {
+    height: 400px;
+  }
   .splash {
     height: 60%;
-
   }
 
   .name {
-    font-size: 2.3em;
-
+    font-size: 2.4em;
+    color: white;
+    text-shadow: 2px 2px black;
   }
 
   .name1{
-    font-size: 2.1em;
+    font-size: 2.2em;
+    color: white;
+    text-shadow: 2px 2px black;
   }
 
   .profile.down {
+    padding-top: 160px;
     height: 100%;
-    width: 100%;
-    padding-top: 20%;
+    width: 900px;
+    background: radial-gradient(ellipse at center, var(--bgtransparent) 5%, transparent 95%);
   } 
-}
-
-@media (max-width: 521px) and (min-width: 421px) {
-  .splash {
-    height: 50%;
-  }
-  .name {
-    font-size: 2em;
-
-  }
-
-  .name1{
-    font-size: 1.8em;
-    margin-bottom: 10px;
-  }
-
-  .profile.down {
-    height: 100%;
-    width: 100%;
-    padding-top: 20%;
-  }
 
   .profile a {
-    height: 40%;
-    font-size: 1.2em;
-    margin-top: 10px;
+    height: 50px;
+    font-size: 1.3em;
+
   }
+
+  .values-header {
+    margin-top:10px;
+    margin-bottom: 5px;
+    font-size: 1em;
+    }
+
+    .values-list div {
+      width: 50%;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .values-list div i {
+      font-size: 2.7em;
+    }
+
+    .about-info {
+      margin-left: 3px;
+    }
+    
+    .about {
+      flex-direction: column;
+    }
+    #about-card {
+      width: 60%;
+    }
+
+    .about i {
+      font-size: 30px;
+    }
+
+    .quote {
+      width: 100%;
+      margin-left:0%;
+    }
+
+    .quote h1 {
+      font-size: 2em;
+    }
+
+   
+    .skills-header {
+      font-size: 1em;
+    }
+
+    .work {
+      height: 150%;
+    }
+
+    .work-header {
+      font-size: 1em;
+    }
+
+    .work h2 {
+      font-size: 1.8em;
+    }
+
+    .work-info {
+      flex-direction: column;
+    }
+  
+    .work p {
+      margin-left: 5px;
+      text-align: left;
+      font-size: 1.5em;
+
+    }
+    .detailed-info {
+      padding-left: 5px;
+      width: 95%;
+    }
+
+    .work-image {
+      width:70%;
+      margin-left: 15px;
+    }
+
+    .slideshow-container {
+      margin: 0 0 0 130px;
+    }
+
+    .detailed-info a.button {
+      margin-left: 12%;
+      font-size: 1.5em;
+      margin-top: 10px;
+      width: 400px;
+      margin-bottom: 20px;
+    }
+
+    .projects-header {
+      font-size: 1em;
+    }
+
+    .project-card {
+      width: 50%;
+    }
+
+    .project-card1 {
+      width: 50%;
+    }
+
+    p.title {
+      font-size: 1.2em;
+    }
+
+    .box {
+      margin-left: 17%;
+
+    }
+
+    .button2 {
+      margin-left: -5%;
+    }
+
+    .button6 {
+      margin-left: -7%;
+    }
+
+    .popup1 {
+      width:90%;
+    }
+
+    .modal1-slideshow-container img {
+      width: 35%;
+    }
+
+    .popup2 {
+      width: 90%;
+    }
+
+    .popup3 {
+      width:90%;
+    }
+
+    .popup4 {
+      width:90%;
+    }
+    .popup5 {
+      width:90%;
+    }
+    .popup6 {
+      width:90%;
+    }
+
+    .contact-header {
+      font-size: 1em;
+    }
+
+    .contact p {
+      line-height: 30px;
+    }
+    .contact form {
+      width: 100%;
+  }
+
+    input[type="submit"] {
+      font-size: 1.1em;
+      height: 50px;
+    }
+  }
+
+
+@media (max-width: 521px) and (min-width: 421px) {
+  header {
+    height: 400px;
+  }
+  .splash {
+    height: 60%;
+  }
+
+  .name {
+    font-size: 2.2em;
+    color: white;
+    text-shadow: 2px 2px black;
+  }
+
+  .name1{
+    font-size: 2em;
+    color: white;
+    text-shadow: 2px 2px black;
+  }
+
+  .profile.down {
+    padding-top: 100px;
+    height: 100%;
+    width: 900px;
+    background: radial-gradient(ellipse at center, var(--bgtransparent) 5%, transparent 95%);
+  } 
+
+  .profile a {
+    height: 50px;
+    font-size: 1.3em;
+  }
+
+  .values-header {
+    margin-top:10px;
+    margin-bottom: 5px;
+    font-size: 1em;
+    }
+
+    .values-list {
+      flex-wrap: wrap;
+    }
+
+    .values-list div {
+      width: 100%;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .values-list div i {
+      font-size: 2.7em;
+    }
+
+    .about-info {
+      margin-left: 3px;
+    }
+    
+    .about {
+      flex-direction: column;
+    }
+    #about-card {
+      width: 60%;
+    }
+
+    .about i {
+      font-size: 30px;
+    }
+
+    .quote {
+      width: 100%;
+      margin-left:0%;
+    }
+
+    .quote h1 {
+      font-size: 2em;
+    }
+
+    .quote p {
+      font-size: 1.4em;
+      line-height: 1.4em;
+    }
+   
+    .skills-header {
+      font-size: 1em;
+    }
+
+    .work {
+      height: 150%;
+    }
+
+    .work-header {
+      font-size: 1em;
+    }
+
+    .work h2 {
+      font-size: 1.4em;
+    }
+
+    .work-info {
+      flex-direction: column;
+    }
+  
+    .work p {
+      margin-left: 5px;
+      text-align: left;
+      font-size: 1.5em;
+    }
+
+    .detailed-info {
+      padding-left: 5px;
+      width: 100%;
+    }
+
+    .work-image {
+      width:70%;
+      margin-left: -30px;
+    }
+
+    .slideshow-container {
+      margin: 0 0 0 110px;
+    }
+
+    .detailed-info a.button {
+      margin-left: 10%;
+      font-size: 1.2em;
+      margin-top: 10px;
+      width: 400px;
+      margin-bottom: 20px;
+      height: 50px;
+      width: 75%;
+    }
+
+    .projects-header {
+      padding-top: 10px;
+      font-size: 1em;
+    }
+
+    .project-card {
+      width: 90%;
+    }
+
+    .project-card1 {
+      width: 90%;
+    }
+
+    p.title {
+      font-size: 1.2em;
+    }
+
+    .box {
+      margin-left: 17%;
+
+    }
+
+    .button2 {
+      margin-left: -5%;
+    }
+
+    .button6 {
+      margin-left: -7%;
+    }
+
+    .popup1 {
+      width:90%;
+    }
+
+    .modal1-slideshow-container img {
+      width: 42%;
+      margin-left: 30%;
+    }
+
+    .modal-header {
+      font-size: .6em;
+    }
+
+    .project-info p {
+      font-size: .9em;
+    }
+
+
+   .modal-content {
+     height: 80%;
+     overflow: auto;
+   }
+
+    .popup2 {
+      width: 95%;
+    }
+
+    .modal2-slideshow-container video {
+      margin-top: 0px;
+      padding-bottom: 60px;
+    }
+
+    .project-info a {
+      margin-top: -30px;
+    }
+
+    .popup3 {
+      width:95%;
+    }
+
+    .modal3-slideshow-container video {
+      margin-top: 0px;
+      padding-bottom: 70px;
+      margin-left: -4px;
+    }
+
+    .popup4 {
+      width:90%;
+    }
+
+    .modal4-slideshow-container img {
+      height: 300px;
+      width: auto;
+      margin-left: -1px;
+      overflow: hidden;
+    }
+
+    .popup5 {
+      width:90%;
+    }
+
+    .modal5-slideshow-container img {
+      height: 340px;
+      width: auto;
+      margin-left: -1px;
+      overflow: hidden;
+    }
+
+    .popup6 {
+      width:90%;
+    }
+
+    .contact-header {
+      font-size: 1em;
+    }
+
+    .contact p {
+      line-height: 30px;
+    }
+    .contact form {
+      width: 100%;
+  }
+
+    input[type="submit"] {
+      font-size: 1.1em;
+      height: 60px;
+    }
 }
 
 @media only screen and (max-width: 420px) and (min-width: 280px) {
+
+
     main {
       width: 100%;
     }
@@ -2490,7 +3246,7 @@ h2 {
       left: 0;
       top: 0;
       width: auto;
-      height: 40%;
+      height: 50%;
       filter: blur(.01px);
   }
   
@@ -2512,19 +3268,19 @@ h2 {
     .profile.down {
       background: radial-gradient(ellipse at center, var(--bgtransparent) 35%, transparent 65%);
       padding-top: 15%;
-      /* color: white; */
+      color: white;
       text-align: center;
       padding-top: 20%;
     }
 
     .name {
       font-size: 1.2em;
-      /* color: white; */
+      color: white;
     }
 
     .name1 {
       font-size: 1.2em;
-      /* color: white; */
+      color: white;
     }
 
     .profile a {
@@ -2533,6 +3289,18 @@ h2 {
       width: auto;
       font-size: .8em;
     }
+
+    .values-header {
+      margin-top:10px;
+      margin-bottom: 5px;
+      font-size: 1em;
+      }
+  
+      .values-list div {
+        width: 50%;
+        padding: 5px;
+        text-align: center;
+      }
 
     .about i, .contact i {
         width: 100%;

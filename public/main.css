@@ -166,18 +166,18 @@ header {
     text-shadow: 0px 0px 0px #181818;
     font-weight: 900;
 }
+
 .profile.down {
     background: radial-gradient(ellipse at center, var(--bgtransparent) 25%, transparent 75%);
     opacity: 1;
     transition: all 2.7s ease;
-    height: 100%;
+    height: 100%; 
     width: 100%;
     padding-top: 20%;
     display: grid;
     place-items: center;
     z-index: 0;
     position:relative;
-
 }
 
 .profile i {
@@ -277,7 +277,6 @@ section {
     transition: all 0.5s ease-in-out;
     color: black;
     text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.45);
-    
 }
 
 .values h3:hover {
@@ -625,7 +624,6 @@ section {
   margin: 30px auto 0px auto;
   transition: all 500ms ease;
   z-index:0;
-  /* box-shadow: 6px 6px 7px 1px rgba(0, 0, 0, 0.15); */
 }
 
 /* forward & Back buttons */
@@ -2089,7 +2087,6 @@ p.date {
 
   /*   /*Modal 6 Image Carousel*/
   
-  /* Make the images invisible by default */
   .modal6-slideshow-container video {
     max-width: 100%;
     height: 380px;
@@ -3291,7 +3288,7 @@ h2 {
 
 @media only screen and (max-width: 420px) and (min-width: 320px) {
   header {
-    height: 280px;
+    height: 220px;
   }
 
   nav a {
@@ -3310,7 +3307,7 @@ h2 {
   }
 
   .name {
-    margin-top: 5px;
+    margin: 0px;
     font-size: 1.3em;
     color: white;
     text-shadow: 2px 2px black;
@@ -3323,14 +3320,10 @@ h2 {
     margin-bottom: 5px;
   }
 
-  .profile {
-    margin-top: 60px;
-  }
-
   .profile.down {
     border: 1px solid white;
-    margin: 60px 5px 0 5px;
-    padding-top: 45px;
+    margin: 40px 5px 0 5px;
+    padding-top: 10px;
     height:60%;
     width: 900px;
     background: radial-gradient(ellipse at center, var(--bgtransparent) 5%, transparent 95%);
@@ -3338,7 +3331,7 @@ h2 {
 
   .profile a {
     height: 40px;
-    font-size: 1.3em;
+    font-size: 1.2em;
     padding: 10px;
   }
 

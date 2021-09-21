@@ -1141,6 +1141,7 @@ p.date {
     visibility: hidden;
     opacity: 0;
     z-index: 3;
+    overflow: auto;
   }
   
   .overlay2:target {
@@ -1164,7 +1165,7 @@ p.date {
   }
 
   .popup1 .close1 {
-    position: absolute;
+    position: inherit;
     bottom: 20px;
     right: 30px;
     transition: all 200ms;
@@ -1180,7 +1181,7 @@ p.date {
   }
 
   .popup1 .content1 {
-    overflow: hidden;
+    overflow: visible;
     z-index: 20;
     color:#333;
   }
@@ -1354,7 +1355,7 @@ p.date {
   }
 
   .popup2 .close2 {
-    position: absolute;
+    position: inherit;
     bottom: 20px;
     right: 30px;
     transition: all 200ms;
@@ -1555,7 +1556,7 @@ p.date {
   }
 
   .popup3 .close3 {
-    position: absolute;
+    position: inherit;
     bottom: 20px;
     right: 30px;
     transition: all 200ms;
@@ -1717,7 +1718,7 @@ p.date {
   }
 
   .popup4 .close4 {
-    position: absolute;
+    position: inherit;
     bottom: 20px;
     right: 30px;
     transition: all 200ms;
@@ -1893,7 +1894,7 @@ p.date {
   }
 
   .popup5 .close5 {
-    position: absolute;
+    position: inherit;
     bottom: 20px;
     right: 30px;
     transition: all 200ms;
@@ -2053,7 +2054,7 @@ p.date {
   }
 
   .popup6 .close6 {
-    position: absolute;
+    position: inherit;
     bottom: 20px;
     right: 30px;
     transition: all 200ms;
@@ -2610,10 +2611,20 @@ h2 {
 @media (max-width: 770px) and (min-width: 641px) {
 
   header {
-    height: 550px;
+    height: 480px;
   }
   .splash {
     height: 70%;
+  }
+
+  nav a {
+    padding-left: 35px;
+    width: 100vw;
+    justify-content: center;
+  }
+
+  nav i {
+    visibility: hidden;
   }
 
   .profile.down {
@@ -2719,7 +2730,31 @@ h2 {
     .box {
       margin-left: 15%;
     }
+
+    .button1 {
+      margin-left: -18%;
+    } 
+
+    .button2 {
+      margin-left:-10%;
+    }
   
+    .button3 {
+      margin-left:-18%;
+    } 
+
+    .button4 {
+      margin-left:-15%;
+    }
+
+    .button5 {
+      margin-left:-18%;
+    } 
+
+    .button6 {
+      margin-left:-13%;
+    }
+
     p.title {
       font-size: 1.2em;
     }
@@ -2791,8 +2826,19 @@ h2 {
   header {
     height: 400px;
   }
+
   .splash {
     height: 60%;
+  }
+
+  nav a {
+    padding-left: 30px;
+    width: 100vw;
+    justify-content: center;
+  }
+  
+  nav i {
+    visibility: hidden;
   }
 
   .name {
@@ -2894,15 +2940,11 @@ h2 {
 
     .work-image {
       width:70%;
-      margin-left: 15px;
-    }
-
-    .slideshow-container {
-      margin: 0 0 0 130px;
+      margin-left: 15%;
     }
 
     .detailed-info a.button {
-      margin-left: 12%;
+      margin-left: 5%;
       font-size: 1.5em;
       margin-top: 10px;
       width: 400px;
@@ -2914,11 +2956,11 @@ h2 {
     }
 
     .project-card {
-      width: 50%;
+      width: 100%;
     }
 
     .project-card1 {
-      width: 50%;
+      width: 100%;
     }
 
     p.title {
@@ -2935,7 +2977,7 @@ h2 {
     }
 
     .button6 {
-      margin-left: -7%;
+      margin-left: -5%;
     }
 
     .popup1 {
@@ -2944,6 +2986,8 @@ h2 {
 
     .modal1-slideshow-container img {
       width: 35%;
+      height: 95%;
+      margin-left: 33%;
     }
 
     .popup2 {
@@ -2991,11 +3035,14 @@ h2 {
   }
 
   nav a {
+    padding-left: 25px;
+    width: 100vw;
+    justify-content: center;
     font-size: 1em;
   }
-
+  
   nav i {
-    font-size:15px;
+    visibility: hidden;
   }
 
   .name {
@@ -3105,11 +3152,7 @@ h2 {
 
     .work-image {
       width:70%;
-      margin-left: -30px;
-    }
-
-    .slideshow-container {
-      margin: 0 0 0 85px;
+      margin-left: 14%;
     }
 
     .detailed-info a.button {
@@ -3153,7 +3196,7 @@ h2 {
     }
 
     .button6 {
-      margin-left: -7%;
+      margin-left: -5%;
     }
 
     .popup1 {
@@ -3248,19 +3291,22 @@ h2 {
 
 @media only screen and (max-width: 420px) and (min-width: 320px) {
   header {
-    height: 350px;
+    height: 280px;
   }
 
   nav a {
-    font-size: 1.2em;
+    padding-left: 20px;
+    width: 100vw;
+    justify-content: center;
+    font-size: 1.1em;
   }
-
+  
   nav i {
     visibility: hidden;
   }
 
   .splash {
-    height: 50%;
+    height: 40%;
   }
 
   .name {
@@ -3291,8 +3337,9 @@ h2 {
   } 
 
   .profile a {
-    height: 30px;
+    height: 40px;
     font-size: 1.3em;
+    padding: 10px;
   }
 
   .values-header {
@@ -3400,12 +3447,8 @@ h2 {
 
     .work-image {
       width:70%;
-      margin-left: -60px;
+      margin-left: 10%;
       height: 90%;
-    }
-
-    .slideshow-container {
-      margin: 0 0 0 80px;
     }
 
     .detailed-info a.button {
@@ -3417,6 +3460,7 @@ h2 {
       height: 50px;
       width: 100%;
       padding: 2px;
+      color: black;
     }
 
     .projects-header {
@@ -3442,7 +3486,6 @@ h2 {
 
     .box {
       margin-left: 17%;
-
     }
 
     .button2 {
@@ -3454,18 +3497,50 @@ h2 {
     }
 
     .popup1 {
-      width:90%;
+      max-height: calc(100vh - 20px);
+      width: 95%;
+      overflow-y: auto;
+    }
+
+    .popup2 {
+      max-height: calc(100vh - 20px);
+      overflow-y: auto;
+      width: 95%;
+    }
+
+    .popup3 {
+      max-height: calc(100vh - 20px);
+      overflow-y: auto;
+      width: 95%;
+    }
+
+    .popup4 {
+      max-height: calc(100vh - 20px);
+      overflow-y: auto;
+      width: 95%;
+    }
+
+    .popup5 {
+      max-height: calc(100vh - 20px);
+      overflow-y: auto;
+      width: 95%;
+    }
+
+    .popup6 {
+      max-height: calc(100vh - 20px);
+      overflow-y: auto;
+      width: 95%;
     }
 
     .modal1-slideshow-container img {
       width: 53%;
+      height: 90%;
       margin-left: 25%;
     }
 
     .modal-header {
-      font-size: .6em;
-      margin-top: 0px;
-      /* margin-bottom: 4px; */
+      font-size: .4em;
+      margin-top: -10px;
     }
 
     .project-info p {
@@ -3478,19 +3553,14 @@ h2 {
       margin-top: -50px;
     }
 
-
    .modal-content {
-     height: 80%;
+     height: 99%;
      overflow: auto;
    }
 
    .modal-header hr {
       margin-left: 30%;
    }
-
-    .popup2 {
-      width: 95%;
-    }
 
     .modal2-slideshow-container video {
       margin-top: 0px;
@@ -3501,18 +3571,10 @@ h2 {
       margin-top: -30px;
     }
 
-    .popup3 {
-      width:95%;
-    }
-
     .modal3-slideshow-container video {
       margin-top: 0px;
       padding-bottom: 75px;
       margin-left: -4px;
-    }
-
-    .popup4 {
-      width:90%;
     }
 
     .modal4-slideshow-container img {
@@ -3522,19 +3584,11 @@ h2 {
       overflow: hidden;
     }
 
-    .popup5 {
-      width:90%;
-    }
-
     .modal5-slideshow-container img {
       height: 340px;
       width: auto;
       margin-left: -1px;
       overflow: hidden;
-    }
-
-    .popup6 {
-      width:90%;
     }
 
     .contact-header {

@@ -3489,7 +3489,7 @@ h2 {
     }
 
     #about-card {
-      margin-top: 0px;
+      margin-top: 30px;
       width: 60%;
     }
 
@@ -3738,7 +3738,7 @@ h2 {
     }
 
     .modal5-slideshow-container img {
-      height: 340px;
+      height: 320px;
       width: auto;
       margin-left: -1px;
       overflow: hidden;

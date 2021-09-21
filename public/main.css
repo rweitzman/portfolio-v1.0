@@ -350,7 +350,7 @@ section {
     align-items: center;
     flex-wrap: nowrap;
     justify-content: center;
-    flex-direction: row;    
+    flex-direction: row;  
 }
 
 #about-card {
@@ -414,7 +414,7 @@ section {
 }
 
 .quote h1 {
-    padding-left: 40%;
+    padding-left: 30%;
     padding-bottom: 5%;
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;
@@ -475,7 +475,7 @@ section {
 .work {
     background-color: var(--shade);
     padding-top: 60px;
-    height: 920px;
+    height: 1020px;
 }
 
 .work-header {
@@ -585,7 +585,7 @@ section {
 }
 
 .detailed-info a.button {
-  width: 500px;
+  width: 400px;
   height: 75px;
   margin-left: 20%;
   margin-top: 15px;
@@ -1153,13 +1153,14 @@ p.date {
     background: #fff;
     border-radius: 5px;
     width: 60%;
-    height: 90%;
+    height: fit-content;
     transition: all 0.5s ease-in-out;
     z-index: 40;
     position: absolute;
     left: 50%;
     top: 45%;
     transform: translate(-50%, -50%);
+    overflow-y: auto;
   }
 
   .popup1 .close1 {
@@ -1188,7 +1189,7 @@ p.date {
     .box{
       width: 70%;
     }
-    .popup{
+    .popup {
       width: 70%;
     }
   }
@@ -1196,8 +1197,8 @@ p.date {
   /*Modal 1 Image Carousel*/
 
   .modal-content {
-   display: flex;
-   flex-direction: column;
+   display: grid;
+   /* place-items: center; */
   }
 
   .Modal1-Containers {
@@ -1343,18 +1344,19 @@ p.date {
     background: #fff;
     border-radius: 5px;
     width: 60%;
-    height: 90%;
+    height: fit-content;
     transition: all 0.5s ease-in-out;
     z-index: 40;
     position: absolute;
     left: 50%;
     top: 45%;
     transform: translate(-50%, -50%);
+    overflow-y: auto;
   }
 
   .popup2 .close2 {
     position: inherit;
-    bottom: 20px;
+    bottom: 30px;
     right: 30px;
     transition: all 200ms;
     font-size: 30px;
@@ -1371,7 +1373,6 @@ p.date {
   .popup2 .content2 {
     overflow: hidden;
     z-index: 20;
-
   }
 
   @media screen and (max-width: 700px){
@@ -1387,7 +1388,7 @@ p.date {
 
 .modal-content {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
 }
 
   .Modal2-Containers {
@@ -1436,10 +1437,18 @@ p.date {
     color: #333;
   }
 
+  .project-info a.teri {
+    color: var(--link);
+    border: none;
+    font-size: 1em;
+    background-color: #fff;
+  }
+
   .modal-buttons {
     display: flex;
     flex-direction: row;
   }
+
   /* forward & Back buttons */
   .m2-Back, .m2-forward {
     cursor: pointer;
@@ -1544,13 +1553,14 @@ p.date {
     background: #fff;
     border-radius: 5px;
     width: 60%;
-    height: 90%;
+    height: fit-content;
     transition: all 0.5s ease-in-out;
     z-index: 40;
     position: absolute;
     left: 50%;
     top: 45%;
     transform: translate(-50%, -50%);
+    overflow-y: auto;
   }
 
   .popup3 .close3 {
@@ -1706,13 +1716,14 @@ p.date {
     background: #fff;
     border-radius: 5px;
     width: 60%;
-    height: 90%;
+    height: fit-content;
     transition: all 0.5s ease-in-out;
     z-index: 40;
     position: absolute;
     left: 50%;
     top: 45%;
     transform: translate(-50%, -50%);
+    overflow-y: auto;
   }
 
   .popup4 .close4 {
@@ -1882,13 +1893,14 @@ p.date {
     background: #fff;
     border-radius: 5px;
     width: 60%;
-    height: 90%;
+    height: fit-content;
     transition: all 0.5s ease-in-out;
     z-index: 40;
     position: absolute;
     left: 50%;
     top: 45%;
     transform: translate(-50%, -50%);
+    overflow-y: auto;
   }
 
   .popup5 .close5 {
@@ -2042,13 +2054,14 @@ p.date {
     background: #fff;
     border-radius: 5px;
     width: 60%;
-    height: 90%;
+    height: fit-content;
     transition: all 0.5s ease-in-out;
     z-index: 40;
     position: absolute;
     left: 50%;
     top: 45%;
     transform: translate(-50%, -50%);
+    overflow-y: auto;
   }
 
   .popup6 .close6 {
@@ -2356,6 +2369,9 @@ h2 {
 }
 
 @media (max-width:941px) and (min-width:851px) {
+  header {
+    height: 540px;
+  }
   .splash {
     height: 100%;
   }
@@ -2374,6 +2390,11 @@ h2 {
     position: absolute;
     padding-top: 20%;
   }
+
+  .values hr {
+    width: 18%;
+  }
+
   #about-card {
     width: 50%;
   }
@@ -2389,10 +2410,15 @@ h2 {
 
   .quote h1 {
     font-size: 2.2em;
+    margin-left: 11%;
   }
 
   .quote-text p {
     font-size: 1.3em;
+  }
+
+  .skills hr {
+    width: 14%;
   }
 
   .work {
@@ -2414,6 +2440,11 @@ h2 {
     font-size: 1.6em;
   }
 
+  .projects hr {
+    width: 18%;
+    margin-left: 40%;
+  }
+
   .project-card {
     width: 47%;
   }
@@ -2431,7 +2462,7 @@ h2 {
   }
 
   .popup2 {
-    width: 90%;
+    width: 98%;
   }
 
   .modal2-slideshow-container video {
@@ -2441,10 +2472,14 @@ h2 {
   .popup3 {
     width:90%;
   }
-
+  
   .popup4 {
     width:90%;
   }
+  .modal4-slideshow-container img {
+    margin-left:7.25%
+  }
+
   .popup5 {
     width:90%;
   }
@@ -2464,12 +2499,10 @@ h2 {
 @media (max-width:850px) and (min-width:771px) {
   .splash {
     height: 80%;
-
   }
 
   .name {
     font-size: 2.9em;
-
   }
 
   .name1{
@@ -2496,6 +2529,7 @@ h2 {
     .about {
       flex-direction: column;
     }
+
     #about-card {
       width: 50%;
     }
@@ -2511,6 +2545,7 @@ h2 {
 
     .quote h1 {
       font-size: 3em;
+      margin-left: 10%;
     }
 
     .skills-header {
@@ -2552,6 +2587,12 @@ h2 {
     .project-card1 {
       width:47%;
     }
+
+    .project-info p {
+      padding-left: 15px;
+      font-size: .9em;
+      line-height: 2em;
+    }
   
     .popup1 {
       width:90%;
@@ -2572,6 +2613,7 @@ h2 {
     .popup3 {
       width:90%;
     }
+
     .modal3-slideshow-container video {
       margin-top: -2%;
       margin-left: -.5%;
@@ -2580,12 +2622,24 @@ h2 {
     .popup4 {
       width:90%;
     }
+
+    .modal4-slideshow-container {
+      margin-left: -20px;
+      padding-right: 40px;
+    }
+
+    .modal4-slideshow-container img {
+      margin-left: 5px;
+    }
+
     .popup5 {
       width:90%;
     }
+
     .popup6 {
       width:90%;
     }
+    
     .modal6-slideshow-container video {
       margin-top: -2%;
       margin-left: -.5%;
@@ -2608,10 +2662,15 @@ h2 {
 @media (max-width: 770px) and (min-width: 641px) {
 
   header {
-    height: 480px;
+    height: 600px;
   }
+
   .splash {
-    height: 70%;
+    height: 100%;
+  }
+
+  main {
+    margin-top:110px;
   }
 
   nav a {
@@ -2625,9 +2684,10 @@ h2 {
   }
 
   .profile.down {
-    height: 70%;
+    height: 90%;
     width: 140%;
-    padding-bottom: 100px;
+    margin-top: 40px;
+   margin-bottom: 100px;
     background: radial-gradient(ellipse at center, var(--bgtransparent) 25%, transparent 75%);
     
   }
@@ -2671,7 +2731,7 @@ h2 {
 
     .quote h1 {
       font-size: 3em;
-      padding-left: 215px;
+      margin-left: 6%;
     }
 
     .skills-header {
@@ -2695,6 +2755,11 @@ h2 {
       font-size: 1.5em;
       margin-left: -30px;
       width: 100%;
+    }
+
+    .work-image {
+      display: grid;
+      place-items: center;
     }
 
     .detailed-info {
@@ -2724,40 +2789,17 @@ h2 {
       width:47%;
     }
 
-    .box {
-      margin-left: 15%;
-    }
-
-    .button1 {
-      margin-left: -18%;
-    } 
-
-    .button2 {
-      margin-left:-10%;
-    }
-  
-    .button3 {
-      margin-left:-18%;
-    } 
-
-    .button4 {
-      margin-left:-15%;
-    }
-
-    .button5 {
-      margin-left:-18%;
-    } 
-
-    .button6 {
-      margin-left:-13%;
-    }
-
     p.title {
       font-size: 1.2em;
     }
+
     .popup1 {
       overflow: auto;
       width:90%;
+    }
+
+    .modal1-slideshow-container img {
+      height: 97%;
     }
 
     .project-info p {
@@ -2766,6 +2808,8 @@ h2 {
     }
   
     .popup2 {
+      max-height: calc(100%-400px);
+      overflow-y:auto;
       width: 90%;
     }
   
@@ -2784,8 +2828,10 @@ h2 {
     .popup4 {
       width:90%;
     }
+
     .modal4-slideshow-container {
-      margin-left: 2px;
+      margin-left: -20px;
+      padding-right: 20px;
     }
 
     .modal4-slideshow-container img {
@@ -2821,7 +2867,7 @@ h2 {
 
 @media (max-width: 640px) and (min-width: 520px) {
   header {
-    height: 400px;
+    height: 340px;
   }
 
   .splash {
@@ -2860,13 +2906,16 @@ h2 {
   .profile a {
     height: 50px;
     font-size: 1.3em;
-
   }
 
   .values-header {
     margin-top:10px;
     margin-bottom: 5px;
     font-size: 1em;
+    }
+
+    .values hr {
+      width: 18%;
     }
 
     .values-list div {
@@ -2901,11 +2950,15 @@ h2 {
 
     .quote h1 {
       font-size: 2em;
+      margin-left: 9%;
     }
-
    
     .skills-header {
       font-size: 1em;
+    }
+
+    .skills hr {
+      width: 18%;
     }
 
     .work {
@@ -2914,6 +2967,10 @@ h2 {
 
     .work-header {
       font-size: 1em;
+    }
+
+    .work hr {
+      width: 16;
     }
 
     .work h2 {
@@ -2930,8 +2987,8 @@ h2 {
       font-size: 1.5em;
 
     }
+
     .detailed-info {
-      padding-left: 5px;
       width: 95%;
     }
 
@@ -2941,15 +2998,17 @@ h2 {
     }
 
     .detailed-info a.button {
-      margin-left: 5%;
       font-size: 1.5em;
-      margin-top: 10px;
+      margin: auto;
       width: 400px;
-      margin-bottom: 20px;
     }
 
     .projects-header {
       font-size: 1em;
+    }
+
+    .projects hr {
+      width: 22%;
     }
 
     .project-card {
@@ -2966,7 +3025,12 @@ h2 {
 
     .box {
       margin-left: 17%;
+    }
 
+    .modal-header hr {
+      margin-top: 20px;
+      margin-left: 40%;
+      padding-bottom: 0px;
     }
 
     .button2 {
@@ -2998,6 +3062,13 @@ h2 {
     .popup4 {
       width:90%;
     }
+
+    .modal4-slideshow-container img {
+      max-width: 95%;
+      height: auto;
+      margin-left: 4.5%;
+    }
+
     .popup5 {
       width:90%;
     }
@@ -3025,10 +3096,15 @@ h2 {
 
 @media (max-width: 521px) and (min-width: 421px) {
   header {
-    height: 400px;
+    height: 570px;
   }
+
   .splash {
-    height: 60%;
+    height: 80%;
+  }
+
+  .splash img {
+    margin-bottom: 20px;
   }
 
   nav a {
@@ -3043,19 +3119,19 @@ h2 {
   }
 
   .name {
-    font-size: 1.8em;
+    font-size: 1.85em;
     color: white;
     text-shadow: 2px 2px black;
   }
 
   .name1 {
-    font-size: 1.6em;
+    font-size: 1.55em;
     color: white;
     text-shadow: 2px 2px black;
   }
 
   .profile.down {
-    padding-top: 100px;
+    padding-top: 130px;
     height: 100%;
     width: 900px;
     background: radial-gradient(ellipse at center, var(--bgtransparent) 5%, transparent 95%);
@@ -3071,6 +3147,10 @@ h2 {
     margin-bottom: 5px;
     font-size: 1em;
     }
+
+  .values hr {
+    width: 18%;
+  }
 
     .values-list {
       flex-wrap: wrap;
@@ -3109,6 +3189,7 @@ h2 {
 
     .quote h1 {
       font-size: 2em;
+      padding-left: 32%;
     }
 
     .quote p {
@@ -3120,12 +3201,20 @@ h2 {
       font-size: 1em;
     }
 
+    .skills hr {
+      width: 18%;
+    }
+
     .work {
       height: 150%;
     }
 
     .work-header {
       font-size: 1em;
+    }
+
+    .work hr {
+      width: 18%;
     }
 
     .work h2 {
@@ -3171,6 +3260,10 @@ h2 {
       font-size: 1em;
     }
 
+    .projects hr {
+      width: 22%;
+    }
+
     .project-card {
       width: 90%;
     }
@@ -3185,7 +3278,10 @@ h2 {
 
     .box {
       margin-left: 17%;
+    }
 
+    .modal-header hr {
+      margin-left: 40%;
     }
 
     .button2 {
@@ -3207,7 +3303,7 @@ h2 {
     }
 
     .modal-header {
-      font-size: .6em;
+      font-size: .5em;
     }
 
     .project-info p {
@@ -3231,15 +3327,21 @@ h2 {
 
     .project-info a {
       margin-top: -30px;
+
     }
 
     .popup3 {
       width:95%;
     }
 
+    .modal3-slideshow-container {
+      margin-top: -15px;
+      margin-bottom: -50px;
+    }
+
     .modal3-slideshow-container video {
       margin-top: 0px;
-      padding-bottom: 70px;
+     padding-bottom: 100px;
       margin-left: -4px;
     }
 
@@ -3248,8 +3350,8 @@ h2 {
     }
 
     .modal4-slideshow-container img {
-      height: 300px;
-      width: auto;
+      height: auto;
+      width: 98%;
       margin-left: -1px;
       overflow: hidden;
     }
@@ -3267,6 +3369,17 @@ h2 {
 
     .popup6 {
       width:90%;
+    }
+
+    .modal6-slideshow-container {
+      margin-top: -15px;
+      margin-bottom: 40px;
+      margin-right: 7px;
+    }
+
+    .modal6-slideshow-container video {
+      width: 100%;
+      height: auto;
     }
 
     .contact-header {
@@ -3288,14 +3401,18 @@ h2 {
 
 @media only screen and (max-width: 420px) and (min-width: 320px) {
   header {
-    height: 220px;
+    height: 520px;
+  }
+
+  section {
+    padding: 3px;
   }
 
   nav a {
-    padding-left: 20px;
+    padding-left: 5px;
     width: 100vw;
     justify-content: center;
-    font-size: 1.1em;
+    font-size: 1em;
   }
   
   nav i {
@@ -3303,14 +3420,20 @@ h2 {
   }
 
   .splash {
-    height: 40%;
+    height: 100%;
+  }
+
+  .splash img {
+    height: 520px;
   }
 
   .name {
     margin: 0px;
-    font-size: 1.3em;
+    font-size: 1.5em;
     color: white;
     text-shadow: 2px 2px black;
+    text-align: center;
+    justify-content: center;
   }
 
   .name1{
@@ -3321,10 +3444,8 @@ h2 {
   }
 
   .profile.down {
-    border: 1px solid white;
-    margin: 40px 5px 0 5px;
-    padding-top: 10px;
-    height:60%;
+    padding-top: 50%;
+    height:100%;
     width: 900px;
     background: radial-gradient(ellipse at center, var(--bgtransparent) 5%, transparent 95%);
   } 
@@ -3366,6 +3487,7 @@ h2 {
     .about {
       flex-direction: column;
     }
+
     #about-card {
       width: 60%;
     }
@@ -3377,11 +3499,13 @@ h2 {
     .quote {
       width: 100%;
       margin-left:0%;
+      padding: 0 10px 0 15px;
     }
 
     .quote h1 {
-      margin-left: -40px;
-      font-size: 2em;
+      justify-content: center;
+      font-size: 1.9em;
+      margin-left: -6px;
     }
 
     .quote p {
@@ -3439,9 +3563,9 @@ h2 {
     }
 
     .work-image {
-      width:70%;
-      margin-left: 10%;
-      height: 90%;
+        display: grid;
+        place-items: center;
+        width: 100%
     }
 
     .detailed-info a.button {
@@ -3466,63 +3590,75 @@ h2 {
     }
 
     .project-card {
-      width: 100vw;
+      width: 90%;
     }
 
     .project-card1 {
-      width: 100vw;
+      width: 90%;
     }
 
     p.title {
       font-size: 1em;
     }
 
-    .box {
-      margin-left: 17%;
+    .button1 {
+      margin-left: 11%;
     }
 
     .button2 {
-      margin-left: -5%;
-    }
-
-    .button6 {
       margin-left: -7%;
     }
 
+    .button3 {
+      margin-left: 7%;
+    }
+
+    .button4 {
+      margin-left: 7%;
+    }
+
+    .button5 {
+      margin-left: 7%;
+    }
+
+    .button6 {
+      margin-left: 5%;
+    }
+
     .popup1 {
-      max-height: calc(100vh - 20px);
-      width: 95%;
+      height: 100vh;
+      width: 100%;
       overflow-y: auto;
     }
 
     .popup2 {
-      max-height: calc(100vh - 20px);
+      height: 100vh;
       overflow-y: auto;
-      width: 95%;
+      width: 100%;
     }
 
     .popup3 {
-      max-height: calc(100vh - 20px);
+      height: 100vh;
       overflow-y: auto;
-      width: 95%;
+      width: 100%;
     }
 
     .popup4 {
-      max-height: calc(100vh - 20px);
+      height: 100vh;
       overflow-y: auto;
-      width: 95%;
+      width: 100%;
     }
 
     .popup5 {
-      max-height: calc(100vh - 20px);
+      height: 100vh;
       overflow-y: auto;
-      width: 95%;
+      width: 100%;
     }
 
     .popup6 {
-      max-height: calc(100vh - 20px);
+      height: 100vh;
       overflow-y: auto;
-      width: 95%;
+      width: 100%;
     }
 
     .modal1-slideshow-container img {
@@ -3555,6 +3691,10 @@ h2 {
       margin-left: 30%;
    }
 
+   .modal2-slideshow-container {
+     margin-top: -40px;
+   }
+
     .modal2-slideshow-container video {
       margin-top: 0px;
       padding-bottom: 60px;
@@ -3562,6 +3702,14 @@ h2 {
 
     .project-info a {
       margin-top: -30px;
+    }
+
+    .modal3-slideshow-container {
+      width: 98%;
+      height: auto;
+      margin: auto;
+      margin-top: -15%;
+      margin-bottom: -10%;
     }
 
     .modal3-slideshow-container video {
@@ -3584,6 +3732,19 @@ h2 {
       overflow: hidden;
     }
 
+    .modal6-slideshow-container {
+      margin-top: -15px;
+      margin-bottom: 40px;
+      margin-left: -2%;
+      display: grid;
+      place-items: center;
+    }
+
+    .modal6-slideshow-container video {
+      width: 100%;
+      height: auto;
+    }
+
     .contact-header {
       font-size: .6em;
     }
@@ -3602,53 +3763,425 @@ h2 {
     }
 }
 
-@media only screen and (max-width: 319px) and (min-width: 214px) {
+@media only screen and (max-width: 319px) and (min-width: 305px) {
   header {
-    height: 350px;
+    height: 520px;
+  }
+
+  section {
+    padding: 3px;
   }
 
   nav a {
-    font-size: 1.1em;
+    padding-left: 5px;
+    width: 100vw;
+    justify-content: center;
+    font-size: 1em;
   }
-
+  
   nav i {
     visibility: hidden;
   }
 
   .splash {
-    height: 50%;
+    height: 100%;
+  }
+
+  .splash img {
+    height: 520px;
   }
 
   .name {
-    margin-top: 5px;
-    font-size: 1em;
+    margin: 0px;
+    font-size: 1.5em;
     color: white;
     text-shadow: 2px 2px black;
+    text-align: center;
+    justify-content: center;
   }
 
   .name1{
-    font-size: 1em;
+    font-size: 1.2em;
     color: white;
     text-shadow: 2px 2px black;
     margin-bottom: 5px;
   }
 
-  .profile {
-    margin-top: 60px;
-  }
-
   .profile.down {
-    border: 1px solid white;
-    margin: 60px 5px 0 5px;
-    padding-top: 45px;
-    height:60%;
+    padding-top: 50%;
+    height:100%;
     width: 900px;
     background: radial-gradient(ellipse at center, var(--bgtransparent) 5%, transparent 95%);
   } 
 
   .profile a {
-    height: 30px;
+    height: 40px;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  .values-header {
+    margin-top:10px;
+    margin-bottom: 5px;
+    font-size: .8em;
+    }
+
+    .values hr {
+      width: 30%;
+    }
+
+    .values-list {
+      flex-wrap: wrap;
+    }
+
+    .values-list div {
+      width: 100%;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .values-list div i {
+      font-size: 2.7em;
+    }
+
+    .about-info {
+      margin-left: 3px;
+    }
+    
+    .about {
+      flex-direction: column;
+    }
+
+    #about-card {
+      width: 60%;
+    }
+
+    .about i {
+      font-size: 30px;
+    }
+
+    .quote {
+      width: 100%;
+      margin-left:0%;
+      padding: 0 10px 0 15px;
+    }
+
+    .quote h1 {
+      justify-content: center;
+      font-size: 1.9em;
+      margin-left: -6px;
+    }
+
+    .quote p {
+      font-size: 1.2em;
+      line-height: 1.4em;
+    }
+
+    .quote-text {
+      padding-left: 0px;
+    }
+   
+    .skills-header {
+      font-size: .8em;
+    }
+
+    .skills hr {
+      width: 30%;
+    }
+
+    li {
+      width: 100px;
+      height: 80px;
+    }
+
+    .work {
+      height: 150%;
+    }
+
+    .work-header {
+      font-size: 1em;
+    }
+
+  .work hr {
+    width: 32%;
+}
+
+    .work h2 {
+      font-size: 1.2em;
+    }
+
+    .work-info {
+      flex-direction: column;
+    }
+  
+    .work p {
+      margin: 0 0 0 0;
+      text-align: left;
+      font-size: 1em;
+      padding-bottom: 2px;
+    }
+
+    .detailed-info {
+      padding-left: 5px;
+      width: 100%;
+    }
+
+    .work-image {
+        display: grid;
+        place-items: center;
+        width: 100%
+    }
+
+    .detailed-info a.button {
+      margin-left: -.5%;
+      font-size: 1em;
+      margin-top: 10px;
+      width: 400px;
+      margin-bottom: 20px;
+      height: 50px;
+      width: 100%;
+      padding: 2px;
+      color: black;
+    }
+
+    .projects-header {
+      padding-top: -10px;
+      font-size: .8em;
+    }
+
+    .projects hr {
+      width: 40%;
+    }
+
+    .project-card {
+      width: 90%;
+    }
+
+    .project-card1 {
+      width: 90%;
+    }
+
+    p.title {
+      font-size: 1em;
+    }
+
+    .button1 {
+      margin-left: 11%;
+    }
+
+    .button2 {
+      margin-left: -7%;
+    }
+
+    .button3 {
+      margin-left: 7%;
+    }
+
+    .button4 {
+      margin-left: 7%;
+    }
+
+    .button5 {
+      margin-left: 7%;
+    }
+
+    .button6 {
+      margin-left: 5%;
+    }
+
+    .popup1 {
+      height: 100vh;
+      width: 100%;
+      overflow-y: auto;
+    }
+
+    .popup2 {
+      height: 100vh;
+      overflow-y: auto;
+      width: 100%;
+    }
+
+    .popup3 {
+      height: 100vh;
+      overflow-y: auto;
+      width: 100%;
+    }
+
+    .popup4 {
+      height: 100vh;
+      overflow-y: auto;
+      width: 100%;
+    }
+
+    .popup5 {
+      height: 100vh;
+      overflow-y: auto;
+      width: 100%;
+    }
+
+    .popup6 {
+      height: 100vh;
+      overflow-y: auto;
+      width: 100%;
+    }
+
+    .modal1-slideshow-container img {
+      width: 53%;
+      height: 90%;
+      margin-left: 25%;
+    }
+
+    .modal-header {
+      font-size: .4em;
+      margin-top: -10px;
+    }
+
+    .project-info p {
+      font-size: .9em;
+    }
+
+    .project-info a {
+      padding: 4px;
+      font-size: .9em;
+      margin-top: -50px;
+    }
+
+   .modal-content {
+     height: 99%;
+     overflow: auto;
+   }
+
+   .modal-header hr {
+      margin-left: 30%;
+   }
+
+   .modal2-slideshow-container {
+     margin-top: -40px;
+   }
+
+    .modal2-slideshow-container video {
+      margin-top: 0px;
+      padding-bottom: 60px;
+    }
+
+    .project-info a {
+      margin-top: -30px;
+    }
+
+    .modal3-slideshow-container {
+      width: 98%;
+      height: auto;
+      margin: auto;
+      margin-top: -15%;
+      margin-bottom: -10%;
+    }
+
+    .modal3-slideshow-container video {
+      margin-top: 0px;
+      padding-bottom: 75px;
+      margin-left: -4px;
+    }
+
+    .modal4-slideshow-container img {
+      height: 300px;
+      width: auto;
+      margin-left: -1px;
+      overflow: hidden;
+    }
+
+    .modal5-slideshow-container img {
+      height: 340px;
+      width: auto;
+      margin-left: -1px;
+      overflow: hidden;
+    }
+
+    .modal6-slideshow-container {
+      margin-top: -15px;
+      margin-bottom: 40px;
+      margin-left: -2%;
+      display: grid;
+      place-items: center;
+    }
+
+    .modal6-slideshow-container video {
+      width: 100%;
+      height: auto;
+    }
+
+    .contact-header {
+      font-size: .6em;
+    }
+
+    .contact p {
+      line-height: 30px;
+    }
+    .contact form {
+      width: 100%;
+  }
+
+    input[type="submit"] {
+      font-size: 1.1em;
+      padding: 5px;
+      height: 60px;
+    }
+}
+
+@media only screen and (max-width: 304px) and (min-width: 250px) {
+  header {
+    height: 300px;
+  }
+
+  section {
+    padding: 3px;
+  }
+
+  nav a {
+    padding-left: 0px;
+    width: 100vw;
+    justify-content: center;
+    font-size: .8em;
+  }
+  
+  nav i {
+    visibility: hidden;
+  }
+
+  .splash {
+    height: 100%;
+  }
+
+  .splash img {
+    height: 300px;
+  }
+
+  .name {
+    margin: 0px;
+    font-size: 1.15em;
+    color: white;
+    text-shadow: 2px 2px black;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .name1{
+    font-size: .99em;
+    color: white;
+    text-shadow: 2px 2px black;
+    margin-bottom: 5px;
+  }
+
+  .profile.down {
+    padding-top: 30%;
+    height:100%;
+    width: 900px;
+    background: radial-gradient(ellipse at center, var(--bgtransparent) 5%, transparent 95%);
+  } 
+
+  .profile a {
+    height: 40px;
     font-size: 1.1em;
+    padding: 10px;
   }
 
   .values-header {
@@ -3672,7 +4205,7 @@ h2 {
     }
 
     .values-list div i {
-      font-size: 2.5em;
+      font-size: 2.3em;
     }
 
     .about-info {
@@ -3682,6 +4215,7 @@ h2 {
     .about {
       flex-direction: column;
     }
+
     #about-card {
       width: 60%;
     }
@@ -3693,11 +4227,13 @@ h2 {
     .quote {
       width: 100%;
       margin-left:0%;
+      padding: 0 10px 0 15px;
     }
 
     .quote h1 {
-      margin-left: -40px;
-      font-size: 2em;
+      justify-content: center;
+      font-size: 1.7em;
+      margin-left: -15px;
     }
 
     .quote p {
@@ -3710,7 +4246,7 @@ h2 {
     }
    
     .skills-header {
-      font-size: .6em;
+      font-size: .8em;
     }
 
     .skills hr {
@@ -3723,11 +4259,11 @@ h2 {
     }
 
     .work {
-      height: 150%;
+      height: 800px;
     }
 
     .work-header {
-      font-size: .6em;
+      font-size: 1em;
     }
 
   .work hr {
@@ -3735,7 +4271,7 @@ h2 {
 }
 
     .work h2 {
-      font-size: 1em;
+      font-size: 1.2em;
     }
 
     .work-info {
@@ -3755,102 +4291,125 @@ h2 {
     }
 
     .work-image {
-      width:60%;
-      height: 50%;
-    }
-
-    .slideshow-container {
-      margin: 0 0 0 -8px;
+       visibility: hidden;
     }
 
     .detailed-info a.button {
-      margin-left: -6%;
-      font-size: .9em;
+      margin-left: -.5%;
+      font-size: 1em;
       margin-top: 10px;
+      width: 400px;
       margin-bottom: 20px;
-      height: 55px;
-      width: 240px;
-      padding: 1px;
+      height: 50px;
+      width: 100%;
+      padding: 2px;
+      color: black;
     }
 
     .projects-header {
-      padding-top: -40px;
+      padding-top: -10px;
       font-size: .8em;
     }
 
     .projects hr {
       width: 40%;
-      margin-bottom: 20px;
     }
 
     .project-card {
-      width: 100vw;
+      width: 90%;
     }
 
     .project-card1 {
-      width: 100vw;
+      width: 90%;
     }
 
     p.title {
-      font-size: .8em;
-    }
-
-    .text1 p{
-      font-size: .73em;
-    }
-
-    .box {
-      margin-left: 17%;
+      font-size: 1em;
     }
 
     .button1 {
-      margin-left: -13%;
+      margin-left: 11%;
     }
 
     .button2 {
-      margin-left: -26%;
+      margin-left: -7%;
     }
 
     .button3 {
-      margin-left: -23%;
+      margin-left: 7%;
     }
 
     .button4 {
-      margin-left: -23%;
+      margin-left: 7%;
     }
 
     .button5 {
-      margin-left: -23%;
+      margin-left: 7%;
     }
 
     .button6 {
-      margin-left: -19%;
+      margin-left: 5%;
     }
 
     .popup1 {
-      width:90%;
+      height: 100vh;
+      width: 100%;
+      overflow-y: auto;
+    }
+
+    .popup2 {
+      height: 100vh;
+      overflow-y: auto;
+      width: 100%;
+    }
+
+    .popup3 {
+      height: 100vh;
+      overflow-y: auto;
+      width: 100%;
+    }
+
+    .popup4 {
+      height: 100vh;
+      overflow-y: auto;
+      width: 100%;
+    }
+
+    .popup5 {
+      height: 100vh;
+      overflow-y: auto;
+      width: 100%;
+    }
+
+    .popup6 {
+      height: 100vh;
+      overflow-y: auto;
+      width: 100%;
     }
 
     .modal1-slideshow-container img {
       width: 53%;
+      height: 90%;
       margin-left: 25%;
-      height: 95%;
-      margin-bottom: 40px;
     }
 
     .modal-header {
-      font-size: .5em;
-      margin-bottom: 5px;
+      font-size: .4em;
+      margin-top: -10px;
     }
 
     .project-info p {
       font-size: .9em;
-      line-height: 1.3em;
     }
 
+    .project-info a {
+      padding: 4px;
+      font-size: .9em;
+      margin-top: -50px;
+    }
 
    .modal-content {
-     height: 80%;
+     height: 99%;
      overflow: auto;
    }
 
@@ -3858,62 +4417,58 @@ h2 {
       margin-left: 30%;
    }
 
-    .popup2 {
-      width: 95%;
-    }
+   .modal2-slideshow-container {
+     margin-top: -40px;
+   }
 
     .modal2-slideshow-container video {
       margin-top: 0px;
-      padding-bottom: 80px;
+      padding-bottom: 60px;
     }
 
-    .popup3 {
-      width:95%;
+    .project-info a {
+      margin-top: -30px;
+    }
+
+    .modal3-slideshow-container {
+      width: 98%;
+      height: auto;
+      margin: auto;
+      margin-top: -15%;
+      margin-bottom: -10%;
     }
 
     .modal3-slideshow-container video {
       margin-top: 0px;
-      padding-bottom: 90px;
+      padding-bottom: 75px;
       margin-left: -4px;
     }
 
-    .modal-buttons {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
-
-    .project-info a {
-      padding: 4px;
-      font-size: .9em;
-      margin-top: -30px;
-    }
-
-    .popup4 {
-      width:90%;
-    }
-
     .modal4-slideshow-container img {
-      height: 140px;
+      height: 300px;
       width: auto;
       margin-left: -1px;
       overflow: hidden;
-    }
-
-    .popup5 {
-      width:90%;
     }
 
     .modal5-slideshow-container img {
-      height: 230px;
+      height: 340px;
       width: auto;
       margin-left: -1px;
       overflow: hidden;
-      margin-bottom: 70px;
     }
 
-    .popup6 {
-      width:90%;
+    .modal6-slideshow-container {
+      margin-top: -15px;
+      margin-bottom: 40px;
+      margin-left: -2%;
+      display: grid;
+      place-items: center;
+    }
+
+    .modal6-slideshow-container video {
+      width: 100%;
+      height: auto;
     }
 
     .contact-header {
@@ -3921,375 +4476,35 @@ h2 {
     }
 
     .contact p {
-      line-height: 20px;
+      line-height: 30px;
     }
-
     .contact form {
-      width: 120%;
-  }
-
-  input, textarea {
-    width: 150%;
-  }
-
-  form {
-    margin: 5px;
+      width: 100%;
   }
 
     input[type="submit"] {
-      font-size: .8em;
-      height: 40px;
-      width: 400px;
-      margin: 0px;
+      font-size: 1.1em;
+      padding: 5px;
+      height: 60px;
     }
 
     footer a {
-      margin: 0 3px 0 0;
-    }
+      text-decoration: none;
+      margin: 0px 3px 0 -10px;
+      color: var(--bg);
+      font-size: 13px;
+      font-family: 'Monda', sans-serif;
+      font-family: 'Raleway', sans-serif;
+      transition: all 500ms ease;
+  }
+
+  footer i {
+    font-size: 1.2em;
+  }
 }
 
-@media only screen and (max-width: 213px) and (min-width: 160px) {
-  header {
-    height: 350px;
-  }
-
-  nav a {
-    font-size: 1.1em;
-  }
-
-  nav i {
+@media only screen and (max-width: 249px) and (min-width: 160px) {
+  body {
     visibility: hidden;
   }
-
-  .splash {
-    height: 50%;
-  }
-
-  .name {
-    margin-top: 5px;
-    font-size: 1em;
-    color: white;
-    text-shadow: 2px 2px black;
-  }
-
-  .name1{
-    font-size: 1em;
-    color: white;
-    text-shadow: 2px 2px black;
-    margin-bottom: 5px;
-  }
-
-  .profile {
-    margin-top: 60px;
-  }
-
-  .profile.down {
-    border: 1px solid white;
-    margin: 60px 5px 0 5px;
-    padding-top: 45px;
-    height:60%;
-    width: 900px;
-    background: radial-gradient(ellipse at center, var(--bgtransparent) 5%, transparent 95%);
-  } 
-
-  .profile a {
-    height: 30px;
-    font-size: 1.1em;
-  }
-
-  .values-header {
-    margin-top:10px;
-    margin-bottom: 5px;
-    font-size: .6em;
-    }
-
-    .values hr {
-      width: 30%;
-    }
-
-    .values-list {
-      flex-wrap: wrap;
-    }
-
-    .values-list div {
-      width: 100%;
-      padding: 5px;
-      text-align: center;
-    }
-
-    .values-list div i {
-      font-size: 2.5em;
-    }
-
-    .about-info {
-      margin-left: 3px;
-    }
-    
-    .about {
-      flex-direction: column;
-    }
-    #about-card {
-      width: 60%;
-    }
-
-    .about i {
-      font-size: 30px;
-    }
-
-    .quote {
-      width: 100%;
-      margin-left:0%;
-    }
-
-    .quote h1 {
-      margin-left: -40px;
-      font-size: 2em;
-    }
-
-    .quote p {
-      font-size: 1.2em;
-      line-height: 1.4em;
-    }
-
-    .quote-text {
-      padding-left: 0px;
-    }
-   
-    .skills-header {
-      font-size: .6em;
-    }
-
-    .skills hr {
-      width: 30%;
-    }
-
-    li {
-      width: 100px;
-      height: 80px;
-    }
-
-    .work {
-      height: 150%;
-    }
-
-    .work-header {
-      font-size: .6em;
-    }
-
-  .work hr {
-    width: 32%;
-}
-
-    .work h2 {
-      font-size: 1em;
-    }
-
-    .work-info {
-      flex-direction: column;
-    }
-  
-    .work p {
-      margin: 0 0 0 0;
-      text-align: left;
-      font-size: 1em;
-      padding-bottom: 2px;
-    }
-
-    .detailed-info {
-      padding-left: 5px;
-      width: 100%;
-    }
-
-    .work-image {
-      width:60%;
-      height: 50%;
-    }
-
-    .slideshow-container {
-      margin: 0 0 0 -8px;
-    }
-
-    .detailed-info a.button {
-      margin-left: -6%;
-      font-size: .9em;
-      margin-top: 10px;
-      margin-bottom: 20px;
-      height: 55px;
-      width: 240px;
-      padding: 1px;
-    }
-
-    .projects-header {
-      padding-top: -40px;
-      font-size: .8em;
-    }
-
-    .projects hr {
-      width: 40%;
-      margin-bottom: 20px;
-    }
-
-    .project-card {
-      width: 100vw;
-    }
-
-    .project-card1 {
-      width: 100vw;
-    }
-
-    p.title {
-      font-size: .8em;
-    }
-
-    .text1 p{
-      font-size: .73em;
-    }
-
-    .box {
-      margin-left: 17%;
-    }
-
-    .button1 {
-      margin-left: -13%;
-    }
-
-    .button2 {
-      margin-left: -26%;
-    }
-
-    .button3 {
-      margin-left: -23%;
-    }
-
-    .button4 {
-      margin-left: -23%;
-    }
-
-    .button5 {
-      margin-left: -23%;
-    }
-
-    .button6 {
-      margin-left: -19%;
-    }
-
-    .popup1 {
-      width:90%;
-    }
-
-    .modal1-slideshow-container img {
-      width: 53%;
-      margin-left: 25%;
-      height: 95%;
-      margin-bottom: 40px;
-    }
-
-    .modal-header {
-      font-size: .5em;
-      margin-bottom: 5px;
-    }
-
-    .project-info p {
-      font-size: .9em;
-      line-height: 1.3em;
-    }
-
-
-   .modal-content {
-     height: 80%;
-     overflow: auto;
-   }
-
-   .modal-header hr {
-      margin-left: 30%;
-   }
-
-    .popup2 {
-      width: 95%;
-    }
-
-    .modal2-slideshow-container video {
-      margin-top: 0px;
-      padding-bottom: 80px;
-    }
-
-    .popup3 {
-      width:95%;
-    }
-
-    .modal3-slideshow-container video {
-      margin-top: 0px;
-      padding-bottom: 90px;
-      margin-left: -4px;
-    }
-
-    .modal-buttons {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
-
-    .project-info a {
-      padding: 4px;
-      font-size: .9em;
-      margin-top: -30px;
-    }
-
-    .popup4 {
-      width:90%;
-    }
-
-    .modal4-slideshow-container img {
-      height: 140px;
-      width: auto;
-      margin-left: -1px;
-      overflow: hidden;
-    }
-
-    .popup5 {
-      width:90%;
-    }
-
-    .modal5-slideshow-container img {
-      height: 230px;
-      width: auto;
-      margin-left: -1px;
-      overflow: hidden;
-      margin-bottom: 70px;
-    }
-
-    .popup6 {
-      width:90%;
-    }
-
-    .contact-header {
-      font-size: .6em;
-    }
-
-    .contact p {
-      line-height: 20px;
-    }
-
-    .contact form {
-      width: 120%;
-  }
-
-  input, textarea {
-    width: 150%;
-  }
-
-  form {
-    margin: 5px;
-  }
-
-    input[type="submit"] {
-      font-size: .8em;
-      height: 40px;
-      width: 400px;
-      margin: 0px;
-    }
-
-    footer a {
-      margin: 0 3px 0 0;
-    }
 }

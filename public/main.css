@@ -2909,7 +2909,7 @@ h2 {
   }
 
   .values-header {
-    margin-top:10px;
+    margin-top:90px;
     margin-bottom: 5px;
     font-size: 1em;
     }
@@ -3096,7 +3096,7 @@ h2 {
 
 @media (max-width: 521px) and (min-width: 421px) {
   header {
-    height: 570px;
+    height: 520px;
   }
 
   .splash {
@@ -3143,7 +3143,7 @@ h2 {
   }
 
   .values-header {
-    margin-top:10px;
+    margin-top:50px;
     margin-bottom: 5px;
     font-size: 1em;
     }
@@ -3457,7 +3457,7 @@ h2 {
   }
 
   .values-header {
-    margin-top:10px;
+    margin-top:30px;
     margin-bottom: 5px;
     font-size: .8em;
     }
@@ -3489,7 +3489,7 @@ h2 {
     }
 
     #about-card {
-      margin-top: 30px;
+      margin-top: 0px;
       width: 60%;
     }
 
@@ -3633,13 +3633,13 @@ h2 {
     }
 
     .popup2 {
-      height: fit-content;
+      max-height: fit-content;
       overflow-y: auto;
       width: 100%;
     }
 
     .popup3 {
-      height: fit-content;
+      max-height: fit-content;
       overflow-y: auto;
       width: 100%;
     }
@@ -3659,7 +3659,7 @@ h2 {
     .popup6 {
       height: fit-content;
       overflow-y: auto;
-      max-width: 100%;
+      width: 100%;
     }
 
     .modal1-slideshow-container img {
@@ -3670,7 +3670,7 @@ h2 {
 
     .modal-header {
       font-size: .4em;
-      margin-top: -10px;
+      margin-top: -20px;
     }
 
     .project-info p {
@@ -3684,29 +3684,39 @@ h2 {
     }
 
    .modal-content {
-     height: 99%;
+     height: 90%;
      overflow: auto;
    }
 
+   .modal-header {
+     font-size: .4em;
+   }
+
    .modal-header hr {
-      margin-left: 30%;
+      visibility: hidden;
+      margin-bottom: -3px;
+      margin-top: 7px;
    }
 
    .modal2-slideshow-container {
-     margin-top: -40px;
-   }
+    margin-top: -15px;
+    margin-bottom: 20px;
+    margin-left: -2%;
+    display: grid;
+    place-items: center;
+  }
 
-    .modal2-slideshow-container video {
-      margin-top: 0px;
-      padding-bottom: 60px;
-    }
+  .modal2-slideshow-container video {
+    width: 100%;
+    height: auto;
+  }
 
     .project-info a {
       margin-top: -30px;
     }
 
     .modal3-slideshow-container {
-      width: 98%;
+      width: 97%;
       height: auto;
       margin: auto;
       margin-top: -15%;
@@ -3720,10 +3730,11 @@ h2 {
     }
 
     .modal4-slideshow-container img {
-      height: 300px;
+      height: 210px;
       width: auto;
       margin-left: -1px;
       overflow: hidden;
+      margin-bottom: 50px;
     }
 
     .modal5-slideshow-container img {
@@ -3737,6 +3748,8 @@ h2 {
       margin-top: -15px;
       margin-bottom: 40px;
       margin-left: -2%;
+      width: 100%;
+      height: 100%;
       display: grid;
       place-items: center;
     }

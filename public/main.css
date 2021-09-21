@@ -332,6 +332,7 @@ section {
     font-family: 'Monda', sans-serif;
     font-family: 'Raleway', sans-serif;    
 } 
+
 .values-list div p {
     margin: 5px 0;
     font-family: 'Monda', sans-serif;
@@ -1926,11 +1927,7 @@ p.date {
   }
 
     /*Modal 5 Image Carousel*/
-.modal5-slideshow-container {
- 
-  }
-  
-  /* Make the images invisible by default */
+
   .modal5-slideshow-container img {
     margin-left: 17%;
     height: 380px;
@@ -2393,7 +2390,7 @@ h2 {
   }
 
   .quote h1 {
-    font-size: 1.5em;
+    font-size: 2.2em;
   }
 
   .quote-text p {
@@ -2613,7 +2610,7 @@ h2 {
 @media (max-width: 770px) and (min-width: 641px) {
 
   header {
-    height: 500px;
+    height: 550px;
   }
   .splash {
     height: 70%;
@@ -2628,12 +2625,12 @@ h2 {
   }
 
   .name {
-    font-size: 2.8em;
+    font-size: 2.6em;
   }
 
   .name1{
     width:80%;
-    font-size: 2.7em;
+    font-size: 2.5em;
   }
 
   .values-header {
@@ -2666,6 +2663,7 @@ h2 {
 
     .quote h1 {
       font-size: 3em;
+      padding-left: 215px;
     }
 
     .skills-header {
@@ -2798,13 +2796,13 @@ h2 {
   }
 
   .name {
-    font-size: 2.4em;
+    font-size: 2.2em;
     color: white;
     text-shadow: 2px 2px black;
   }
 
   .name1{
-    font-size: 2.2em;
+    font-size: 2em;
     color: white;
     text-shadow: 2px 2px black;
   }
@@ -2992,14 +2990,22 @@ h2 {
     height: 60%;
   }
 
+  nav a {
+    font-size: 1em;
+  }
+
+  nav i {
+    font-size:15px;
+  }
+
   .name {
-    font-size: 2.2em;
+    font-size: 1.8em;
     color: white;
     text-shadow: 2px 2px black;
   }
 
-  .name1{
-    font-size: 2em;
+  .name1 {
+    font-size: 1.6em;
     color: white;
     text-shadow: 2px 2px black;
   }
@@ -3043,6 +3049,7 @@ h2 {
     .about {
       flex-direction: column;
     }
+
     #about-card {
       width: 60%;
     }
@@ -3088,7 +3095,7 @@ h2 {
     .work p {
       margin-left: 5px;
       text-align: left;
-      font-size: 1.5em;
+      font-size: 1.2em;
     }
 
     .detailed-info {
@@ -3102,17 +3109,21 @@ h2 {
     }
 
     .slideshow-container {
-      margin: 0 0 0 110px;
+      margin: 0 0 0 85px;
     }
 
     .detailed-info a.button {
-      margin-left: 10%;
+      margin-left: 5%;
       font-size: 1.2em;
       margin-top: 10px;
-      width: 400px;
       margin-bottom: 20px;
       height: 50px;
-      width: 75%;
+      width: 90%;
+    }
+
+    li {
+      width: 120px;
+      height: 100px;
     }
 
     .projects-header {
@@ -3152,6 +3163,7 @@ h2 {
     .modal1-slideshow-container img {
       width: 42%;
       margin-left: 30%;
+      height: 80%;
     }
 
     .modal-header {
@@ -3234,126 +3246,1003 @@ h2 {
     }
 }
 
-@media only screen and (max-width: 420px) and (min-width: 280px) {
-
-
-    main {
-      width: 100%;
-    }
-
-    .splash {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: auto;
-      height: 50%;
-      filter: blur(.01px);
-  }
-  
-  .splash img {
-      position: relative;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+@media only screen and (max-width: 420px) and (min-width: 320px) {
+  header {
+    height: 350px;
   }
 
-    .profile {
-      width: 100%;
-      margin: 5px;
-      /* color: white; */
+  nav a {
+    font-size: 1.2em;
+  }
+
+  nav i {
+    visibility: hidden;
+  }
+
+  .splash {
+    height: 50%;
+  }
+
+  .name {
+    margin-top: 5px;
+    font-size: 1.3em;
+    color: white;
+    text-shadow: 2px 2px black;
+  }
+
+  .name1{
+    font-size: 1.2em;
+    color: white;
+    text-shadow: 2px 2px black;
+    margin-bottom: 5px;
+  }
+
+  .profile {
+    margin-top: 60px;
+  }
+
+  .profile.down {
+    border: 1px solid white;
+    margin: 60px 5px 0 5px;
+    padding-top: 45px;
+    height:60%;
+    width: 900px;
+    background: radial-gradient(ellipse at center, var(--bgtransparent) 5%, transparent 95%);
+  } 
+
+  .profile a {
+    height: 30px;
+    font-size: 1.3em;
+  }
+
+  .values-header {
+    margin-top:10px;
+    margin-bottom: 5px;
+    font-size: .8em;
     }
 
-    .profile.down {
-      background: radial-gradient(ellipse at center, var(--bgtransparent) 35%, transparent 65%);
-      padding-top: 15%;
-      color: white;
+    .values hr {
+      width: 30%;
+    }
+
+    .values-list {
+      flex-wrap: wrap;
+    }
+
+    .values-list div {
+      width: 100%;
+      padding: 5px;
       text-align: center;
-      padding-top: 20%;
     }
 
-    .name {
+    .values-list div i {
+      font-size: 2.7em;
+    }
+
+    .about-info {
+      margin-left: 3px;
+    }
+    
+    .about {
+      flex-direction: column;
+    }
+    #about-card {
+      width: 60%;
+    }
+
+    .about i {
+      font-size: 30px;
+    }
+
+    .quote {
+      width: 100%;
+      margin-left:0%;
+    }
+
+    .quote h1 {
+      margin-left: -40px;
+      font-size: 2em;
+    }
+
+    .quote p {
       font-size: 1.2em;
-      color: white;
+      line-height: 1.4em;
     }
 
-    .name1 {
-      font-size: 1.2em;
-      color: white;
+    .quote-text {
+      padding-left: 0px;
     }
-
-    .profile a {
-      margin-top: 10px;
-      height: 20%;
-      width: auto;
+   
+    .skills-header {
       font-size: .8em;
     }
 
-    .values-header {
-      margin-top:10px;
-      margin-bottom: 5px;
-      font-size: 1em;
-      }
-  
-      .values-list div {
-        width: 50%;
-        padding: 5px;
-        text-align: center;
-      }
-
-    .about i, .contact i {
-        width: 100%;
-        font-size: 75px;
-    }
-
-    .about div, .contact form {
-        width: 100%;
-    }
-
-    section {
-        padding: 30px;
-    }
-
-    .skills>div {
-        height: 200px;
+    .skills hr {
+      width: 30%;
     }
 
     li {
-        width: 100px;
+      width: 100px;
+      height: 80px;
     }
 
-    #values-list {
-        flex-wrap: wrap;
+    .work {
+      height: 150%;
     }
 
-    #values-list div {
-        width: 50%;
+    .work-header {
+      font-size: 1em;
+    }
+
+  .work hr {
+    width: 32%;
+}
+
+    .work h2 {
+      font-size: 1.2em;
+    }
+
+    .work-info {
+      flex-direction: column;
+    }
+  
+    .work p {
+      margin: 0 0 0 0;
+      text-align: left;
+      font-size: 1em;
+      padding-bottom: 2px;
+    }
+
+    .detailed-info {
+      padding-left: 5px;
+      width: 100%;
+    }
+
+    .work-image {
+      width:70%;
+      margin-left: -60px;
+      height: 90%;
+    }
+
+    .slideshow-container {
+      margin: 0 0 0 80px;
+    }
+
+    .detailed-info a.button {
+      margin-left: -.5%;
+      font-size: 1em;
+      margin-top: 10px;
+      width: 400px;
+      margin-bottom: 20px;
+      height: 50px;
+      width: 100%;
+      padding: 2px;
+    }
+
+    .projects-header {
+      padding-top: -10px;
+      font-size: .8em;
+    }
+
+    .projects hr {
+      width: 40%;
     }
 
     .project-card {
-        width: 100%;
-        margin: 10px 0;
+      width: 100vw;
     }
 
-    .skills h2 {
-        width: 75%;
-        left: 12.5%;
-        top: 10px;
+    .project-card1 {
+      width: 100vw;
     }
+
+    p.title {
+      font-size: 1em;
+    }
+
+    .box {
+      margin-left: 17%;
+
+    }
+
+    .button2 {
+      margin-left: -5%;
+    }
+
+    .button6 {
+      margin-left: -7%;
+    }
+
+    .popup1 {
+      width:90%;
+    }
+
+    .modal1-slideshow-container img {
+      width: 53%;
+      margin-left: 25%;
+    }
+
+    .modal-header {
+      font-size: .6em;
+      margin-top: 0px;
+      /* margin-bottom: 4px; */
+    }
+
+    .project-info p {
+      font-size: .9em;
+    }
+
+    .project-info a {
+      padding: 4px;
+      font-size: .9em;
+      margin-top: -50px;
+    }
+
+
+   .modal-content {
+     height: 80%;
+     overflow: auto;
+   }
+
+   .modal-header hr {
+      margin-left: 30%;
+   }
+
+    .popup2 {
+      width: 95%;
+    }
+
+    .modal2-slideshow-container video {
+      margin-top: 0px;
+      padding-bottom: 60px;
+    }
+
+    .project-info a {
+      margin-top: -30px;
+    }
+
+    .popup3 {
+      width:95%;
+    }
+
+    .modal3-slideshow-container video {
+      margin-top: 0px;
+      padding-bottom: 75px;
+      margin-left: -4px;
+    }
+
+    .popup4 {
+      width:90%;
+    }
+
+    .modal4-slideshow-container img {
+      height: 300px;
+      width: auto;
+      margin-left: -1px;
+      overflow: hidden;
+    }
+
+    .popup5 {
+      width:90%;
+    }
+
+    .modal5-slideshow-container img {
+      height: 340px;
+      width: auto;
+      margin-left: -1px;
+      overflow: hidden;
+    }
+
+    .popup6 {
+      width:90%;
+    }
+
+    .contact-header {
+      font-size: .6em;
+    }
+
+    .contact p {
+      line-height: 30px;
+    }
+    .contact form {
+      width: 100%;
+  }
+
+    input[type="submit"] {
+      font-size: 1.1em;
+      padding: 5px;
+      height: 60px;
+    }
+}
+
+@media only screen and (max-width: 319px) and (min-width: 214px) {
+  header {
+    height: 350px;
+  }
+
+  nav a {
+    font-size: 1.1em;
+  }
+
+  nav i {
+    visibility: hidden;
+  }
+
+  .splash {
+    height: 50%;
+  }
+
+  .name {
+    margin-top: 5px;
+    font-size: 1em;
+    color: white;
+    text-shadow: 2px 2px black;
+  }
+
+  .name1{
+    font-size: 1em;
+    color: white;
+    text-shadow: 2px 2px black;
+    margin-bottom: 5px;
+  }
+
+  .profile {
+    margin-top: 60px;
+  }
+
+  .profile.down {
+    border: 1px solid white;
+    margin: 60px 5px 0 5px;
+    padding-top: 45px;
+    height:60%;
+    width: 900px;
+    background: radial-gradient(ellipse at center, var(--bgtransparent) 5%, transparent 95%);
+  } 
+
+  .profile a {
+    height: 30px;
+    font-size: 1.1em;
+  }
+
+  .values-header {
+    margin-top:10px;
+    margin-bottom: 5px;
+    font-size: .6em;
+    }
+
+    .values hr {
+      width: 30%;
+    }
+
+    .values-list {
+      flex-wrap: wrap;
+    }
+
+    .values-list div {
+      width: 100%;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .values-list div i {
+      font-size: 2.5em;
+    }
+
+    .about-info {
+      margin-left: 3px;
+    }
+    
+    .about {
+      flex-direction: column;
+    }
+    #about-card {
+      width: 60%;
+    }
+
+    .about i {
+      font-size: 30px;
+    }
+
+    .quote {
+      width: 100%;
+      margin-left:0%;
+    }
+
+    .quote h1 {
+      margin-left: -40px;
+      font-size: 2em;
+    }
+
+    .quote p {
+      font-size: 1.2em;
+      line-height: 1.4em;
+    }
+
+    .quote-text {
+      padding-left: 0px;
+    }
+   
+    .skills-header {
+      font-size: .6em;
+    }
+
+    .skills hr {
+      width: 30%;
+    }
+
+    li {
+      width: 100px;
+      height: 80px;
+    }
+
+    .work {
+      height: 150%;
+    }
+
+    .work-header {
+      font-size: .6em;
+    }
+
+  .work hr {
+    width: 32%;
+}
 
     .work h2 {
-        width: 100%;
-        top: -30px;
-        left: 0;
-        font-size: 19px;
+      font-size: 1em;
     }
 
-    .work h4 {
-        float: none;
+    .work-info {
+      flex-direction: column;
+    }
+  
+    .work p {
+      margin: 0 0 0 0;
+      text-align: left;
+      font-size: 1em;
+      padding-bottom: 2px;
     }
 
-    .project-grid {
-        padding: 0;
+    .detailed-info {
+      padding-left: 5px;
+      width: 100%;
+    }
+
+    .work-image {
+      width:60%;
+      height: 50%;
+    }
+
+    .slideshow-container {
+      margin: 0 0 0 -8px;
+    }
+
+    .detailed-info a.button {
+      margin-left: -6%;
+      font-size: .9em;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      height: 55px;
+      width: 240px;
+      padding: 1px;
+    }
+
+    .projects-header {
+      padding-top: -40px;
+      font-size: .8em;
+    }
+
+    .projects hr {
+      width: 40%;
+      margin-bottom: 20px;
+    }
+
+    .project-card {
+      width: 100vw;
+    }
+
+    .project-card1 {
+      width: 100vw;
+    }
+
+    p.title {
+      font-size: .8em;
+    }
+
+    .text1 p{
+      font-size: .73em;
+    }
+
+    .box {
+      margin-left: 17%;
+    }
+
+    .button1 {
+      margin-left: -13%;
+    }
+
+    .button2 {
+      margin-left: -26%;
+    }
+
+    .button3 {
+      margin-left: -23%;
+    }
+
+    .button4 {
+      margin-left: -23%;
+    }
+
+    .button5 {
+      margin-left: -23%;
+    }
+
+    .button6 {
+      margin-left: -19%;
+    }
+
+    .popup1 {
+      width:90%;
+    }
+
+    .modal1-slideshow-container img {
+      width: 53%;
+      margin-left: 25%;
+      height: 95%;
+      margin-bottom: 40px;
+    }
+
+    .modal-header {
+      font-size: .5em;
+      margin-bottom: 5px;
+    }
+
+    .project-info p {
+      font-size: .9em;
+      line-height: 1.3em;
+    }
+
+
+   .modal-content {
+     height: 80%;
+     overflow: auto;
+   }
+
+   .modal-header hr {
+      margin-left: 30%;
+   }
+
+    .popup2 {
+      width: 95%;
+    }
+
+    .modal2-slideshow-container video {
+      margin-top: 0px;
+      padding-bottom: 80px;
+    }
+
+    .popup3 {
+      width:95%;
+    }
+
+    .modal3-slideshow-container video {
+      margin-top: 0px;
+      padding-bottom: 90px;
+      margin-left: -4px;
+    }
+
+    .modal-buttons {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .project-info a {
+      padding: 4px;
+      font-size: .9em;
+      margin-top: -30px;
+    }
+
+    .popup4 {
+      width:90%;
+    }
+
+    .modal4-slideshow-container img {
+      height: 140px;
+      width: auto;
+      margin-left: -1px;
+      overflow: hidden;
+    }
+
+    .popup5 {
+      width:90%;
+    }
+
+    .modal5-slideshow-container img {
+      height: 230px;
+      width: auto;
+      margin-left: -1px;
+      overflow: hidden;
+      margin-bottom: 70px;
+    }
+
+    .popup6 {
+      width:90%;
+    }
+
+    .contact-header {
+      font-size: .6em;
+    }
+
+    .contact p {
+      line-height: 20px;
+    }
+
+    .contact form {
+      width: 120%;
+  }
+
+  input, textarea {
+    width: 150%;
+  }
+
+  form {
+    margin: 5px;
+  }
+
+    input[type="submit"] {
+      font-size: .8em;
+      height: 40px;
+      width: 400px;
+      margin: 0px;
+    }
+
+    footer a {
+      margin: 0 3px 0 0;
+    }
+}
+
+@media only screen and (max-width: 213px) and (min-width: 160px) {
+  header {
+    height: 350px;
+  }
+
+  nav a {
+    font-size: 1.1em;
+  }
+
+  nav i {
+    visibility: hidden;
+  }
+
+  .splash {
+    height: 50%;
+  }
+
+  .name {
+    margin-top: 5px;
+    font-size: 1em;
+    color: white;
+    text-shadow: 2px 2px black;
+  }
+
+  .name1{
+    font-size: 1em;
+    color: white;
+    text-shadow: 2px 2px black;
+    margin-bottom: 5px;
+  }
+
+  .profile {
+    margin-top: 60px;
+  }
+
+  .profile.down {
+    border: 1px solid white;
+    margin: 60px 5px 0 5px;
+    padding-top: 45px;
+    height:60%;
+    width: 900px;
+    background: radial-gradient(ellipse at center, var(--bgtransparent) 5%, transparent 95%);
+  } 
+
+  .profile a {
+    height: 30px;
+    font-size: 1.1em;
+  }
+
+  .values-header {
+    margin-top:10px;
+    margin-bottom: 5px;
+    font-size: .6em;
+    }
+
+    .values hr {
+      width: 30%;
+    }
+
+    .values-list {
+      flex-wrap: wrap;
+    }
+
+    .values-list div {
+      width: 100%;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .values-list div i {
+      font-size: 2.5em;
+    }
+
+    .about-info {
+      margin-left: 3px;
+    }
+    
+    .about {
+      flex-direction: column;
+    }
+    #about-card {
+      width: 60%;
+    }
+
+    .about i {
+      font-size: 30px;
+    }
+
+    .quote {
+      width: 100%;
+      margin-left:0%;
+    }
+
+    .quote h1 {
+      margin-left: -40px;
+      font-size: 2em;
+    }
+
+    .quote p {
+      font-size: 1.2em;
+      line-height: 1.4em;
+    }
+
+    .quote-text {
+      padding-left: 0px;
+    }
+   
+    .skills-header {
+      font-size: .6em;
+    }
+
+    .skills hr {
+      width: 30%;
+    }
+
+    li {
+      width: 100px;
+      height: 80px;
+    }
+
+    .work {
+      height: 150%;
+    }
+
+    .work-header {
+      font-size: .6em;
+    }
+
+  .work hr {
+    width: 32%;
+}
+
+    .work h2 {
+      font-size: 1em;
+    }
+
+    .work-info {
+      flex-direction: column;
+    }
+  
+    .work p {
+      margin: 0 0 0 0;
+      text-align: left;
+      font-size: 1em;
+      padding-bottom: 2px;
+    }
+
+    .detailed-info {
+      padding-left: 5px;
+      width: 100%;
+    }
+
+    .work-image {
+      width:60%;
+      height: 50%;
+    }
+
+    .slideshow-container {
+      margin: 0 0 0 -8px;
+    }
+
+    .detailed-info a.button {
+      margin-left: -6%;
+      font-size: .9em;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      height: 55px;
+      width: 240px;
+      padding: 1px;
+    }
+
+    .projects-header {
+      padding-top: -40px;
+      font-size: .8em;
+    }
+
+    .projects hr {
+      width: 40%;
+      margin-bottom: 20px;
+    }
+
+    .project-card {
+      width: 100vw;
+    }
+
+    .project-card1 {
+      width: 100vw;
+    }
+
+    p.title {
+      font-size: .8em;
+    }
+
+    .text1 p{
+      font-size: .73em;
+    }
+
+    .box {
+      margin-left: 17%;
+    }
+
+    .button1 {
+      margin-left: -13%;
+    }
+
+    .button2 {
+      margin-left: -26%;
+    }
+
+    .button3 {
+      margin-left: -23%;
+    }
+
+    .button4 {
+      margin-left: -23%;
+    }
+
+    .button5 {
+      margin-left: -23%;
+    }
+
+    .button6 {
+      margin-left: -19%;
+    }
+
+    .popup1 {
+      width:90%;
+    }
+
+    .modal1-slideshow-container img {
+      width: 53%;
+      margin-left: 25%;
+      height: 95%;
+      margin-bottom: 40px;
+    }
+
+    .modal-header {
+      font-size: .5em;
+      margin-bottom: 5px;
+    }
+
+    .project-info p {
+      font-size: .9em;
+      line-height: 1.3em;
+    }
+
+
+   .modal-content {
+     height: 80%;
+     overflow: auto;
+   }
+
+   .modal-header hr {
+      margin-left: 30%;
+   }
+
+    .popup2 {
+      width: 95%;
+    }
+
+    .modal2-slideshow-container video {
+      margin-top: 0px;
+      padding-bottom: 80px;
+    }
+
+    .popup3 {
+      width:95%;
+    }
+
+    .modal3-slideshow-container video {
+      margin-top: 0px;
+      padding-bottom: 90px;
+      margin-left: -4px;
+    }
+
+    .modal-buttons {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .project-info a {
+      padding: 4px;
+      font-size: .9em;
+      margin-top: -30px;
+    }
+
+    .popup4 {
+      width:90%;
+    }
+
+    .modal4-slideshow-container img {
+      height: 140px;
+      width: auto;
+      margin-left: -1px;
+      overflow: hidden;
+    }
+
+    .popup5 {
+      width:90%;
+    }
+
+    .modal5-slideshow-container img {
+      height: 230px;
+      width: auto;
+      margin-left: -1px;
+      overflow: hidden;
+      margin-bottom: 70px;
+    }
+
+    .popup6 {
+      width:90%;
+    }
+
+    .contact-header {
+      font-size: .6em;
+    }
+
+    .contact p {
+      line-height: 20px;
+    }
+
+    .contact form {
+      width: 120%;
+  }
+
+  input, textarea {
+    width: 150%;
+  }
+
+  form {
+    margin: 5px;
+  }
+
+    input[type="submit"] {
+      font-size: .8em;
+      height: 40px;
+      width: 400px;
+      margin: 0px;
+    }
+
+    footer a {
+      margin: 0 3px 0 0;
     }
 }
